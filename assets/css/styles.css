@@ -427,7 +427,8 @@ main {
 .tab {
   text-decoration: none;
   color: var(--muted);
-  font-size: var(--fs-small);
+  font-size: var(--fs-ui);
+  font-weight: var(--w-semibold);
   padding: .3rem .7rem;
   white-space: nowrap;
   border-bottom: 2px solid transparent;

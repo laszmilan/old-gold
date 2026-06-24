@@ -178,6 +178,23 @@ function markChapterOpeners() {
 function buildToc(headings) {
   tocEl.innerHTML = "";
   const ol = document.createElement("ol");
+
+  // the masthead leads the contents as chapter 01, so the front-matter sections
+  // (the h3s before the first chapter) nest under the book title instead of
+  // floating above CHARACTER CREATION as orphaned sub-entries
+  const h1 = docEl.querySelector("h1");
+  if (h1) {
+    if (!h1.id) h1.id = slug(h1.textContent, new Set());
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#" + h1.id;
+    a.textContent = h1.textContent.trim();
+    a.className = "lvl-2";
+    a.dataset.target = h1.id;
+    li.appendChild(a);
+    ol.appendChild(li);
+  }
+
   headings.forEach(h => {
     const li = document.createElement("li");
     const a = document.createElement("a");
@@ -213,8 +230,11 @@ function setupScrollSpy(headings) {
       .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
     if (visible.length) setActive(visible[0].target.id);
   }, { root: document.getElementById("scrollarea"), rootMargin: "0px 0px -70% 0px", threshold: 0 });
-  headings.forEach(h => spy.observe(h));
-  if (headings[0]) setActive(headings[0].id);
+  // observe the masthead too, so "00" lights up while you're at the top
+  const h1 = docEl.querySelector("h1");
+  const spied = h1 ? [h1, ...headings] : headings;
+  spied.forEach(h => spy.observe(h));
+  if (spied[0]) setActive(spied[0].id);
 }
 
 /* contents toggle + reading-progress bar */
