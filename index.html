@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Old Gold</title>
+<meta name="description" content="Old Gold — a minimalist OSR fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat.">
+
+<!-- inline SVG favicon, so the folder stays self-contained -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23141414'/><text x='16' y='23' font-family='Georgia, serif' font-size='17' fill='%23ffffff' text-anchor='middle'>OG</text></svg>">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Old Gold">
+<meta property="og:description" content="A minimalist OSR fantasy adventure game. Read the full rulebook online.">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-plain home">
+
+  <a class="skip-link" href="#top" data-i18n="skip">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-side topbar-left"></div>
+
+    <nav class="tabs" aria-label="Primary" data-i18n-aria="primaryNav">
+      <button class="tabs-toggle" id="tabsToggle" type="button" aria-expanded="false" aria-controls="tabsMenu">
+        <span data-i18n="tabHome">Home</span>
+        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <div class="tabs-menu" id="tabsMenu">
+        <a class="tab tab-active" href="#top" aria-current="page" data-i18n="tabHome">Home</a>
+        <a class="tab" href="rulebook.html" data-i18n="tabRules">Rulebook</a>
+        <a class="tab" href="generators.html" data-i18n="tabGenerators">Generators</a>
+      </div>
+    </nav>
+
+    <div class="topbar-side topbar-right">
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="langGroup">
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" type="button" data-lang="hu" aria-pressed="false">HU</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scrollarea" id="scrollarea">
+    <main class="home-page" id="top">
+
+      <section class="hero">
+        <div class="hero-text">
+          <h1 class="hero-title">Old Gold</h1>
+          <p class="hero-tagline" data-i18n="homeTagline">A fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="rulebook.html">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              <span data-i18n="homeRead">Read the rulebook</span>
+            </a>
+            <a class="btn btn-ghost" id="discordLink" href="#" target="_blank" rel="noopener">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path>
+              </svg>
+              <span data-i18n="homeDiscord">Join the Discord</span>
+            </a>
+            <a class="btn btn-ghost" id="itchLink" href="#" target="_blank" rel="noopener">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="homeItch">Get it on itch.io</span>
+            </a>
+          </div>
+          <p class="hero-meta">
+            <span class="hero-free" data-i18n="homeFree">Free — pay what you want on itch.io</span>
+            <span class="hero-contact"><a class="home-email" id="emailLink" href="#">you@example.com</a></span>
+          </p>
+        </div>
+
+        <!-- cover plate: a deliberate placeholder until the illustration lands.
+             to use real art, drop <img class="hero-cover-img"> inside this panel -->
+        <aside class="hero-cover" aria-hidden="true">
+          <span class="hero-cover-mark">OG</span>
+          <hr class="hero-cover-rule">
+          <span class="hero-cover-label" data-i18n="homeArt">Cover art coming soon</span>
+        </aside>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
