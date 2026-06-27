@@ -54,16 +54,27 @@ const Site = (() => {
     });
   }
 
-  /* shared contents sidebar: the desktop collapse (persisted via og-collapsed)
-     and the mobile drawer, wired to the hamburger (#navToggle), the scrim
-     (#scrim), and Escape. Each page adds its own link-click behavior through the
-     returned handle. Returns null on pages without a toggle (e.g. home). */
-  function sidebar() {
+  /* shared contents sidebar — one behavior for the rulebook TOC and the
+     generators list. The panel is a fixed overlay at every width and starts
+     closed on every page load (so navigating between pages never carries a
+     stale-open panel). Pass the page's content element and its list of item
+     links so the shared rules below can be wired uniformly:
+
+       - the hamburger (#navToggle) toggles it; Escape and the scrim close it
+       - clicking into the content closes it (on mobile the drawer overlays the
+         page; on desktop it's the "done with the menu" gesture)
+       - selecting an item closes it only while the panel covers the text — the
+         mobile drawer, or a desktop window too narrow (<80rem) for the centered
+         reading column to clear the panel; on a wide screen it stays open
+
+     Returns null on pages without a toggle (e.g. home). */
+  function sidebar({ content, selectLinks } = {}) {
     const body = document.body;
     const navToggle = document.getElementById("navToggle");
     if (!navToggle) return null;
     const scrim = document.getElementById("scrim");
-    const mobile = window.matchMedia("(max-width: 820px)");
+    const mobile   = window.matchMedia("(max-width: 820px)");  // slide-in drawer + scrim
+    const overlaps = window.matchMedia("(max-width: 80rem)");  // open panel covers the reading column
 
     const isOpen = () => mobile.matches
       ? body.classList.contains("nav-open")
@@ -72,27 +83,27 @@ const Site = (() => {
 
     const open = () => {
       if (mobile.matches) body.classList.add("nav-open");
-      else { body.classList.remove("sidebar-collapsed"); store("og-collapsed", null); }
+      else body.classList.remove("sidebar-collapsed");
       syncExpanded();
     };
     const close = () => {
       if (mobile.matches) body.classList.remove("nav-open");
-      else if (!body.classList.contains("sidebar-collapsed")) {
-        body.classList.add("sidebar-collapsed"); store("og-collapsed", "1");
-      }
+      else body.classList.add("sidebar-collapsed");
       syncExpanded();
     };
-    /* desktop-only: hide the panel for this view without saving the preference */
-    const collapseTransient = () => { body.classList.add("sidebar-collapsed"); syncExpanded(); };
 
     navToggle.addEventListener("click", () => (isOpen() ? close() : open()));
     if (scrim) scrim.addEventListener("click", close);
     document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
     mobile.addEventListener("change", () => { body.classList.remove("nav-open"); syncExpanded(); });
-    syncExpanded();
-    // the saved collapsed state is applied pre-paint by each page's inline boot script
 
-    return { isOpen, open, close, collapseTransient, isMobile: () => mobile.matches };
+    if (content) content.addEventListener("click", () => { if (isOpen()) close(); });
+    if (selectLinks) selectLinks.addEventListener("click", e => {
+      if (e.target.closest("a") && overlaps.matches) close();
+    });
+
+    syncExpanded();
+    return { isOpen, open, close, isMobile: () => mobile.matches };
   }
 
   /* primary nav: an expandable menu on the smallest phones (CSS-gated) */

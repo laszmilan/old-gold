@@ -294,16 +294,11 @@ function applyLang(lang) {
   renderActive();   // re-render the active generator in the new language, keeping its result
 }
 
-/* contents drawer / collapsible panel — shared logic from Site.sidebar; here we
-   add only the page's own nuance: picking a generator dismisses the drawer on
-   mobile so the result is visible, while on desktop the list stays open since
-   switching generators is the main task */
+/* contents panel — same unified behavior as the rulebook's TOC: the shared
+   logic in Site.sidebar handles the toggle, scrim, Escape, click-to-dismiss,
+   and closing on selection only while the list is covering the content */
 function setupChrome() {
-  const sb = Site.sidebar();
-  if (!sb) return;
-  genList.addEventListener("click", e => {
-    if (e.target.closest("a") && sb.isMobile()) sb.close();
-  });
+  Site.sidebar({ content: document.querySelector("main"), selectLinks: genList });
 }
 
 buildList();

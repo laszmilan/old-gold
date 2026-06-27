@@ -2,15 +2,15 @@
   /* palette — three inks, two fills, one hairline, one accent */
   --ink:        #141414;
   --ink-soft:   #2b2b2b;
-  --muted:      #6b6b6b;
+  --muted:      #595959;
   --paper:      #ffffff;
-  --surface:    #f2f2f2;
+  --surface:    #eaeaea;
   --hair:       #e3e3e3;
   --gold:       #8c6f28;   /* the one accent — used sparingly; deep enough for AA text on white (~4.7:1) */
 
   /* type families */
-  --serif:      "EB Garamond", Georgia, "Times New Roman", serif;
-  --mono:       "Courier Prime", ui-monospace, "Courier New", monospace;
+  --serif:      "EB Garamond", Georgia, "Times New Roman", serif;   /* display: titles + headings */
+  --sans:       "Lato", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;   /* everything but display: body, UI, stat blocks, dice */
 
   /* generated label text (localized via html[lang] below) */
   --label-example: "Example";
@@ -21,7 +21,7 @@
   --fs-small:   .9rem;
   --fs-ui:      .95rem;
   --fs-label:   1rem;
-  --fs-body:    1.125rem;
+  --fs-body:    1rem;
   --fs-deck:    1.15rem;
   --fs-h3:      1.35rem;
   --fs-h2:      1.8rem;
@@ -80,7 +80,7 @@ html[lang="hu"] { --label-example: "Példa"; }
   z-index: 60;
   background: var(--ink);
   color: var(--paper);
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-tiny);
   padding: .5rem .8rem;
   text-decoration: none;
@@ -105,7 +105,7 @@ body {
   overflow: hidden;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: var(--fs-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -160,7 +160,7 @@ nav.toc a {
 nav.toc a.lvl-2::before {
   counter-increment: chap;
   content: counter(chap, decimal-leading-zero);
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-micro);
   color: var(--muted);
   flex: 0 0 auto;
@@ -190,6 +190,7 @@ main {
 .doc h1,
 .gen-heading,
 .hero-title {
+  font-family: var(--serif);
   font-weight: var(--w-semibold);
   font-size: var(--fs-h1);
   line-height: 1.05;
@@ -202,6 +203,7 @@ main {
   border-bottom: 3px solid var(--gold);   /* masthead rule — the gold accent */
 }
 .doc h1 + p { /* deck / subtitle */
+  font-family: var(--serif);
   font-style: italic;
   font-size: var(--fs-deck);
   color: var(--muted);
@@ -209,6 +211,7 @@ main {
 }
 
 .doc h2 {
+  font-family: var(--serif);
   font-weight: var(--w-semibold);
   font-size: var(--fs-h2);
   letter-spacing: var(--ls-heading);
@@ -219,6 +222,7 @@ main {
   scroll-margin-top: 1rem;
 }
 .doc h3 {
+  font-family: var(--serif);
   font-weight: var(--w-semibold);
   font-size: var(--fs-h3);
   letter-spacing: var(--ls-heading);
@@ -230,6 +234,7 @@ main {
 /* h4 is demoted to the bold-serif "label" voice it shares with run-in
    rule terms — no longer a distinct mono heading */
 .doc h4 {
+  font-family: var(--serif);
   font-weight: var(--w-bold);
   font-size: var(--fs-label);
   margin: var(--space-4) 0 var(--space-1);
@@ -273,7 +278,7 @@ main {
 .doc ul, .doc ol { margin: 0 0 var(--space-3); padding-left: 1.4rem; }
 .doc li { margin: .3rem 0; padding-left: .3rem; }
 .doc ul li::marker { content: "•  "; }
-.doc ol li::marker { font-family: var(--mono); font-size: .85em; }
+.doc ol li::marker { font-family: var(--sans); font-size: .85em; }
 .doc li > ul, .doc li > ol { margin: .3rem 0; }
 
 /* blockquote — worked-example callout, flagged with a small EXAMPLE label */
@@ -287,7 +292,7 @@ main {
 .doc blockquote::before {
   content: var(--label-example);
   display: block;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-style: normal;
   font-size: var(--fs-micro);
   letter-spacing: var(--ls-label);
@@ -299,14 +304,14 @@ main {
 
 /* code — inline sizes in em so it tracks its surrounding text */
 .doc code {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: .82em;
   background: var(--surface);
   padding: .1em .35em;
   border: 1px solid var(--hair);
 }
 .doc pre {
-  font-family: var(--mono);
+  font-family: var(--sans);
   background: var(--ink);
   color: var(--paper);
   padding: 1.1rem 1.3rem;
@@ -328,7 +333,7 @@ main {
 .doc table { width: 100%; border-collapse: collapse; font-size: var(--fs-ui); }
 .doc thead th {
   text-align: left;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-weight: var(--w-bold);
   font-size: var(--fs-micro);
   letter-spacing: var(--ls-caps);
@@ -354,6 +359,7 @@ main {
 }
 .doc .stat-name {
   display: block;
+  font-family: var(--serif);
   font-weight: var(--w-bold);
   font-size: var(--fs-deck);
   line-height: 1.2;
@@ -361,6 +367,7 @@ main {
 .doc .stat-special { display: block; margin: .2rem 0 .55rem; color: var(--ink-soft); }
 .doc .stat-row {
   display: block;
+  font-family: var(--sans);
   font-size: var(--fs-ui);
   line-height: 1.65;
 }
@@ -373,7 +380,7 @@ main {
 
 /* loading / error message */
 .doc .doc-status {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   color: var(--muted);
   line-height: 1.7;
@@ -446,7 +453,7 @@ main {
   border: none;
   background: none;
   cursor: pointer;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   letter-spacing: var(--ls-caps);
   color: var(--muted);
@@ -519,6 +526,7 @@ main {
 }
 
 .gen-lead {
+  font-family: var(--serif);
   font-style: italic;
   font-size: var(--fs-deck);
   color: var(--muted);
@@ -533,6 +541,7 @@ main {
   padding: var(--space-4);
 }
 .pc-name {
+  font-family: var(--serif);
   font-weight: var(--w-semibold);
   font-size: var(--fs-h2);
   line-height: 1.1;
@@ -552,10 +561,11 @@ main {
   border-top: 1px solid var(--hair);
   border-bottom: 1px solid var(--hair);
 }
-.pc-stat { font-size: var(--fs-ui); white-space: nowrap; }
-.pc-stat b { font-family: var(--mono); font-weight: var(--w-bold); }
+.pc-stat { font-family: var(--sans); font-size: var(--fs-ui); white-space: nowrap; }
+.pc-stat b { font-family: var(--sans); font-weight: var(--w-bold); }
 .pc-stat i { font-style: normal; color: var(--muted); }
 .pc-vitals {
+  font-family: var(--sans);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
@@ -563,12 +573,12 @@ main {
   border-bottom: 1px solid var(--hair);
   font-size: var(--fs-ui);
 }
-.pc-vitals b { font-family: var(--mono); font-weight: var(--w-bold); }
+.pc-vitals b { font-family: var(--sans); font-weight: var(--w-bold); }
 .pc-detail { margin: var(--space-3) 0 0; display: grid; gap: var(--space-2); }
 .pc-detail > div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-2); }
 .pc-detail dt {
   margin: 0;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   letter-spacing: var(--ls-caps);
   text-transform: uppercase;
@@ -591,7 +601,7 @@ main {
   background: var(--paper);
   color: var(--ink);
   border: 1.5px solid var(--ink);
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   letter-spacing: var(--ls-caps);
   text-transform: uppercase;
@@ -609,7 +619,7 @@ main {
   background: var(--paper);
   color: var(--ink);
   border: 1.5px solid var(--ink);
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-body);
 }
 .dice-input:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
@@ -623,7 +633,7 @@ main {
 }
 .dice-expr {
   margin: 0 0 var(--space-1);
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   letter-spacing: var(--ls-caps);
   text-transform: uppercase;
@@ -631,20 +641,20 @@ main {
 }
 .dice-total {
   display: block;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-weight: var(--w-bold);
   font-size: var(--fs-h1);
   line-height: 1;
 }
 .dice-breakdown {
   margin: var(--space-2) 0 0;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   color: var(--ink-soft);
 }
 .dice-error {
   margin: 0;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   color: var(--ink-soft);
 }
@@ -663,7 +673,8 @@ main {
      so equal padding reads top-heavy — the extra top pad drops them to optical center */
   padding: .62rem calc(1.4rem - var(--ls-caps)) .48rem 1.4rem;
   text-decoration: none;
-  font-family: var(--mono);
+  font-family: var(--sans);
+  font-weight: var(--w-bold);
   font-size: var(--fs-small);
   line-height: 1;   /* hug the caps so the icon centers true against the text */
   letter-spacing: var(--ls-caps);
@@ -732,6 +743,7 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
 .hero-tagline {
   margin: 0;
   max-width: 32rem;
+  font-family: var(--serif);
   font-style: italic;
   font-size: var(--fs-deck);
   color: var(--muted);
@@ -763,7 +775,7 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
   flex-direction: column;
   align-items: flex-start;
   gap: .4rem;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: var(--fs-small);
   letter-spacing: var(--ls-caps);
   text-transform: uppercase;
@@ -778,8 +790,8 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
 }
 .home-email:hover { text-decoration: underline; }
 
-/* right: a deliberate ink cover plate until the illustration lands.
-   to use real art, drop <img class="hero-cover-img" src="…"> inside .hero-cover */
+/* right: the cover plate — an ink panel with a gold inner frame (::after)
+   holding the cover art (.hero-cover-img) */
 .hero-cover {
   position: relative;
   display: flex;
@@ -791,30 +803,33 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
   background: var(--ink);
   color: var(--paper);
   overflow: hidden;
+  /* on desktop the grid stretches this to the hero's height; once stacked the
+     art is absolutely positioned and gives no intrinsic height, so anchor the
+     panel to a near-square ratio — the wide artwork ratio made too flat a
+     rectangle, and a squarer plate gives the contained art vertical breathing
+     room so the downward bias never pushes the tail past the frame */
+  aspect-ratio: 1 / 1;
 }
-.hero-cover::after {   /* inset frame, in the same gold as the OG rule */
+@media (min-width: 821px) { .hero-cover { aspect-ratio: auto; } }
+.hero-cover::after {   /* inset gold frame around the art */
   content: "";
   position: absolute;
   inset: clamp(1rem, 2.5vw, 1.75rem);
-  border: 2px solid var(--gold);   /* same weight as .hero-cover-rule */
+  border: 2px solid var(--gold);
   pointer-events: none;
 }
-.hero-cover-mark {
-  font-family: var(--serif);
-  font-weight: var(--w-semibold);
-  font-size: clamp(4.5rem, 16vh, 11rem);
-  line-height: 1;
-  letter-spacing: var(--ls-title);
+/* the img fills the area inside the gold frame; `contain` keeps the dragon's
+   ratio (no crop) and `object-position` biases it low WITHIN that box, so the
+   tail can never spill past the frame the way a transform would */
+.hero-cover-img {
+  position: absolute;
+  top: clamp(1rem, 2.5vw, 1.75rem);
+  left: clamp(1rem, 2.5vw, 1.75rem);
+  width: calc(100% - 2 * clamp(1rem, 2.5vw, 1.75rem));
+  height: calc(100% - 2 * clamp(1rem, 2.5vw, 1.75rem));
+  object-fit: contain;
+  object-position: 50% 70%;
 }
-.hero-cover-rule { width: 3rem; margin: 0; border: none; border-top: 2px solid var(--gold); }
-.hero-cover-label {
-  font-family: var(--mono);
-  font-size: var(--fs-tiny);
-  letter-spacing: var(--ls-label);
-  text-transform: uppercase;
-  color: var(--hair);   /* muted light-grey label, subordinate to the white OG mark */
-}
-.hero-cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 /* stacked (mobile/tablet) hero: the big --pad-block top gap is there to balance
    the vertically-centered desktop column — once stacked there's nothing to
@@ -871,7 +886,7 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
     border: none;
     background: none;
     cursor: pointer;
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-size: var(--fs-small);
     color: var(--ink);
   }

@@ -8,7 +8,6 @@ const I18N = Site.i18n({
     homeRead: "Read the rulebook",
     homeDiscord: "Join the Discord",
     homeItch: "Get it on itch.io",
-    homeArt: "Cover art coming soon",
     homeFree: "Pay what you want on itch.io",
   },
   hu: {
@@ -17,7 +16,6 @@ const I18N = Site.i18n({
     homeRead: "Szabálykönyv olvasása",
     homeDiscord: "Csatlakozz a Discordhoz",
     homeItch: "Töltsd le az itch.io-n",
-    homeArt: "A borító hamarosan",
     homeFree: "Fizess annyit, amennyit szeretnél az itch.io-n",
   },
 });

@@ -239,20 +239,9 @@ function setupScrollSpy(headings) {
 
 /* contents toggle + reading-progress bar */
 function setupChrome() {
-  // shared drawer/collapse logic (toggle, scrim, Escape) lives in Site.sidebar;
-  // here we add only the rulebook's own dismiss-on-read behavior
-  const sb = Site.sidebar();
-  if (sb) {
-    // clicking the rules dismisses an open panel
-    document.querySelector("main").addEventListener("click", () => { if (sb.isOpen()) sb.close(); });
-    // jumping via a TOC link dismisses the panel so you can read: the drawer on
-    // mobile, and a transient close on desktop that leaves the saved preference intact
-    tocEl.addEventListener("click", e => {
-      if (!e.target.closest("a")) return;
-      if (sb.isMobile()) sb.close();
-      else sb.collapseTransient();
-    });
-  }
+  // unified contents-panel behavior (toggle, scrim, Escape, click-to-dismiss,
+  // close-on-select-when-covering-the-text) all lives in Site.sidebar
+  Site.sidebar({ content: document.querySelector("main"), selectLinks: tocEl });
 
   // reading-progress bar — tracks the scroll region, not the window
   const scroller = document.getElementById("scrollarea");
