@@ -15,20 +15,12 @@
 
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="gen sidebar-collapsed">
+<body class="gen page-plain">
 
   <a class="skip-link" href="#top" data-i18n="skip">Skip to content</a>
 
   <header class="topbar">
-    <div class="topbar-side topbar-left">
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle generators" data-i18n-aria="navToggle" aria-expanded="true" aria-controls="sidebar">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-          <line x1="4" y1="7"  x2="20" y2="7"></line>
-          <line x1="4" y1="12" x2="20" y2="12"></line>
-          <line x1="4" y1="17" x2="20" y2="17"></line>
-        </svg>
-      </button>
-    </div>
+    <div class="topbar-side topbar-left"></div>
 
     <nav class="tabs" aria-label="Primary" data-i18n-aria="primaryNav">
       <button class="tabs-toggle" id="tabsToggle" type="button" aria-expanded="false" aria-controls="tabsMenu">
@@ -52,20 +44,13 @@
     </div>
   </header>
 
-  <div class="scrim" id="scrim"></div>
-
-  <!-- the lone scroll region: its scrollbar starts below the top bar -->
   <div class="scrollarea" id="scrollarea">
-    <div class="shell">
-      <aside class="sidebar" id="sidebar">
-        <nav class="toc gen-list" id="genList" aria-label="Generators" data-i18n-aria="genListLabel"></nav>
-      </aside>
-
-      <main id="top">
-        <!-- the active generator (title + controls + output) renders here -->
-        <section class="gen-doc" id="genStage"></section>
-      </main>
-    </div>
+    <main class="gen-main" id="top">
+      <section class="gen-doc" aria-labelledby="genTitle">
+        <nav class="gen-list" id="genList" aria-label="Generators" data-i18n-aria="genListLabel"></nav>
+        <div class="gen-stage" id="genStage"></div>
+      </section>
+    </main>
   </div>
 
   <script src="assets/js/site.js"></script>

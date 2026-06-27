@@ -27,7 +27,7 @@ Site.onLang(loadLang);
 setupChrome();
 loadLang(Site.startLang(I18N));
 
-/* fetch + render one language; falls back gracefully if a translation is absent */
+/* fetch + render one language */
 async function loadLang(lang) {
   document.documentElement.lang = lang;
   const t = I18N[lang] || I18N.en;
@@ -39,26 +39,11 @@ async function loadLang(lang) {
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     markdown = await res.text();
   } catch (err) {
-    if (lang !== "en") { showComingSoon(); return; }  // EN must exist; HU may not yet
     showLoadError(err, lang);
     return;
   }
   Site.store("og-lang", lang);
   render(markdown);
-}
-
-/* placeholder shown when a translation file isn't there yet */
-function showComingSoon() {
-  tocEl.innerHTML = "";
-  docEl.innerHTML = `
-    <h1>Old Gold</h1>
-    <p class="doc-status">
-      <strong>A magyar fordítás hamarosan.</strong><br>
-      The Hungarian translation is on its way.<br><br>
-      <button class="inline-link" id="backToEn" type="button">&larr; Read in English</button>
-    </p>`;
-  const back = document.getElementById("backToEn");
-  if (back) back.addEventListener("click", () => loadLang("en"));
 }
 
 function render(markdown) {
