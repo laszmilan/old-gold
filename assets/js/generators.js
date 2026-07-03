@@ -23,7 +23,7 @@ const ANCESTRY = {
   elf: {
     name: "Elf", move: "12m", languages: "Common, Sylvan",
     attrDice: 6, hpAdvantage: false,
-    trait: "Keen senses and resistance to mental effects.",
+    trait: "Advantage to resist charm, sleep, and other mental effects.",
     names: ["Varenthas", "Celindyl", "Fendalus", "Therylon", "Nyveris", "Seralyn", "Maeraphon", "Evrandir", "Aelinor", "Galrion", "Yphera", "Abrion"],
   },
   human: {
@@ -46,12 +46,12 @@ const PERSONALITY = ["Never breaks a promise", "Laughs at danger", "Suspicious o
 const BACKGROUND = ["Soldier", "Herbalist", "Pickpocket", "Sailor", "Merchant", "Blacksmith", "Charlatan", "Hunter", "Tax collector", "Scribe", "Deserter", "Spy", "Barber-surgeon", "Pit fighter", "Smuggler", "Cultist", "Troubadour", "Grave robber", "Hedge witch", "Disgraced noble"];
 const MOTIVATION = ["Pay off debt", "Find someone", "Avenge something", "Prove a doubter wrong", "Earn enough to retire", "Outrun a curse", "Learn what others fear to know", "Fulfill a vow", "Recover something", "Wander for its own sake", "Greed, pure and simple", "Nothing waits for you at home", "Test your faith", "Find a place worth staying", "Look for a worthy death", "Discover the truth", "Earn back your honor", "Map the unmapped", "Protect what others won't", "Stop running from yourself"];
 
-const ATTRS = ["MGT", "GRC", "MND", "HRT"];
+const ATTRS = ["Might", "Grace", "Mind", "Heart"];
 
-/* roll attributes: N d4, each die +1 to its attribute (1=MGT…4=HRT),
+/* roll attributes: N d4, each die +1 to its attribute (1=Might…4=Heart),
    capped at 4 at creation (a die that would exceed 4 is rerolled) */
 function rollAttributes(n) {
-  const s = { MGT: 0, GRC: 0, MND: 0, HRT: 0 };
+  const s = { Might: 0, Grace: 0, Mind: 0, Heart: 0 };
   for (let placed = 0; placed < n;) {
     const a = ATTRS[d(4) - 1];
     if (s[a] < 4) { s[a]++; placed++; }
@@ -74,7 +74,7 @@ function generateCharacter() {
     personality: pick(PERSONALITY),
     motivation: pick(MOTIVATION),
     attrs,
-    hp: 6 + 3 * attrs.MGT + hpRoll,
+    hp: 6 + 3 * attrs.Might + hpRoll,
     dp: 0,
     move: anc.move,
     languages: anc.languages,
@@ -84,33 +84,31 @@ function generateCharacter() {
 function renderCharacter(pc, t) {
   const anc = ANCESTRY[pc.key];
   const stats = ATTRS.map(a =>
-    `<span class="pc-stat"><b>${a}</b> ${pc.attrs[a]} <i>(+${bonus(pc.attrs[a])})</i></span>`
+    `<span class="pc-stat"><b>${a}</b><span class="pc-num">${pc.attrs[a]} <i>(+${bonus(pc.attrs[a])})</i></span></span>`
   ).join("");
   const detail = [
     [t["character.lblLanguages"], pc.languages],
     [t["character.lblAppearance"], pc.appearance],
     [t["character.lblPersonality"], pc.personality],
     [t["character.lblMotivation"], pc.motivation],
-    [anc.name, anc.trait],
   ].map(([dt, dd]) => `<div><dt>${dt}</dt><dd>${dd}</dd></div>`).join("");
 
   return `
     <article class="pc-card">
-      <div class="pc-main">
-        <header class="pc-head">
-          <h2 class="pc-name">${pc.name}</h2>
-          <p class="pc-sub">${anc.name} &middot; ${pc.background} &middot; ${t["character.lvl1"]}</p>
-        </header>
-        <dl class="pc-detail">${detail}</dl>
-      </div>
+      <header class="pc-head">
+        <h2 class="pc-name">${pc.name}</h2>
+        <p class="pc-sub">${anc.name} &middot; ${pc.background} &middot; ${t["character.lvl1"]}</p>
+      </header>
       <div class="pc-side">
         <div class="pc-vitals">
-          <span><b>HP</b> ${pc.hp}</span>
-          <span><b>DP</b> ${pc.dp}</span>
-          <span><b>MOV</b> ${pc.move}</span>
+          <span><b>HP</b><span class="pc-num">${pc.hp}</span></span>
+          <span><b>DP</b><span class="pc-num">${pc.dp}</span></span>
+          <span><b>MOV</b><span class="pc-num">${pc.move}</span></span>
         </div>
         <div class="pc-stats">${stats}</div>
+        <div class="pc-trait"><b>${anc.name}</b>${anc.trait}</div>
       </div>
+      <dl class="pc-detail">${detail}</dl>
     </article>`;
 }
 
@@ -202,11 +200,12 @@ function rollModule(def) {
       stage.innerHTML = `
         <div class="gen-title-row">
           <h1 class="gen-heading" id="genTitle">${t[id + ".label"]}</h1>
-          <button class="gen-reroll" type="button" data-roll aria-label="${t[id + ".roll"]}" title="${t[id + ".roll"]}">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <button class="btn btn-ghost gen-reroll" type="button" data-roll aria-label="${t[id + ".roll"]}" title="${t[id + ".roll"]}">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M20 12a8 8 0 1 1-2.34-5.66"></path>
               <polyline points="20 4 20 10 14 10"></polyline>
             </svg>
+            <span class="gen-reroll-label">${t[id + ".reroll"]}</span>
           </button>
         </div>
         <p class="gen-lead">${t[id + ".lead"]}</p>
@@ -226,14 +225,14 @@ const GENERATORS = [
   Object.assign({ id: "character" }, rollModule({
     i18n: {
       en: {
-        label: "Character", roll: "Roll a character",
+        label: "Character", roll: "Roll a character", reroll: "Reroll",
         lead: "Roll up a ready-to-play level 1 adventurer for Old Gold.",
         lvl1: "Level 1",
         lblLanguages: "Languages", lblAppearance: "Appearance",
         lblPersonality: "Personality", lblMotivation: "Motivation",
       },
       hu: {
-        label: "Karakter", roll: "Karakter dobása",
+        label: "Karakter", roll: "Karakter dobása", reroll: "Újradobás",
         lead: "Dobj egy játékra kész, 1. szintű kalandozót az Old Goldhoz.",
         lvl1: "1. szint",
         lblLanguages: "Nyelvek", lblAppearance: "Külső",

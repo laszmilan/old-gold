@@ -45,13 +45,15 @@ This chapter will walk you through creating an adventurer in just a few minutes.
 
 Choose your ancestry or roll 1d4.
 
-**1. Dwarf.** Sturdy as the fortresses they carve, Dwarves are fiercely loyal and famous for their love of beer. They stand 120 cm tall and live 200 years, their bodies turning to stone, ore, and gems upon death. Roll HP with advantage at character creation and when leveling up. Advantage on checks to resist poison (including alcohol). Movement 8m. Speak Common and Dwarvish.
+**1. Dwarf.** Sturdy as the fortresses they carve, they are fiercely loyal and famous for their love of beer. Dwarves stand 120 cm tall and live 200 years, their bodies turning to stone, ore, and gems upon death. Gain advantage on checks to resist poison (including alcohol) and roll HP with advantage at character creation and when leveling up. Movement 8m. Speak Common and Dwarvish.
 
-**2. Elf.** Quiet and keen-eyed, Elves are drawn to old knowledge and the wild places of the world. They stand 200 cm tall and live up to 500 years, their bodies becoming seeds and green growth upon death. Advantage on checks to perceive distant sights or faint sounds. Advantage on checks to resist charm, sleep, and other mental effects. Movement 12m. Speak Common and Sylvan.
+**2. Elf.** Quiet and keen-eyed, Elves are drawn to old knowledge and the wild places of the world. They stand 200 cm tall and live up to 500 years, their bodies becoming seeds and green growth upon death. Advantage on checks to resist charm, sleep, and other mental effects. Movement 12m. Speak Common and Sylvan.
 
 **3. Halfkin.** Stubborn and warm-hearted, Halfkin prefer good food and a quiet life (though trouble finds them anyway). They stand 80 cm tall and live 100 years and they may reroll natural 1s on checks. Movement 8m. Speak Common.
 
 **4. Human.** Restless and adaptable, Humans outnumber all other folk and thrive in every corner of the world. They stand 170 cm tall and live 70 years. Upon character creation, humans can either distribute 7 points or roll 7d4. Movement 10m. Speak Common.
+
+![Four adventurers stand together: a staff-bearing halfkin, a hooded human, a red-bearded dwarf, and a tall elf reading a book.](assets/img/ancestries.png)
 
 ### LANGUAGES
 
@@ -74,10 +76,10 @@ Four attributes ranging from 0 to 9 measure your PC's strengths and weaknesses. 
 
 | 1d4 | Attribute | Governs |
 |---|---|---|
-| 1 | Might (MGT) | Strength, constitution, melee |
-| 2 | Grace (GRC) | Dexterity, initiative, ranged |
-| 3 | Mind (MND) | Wits, knowledge, spellcasting |
-| 4 | Heart (HRT) | Charisma, perception, praying |
+| 1 | Might | Strength, constitution, melee |
+| 2 | Grace | Dexterity, initiative, ranged |
+| 3 | Mind | Wits, knowledge, spellcasting |
+| 4 | Heart | Charisma, perception, praying |
 
 Either distribute 6 points among your attributes, or roll 6d4, each die adding +1 to the corresponding attribute. No attribute may exceed 4 at character creation (reroll any die that would push it higher).
 
@@ -87,11 +89,11 @@ When you do something exceptionally creative or courageous, something your chara
 
 ### HEALTH POINTS
 
-HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 for each point of your MGT score. At each level (including the first), roll 1d6 and add it to your maximum HP. Your HP cannot drop below 0.
+HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 for each point of your Might score. At each level (including the first), roll 1d6 and add it to your maximum HP. Your HP cannot drop below 0.
 
-> Bramble the halfkin, MGT 1, starts with 6 + (1 × 3) = 9 HP and rolls 2 at level 1: 11 maximum HP. Reaching level 2, he rolls 5 and raises his MGT to 2, gaining 5 HP from the roll and 3 from MGT for a new maximum of 19.
+> Bramble the halfkin, Might 1, starts with 6 + (1 × 3) = 9 HP and rolls 2 at level 1: 11 maximum HP. Reaching level 2, he rolls 5 and raises his Might to 2, gaining 5 HP from the roll and 3 from Might for a new maximum of 19.
 
-**Dying.** While at 0 HP, you fall prone, unable to act, and must make a Death Roll at the start of your round. NPCs usually die at 0 HP, and a creature that is unconscious, restrained, or otherwise helpless can be slain instantly.
+**Dying.** While at 0 HP, you fall prone, unable to act, and must make a Death Roll at the start of your turn. NPCs usually die at 0 HP, and a creature that is unconscious or otherwise helpless can be slain instantly.
 
 | 1d6 | Death Roll Outcome |
 |---|---|
@@ -123,12 +125,14 @@ PCs can carry equipment in 12 inventory slots, divided across three locations.
 
 Most items take one slot, but bulky or heavy items take two. You cannot carry items beyond your capacity. The slots on the character sheet are sized for sticky notes. Write item names, dots, and effects on these as needed, then move them between slots, pass them to another player, or set them aside as fiction demands.
 
-**Depletion.** Most items have three usage dots. Mark one when you use the item in a way that might break, damage, or deplete it. When all dots are marked, the item is broken, empty, or otherwise no longer usable. Some items follow special rules:
+**Depletion.** Most items carry three usage dots. Mark a dot whenever you use an item in a way that might spend, damage, or wear it out. When the last dot is filled, the item is spent: broken, empty, or gone. Some items refill rather than break, for example a lantern clears its dots with lantern oil. How a dot is spent depends on the item:
 
-- **Weapons & armor.** 1-in-6 chance to mark after combat. A blacksmith can repair them for 10% of the item's price per dot.
-- **Throwing weapons.** Each dot represents a weapon, mark a dot when you throw one. After combat, 5-in-6 chance to recover each thrown weapon and clear its dot.
-- **Spellbooks.** Mark one when casting. Clear all after a successful rest.
-- **Relics.** One dot only. Mark when invoking a prayer. Clear after a successful rest.
+- **Gear & tools.** Mark a dot when the fiction damages or uses it up, such as a rope cut short or a snapped lockpick.
+- **Light sources.** Mark a dot for each period the light burns, as listed in Light Sources.
+- **Weapons, armor & shields.** Roll 1d6 after each combat and mark a dot on a 1. A blacksmith repairs each marked dot for 10% of the item's price.
+- **Throwing weapons.** Each dot is one weapon, so a full slot holds three. Mark a dot as you throw one, then after combat roll 1d6 for each and recover it on a 2–6, clearing the dot.
+- **Consumables.** Each dot is one dose, such as a potion, ration, or vial of poison. Mark a dot as you use it; when the last is gone, so is the item.
+- **Spellbooks & relics.** Mark a dot when you cast a spell or invoke a prayer, then clear all dots on a successful rest. A relic has only one dot.
 
 ### STARTING EQUIPMENT
 
@@ -155,7 +159,7 @@ You begin at level 1 with 0 XP and gain 1 XP for each gp spent on downtime activ
 | 9 | 128,000 | 255,000 |
 | 10 | 256,000 | 511,000 |
 
-Upon leveling up, increase an attribute of your choice by 1 (no attribute may exceed 9), and add a level's worth of HP as described in Health Points. If you raise MGT, add 3 to your maximum HP as well.
+Upon leveling up, increase an attribute of your choice by 1 (no attribute may exceed 9), and add a level's worth of HP as described in Health Points. If you raise Might, add 3 to your maximum HP as well.
 
 ### FINISHING TOUCHES
 
@@ -266,15 +270,15 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 
 | Weapon | Description | gp |
 |---|---|---|
-| Melee | 1 slot, 1d6+MGT, 2m. | 50 |
-| Finesse | 1 slot, 1d6+GRC, 2m. | 50 |
-| Versatile | 1 slot 1d6+MGT or 2 slots 1d8+MGT, 2m. | 100 |
-| Heavy | 2 slots, 1d10+MGT, 2m. | 200 |
-| Reach | 1 slot, 1d4+MGT, 4m. | 50 |
-| Heavy Reach | 2 slots, 1d6+MGT, 4m. | 100 |
-| Throwing | 1 slot, 1d4+MGT, MGT bonus × 6m (min 2). | 50 |
-| Ranged | 1 slot, 1d4+GRC, 20m. | 50 |
-| Heavy Ranged | 2 slots, 1d6+GRC, 60m. | 100 |
+| Melee | 1 slot, 1d6 + Might Bonus, 2m. | 50 |
+| Finesse | 1 slot, 1d6 + Grace Bonus, 2m. | 50 |
+| Versatile | 1 slot 1d6 + Might Bonus or 2 slots 1d8 + Might Bonus, 2m. | 100 |
+| Heavy | 2 slots, 1d10 + Might Bonus, 2m. | 200 |
+| Reach | 1 slot, 1d4 + Might Bonus, 4m. | 50 |
+| Heavy Reach | 2 slots, 1d6 + Might Bonus, 4m. | 100 |
+| Throwing | 1 slot, 1d4 + Might Bonus, Might Bonus × 6m (min 2). | 50 |
+| Ranged | 1 slot, 1d4 + Grace Bonus, 20m. | 50 |
+| Heavy Ranged | 2 slots, 1d6 + Grace Bonus, 60m. | 100 |
 
 | Armor | Description | gp |
 |---|---|---|
@@ -292,10 +296,10 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 | Antitoxin | 1 slot. Drink to retry a failed check against an active poison, or to gain advantage on the next poison check. | 30 |
 | Healing potion | 1 slot. Drink to restore 1d6+1 HP. | 50 |
 | Greater healing potion | 1 slot. Drink to restore 2d6+2 HP. | 200 |
-| Weakening poison | 1 slot. Disadvantage on MGT and GRC rolls for 1d4 watches or until cured. | 200 |
+| Weakening poison | 1 slot. Disadvantage on Might and Grace rolls for 1d4 watches or until cured. | 200 |
 | Sleep poison | 1 slot. Unconscious for 1d4 watches. Damage or shaking may wake the victim. | 300 |
 | Paralytic poison | 1 slot. Cannot move or act for 1d6 hours. | 400 |
-| Lethal poison | 1 slot. 1d6 direct damage now and at the start of each round for 6 rounds. | 500 |
+| Lethal poison | 1 slot. 1d6 direct damage now and at the start of each of the victim's turns for 6 rounds. | 500 |
 
 ### ADVENTURING GEAR
 
@@ -312,8 +316,8 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 | Net | 1 slot. Throw to restrain the target. | 20 |
 | Spyglass | 1 slot. See clearly at a long distance. | 100 |
 | Hourglass | 1 slot. Measures time. | 25 |
-| Healer's kit | 1 slot, 3 dots. Heal 1d3+HRT HP. Advantage on the rest's HP roll. | 50 |
-| Disguise kit | 1 slot, 3 dots. HRT check to pass as another person. | 100 |
+| Healer's kit | 1 slot, 3 dots. Heal 1d3 + Heart Bonus HP. Advantage on the rest's HP roll. | 50 |
+| Disguise kit | 1 slot, 3 dots. Heart check to pass as another person. | 100 |
 | Sack | 1 slot. Carries small items together. | 1 |
 | Pouch | 1 slot. Holds 250 gp or small valuables. | 5 |
 
@@ -339,11 +343,11 @@ When the outcome of an action is uncertain, make a check: roll 1d20, add your re
 | Difficult | 16 |
 | Brutal | 19 |
 
-> Bramble (GRC 2) picks a sturdy lock, rolling 1d20 + 2 against difficulty 10 (Normal). His d20 comes up 8, for a total of 10. Equal to the difficulty, so the lock holds.
+> Bramble (Grace 2) picks a sturdy lock, rolling 1d20 + 2 against difficulty 10 (Normal). His d20 comes up 8, for a total of 10. Equal to the difficulty, so the lock holds.
 
 **Critical rolls.** A natural 20 always produces the best possible outcome given the circumstances. A natural 1 always fails, and badly.
 
-**Advantage & disadvantage.** When you have advantage, roll twice and take the higher result. Conversely, when you have disadvantage, roll twice and take the lower one. These effects do not stack and cancel each other out.
+**Advantage & disadvantage.** When you have advantage, roll twice and take the higher result. Conversely, when you have disadvantage, roll twice and take the lower one. These effects can apply to any roll (a check, a damage roll, even a death roll). They do not stack and cancel each other out.
 
 **Helping.** Once per rest, you can help an ally if you can reasonably contribute to their task. When helped, the ally makes their check with advantage.
 
@@ -353,7 +357,7 @@ When the outcome of an action is uncertain, make a check: roll 1d20, add your re
 
 **Player-facing rolls.** Whenever a PC is involved, the player should make the check from their character's point of view.
 
-> Aldric (MGT 5) faces an orc warrior (MGT 3). When the orc tries to grapple him, instead of the Referee rolling for the orc, Aldric rolls 1d20 + 5 against difficulty 13 (10 + the orc's MGT). Perspective changes, but the odds remain identical.
+> Aldric (Might 5) faces an orc warrior (Might 3). When the orc tries to grapple him, instead of the Referee rolling for the orc, Aldric rolls 1d20 + 5 against difficulty 13 (10 + the orc's Might). Perspective changes, but the odds remain identical.
 
 ---
 
@@ -377,7 +381,7 @@ When the sequence of actions matters, the game shifts into rounds. Each round, e
 
 ### INITIATIVE
 
-Creatures act in order of their GRC, highest first. PCs act before NPCs when tied. If multiple PCs share the same GRC, they decide among themselves.
+Creatures act in order of their Grace, highest first. PCs act before NPCs when tied. If multiple PCs share the same Grace, they decide among themselves.
 
 **Surprise.** Surprising your opponents requires preparation and an appropriate check. Surprised creatures cannot act during the first round.
 
@@ -390,7 +394,7 @@ You may move up to your speed per round. Difficult terrain (dense brush, rubble,
 Your main action is one complex interaction, such as attacking, casting a spell, praying, or making an ability check. You can also:
 
 - **Sprint.** Move up to your speed again.
-- **Defend.** Until your next round, make a check against each attack targeting you, negating damage and effects on a success.
+- **Defend.** Roll 1d4 and gain that much DP until the start of your next turn.
 - **Disengage.** Use your movement action without provoking opportunity attacks.
 
 ### FREE ACTIONS
@@ -401,36 +405,30 @@ Drawing a weapon, drinking a potion, flipping a lever, shouting a warning. Anyth
 
 ## COMBAT
 
-Unless the target uses the defend action, roll for damage only: use your weapon's damage die, add your relevant attribute bonus (MGT for melee, GRC for ranged), and subtract the target's DP.
+In Old Gold you only need to roll for damage; use your weapon's damage die, add your relevant attribute bonus (Might for melee, Grace for ranged), and subtract the target's DP (which is higher if they used the defend action).
 
-> Aldric (MGT 5, so a +3 melee bonus) swings a sword (1d6) at an orc warrior (DP 2). He rolls a 4: 4 + 3 = 7 damage, minus the orc's 2 DP, for 5 to its HP. The orc spent its action attacking rather than defending, so it gets no roll to reduce the hit.
+> Aldric (Might 5, so a +3 melee bonus) swings a sword (1d6) at an orc warrior (DP 2). He rolls a 4: 4 + 3 = 7 damage, minus the orc's 2 DP, for 5 to its HP. Had the orc defended instead of attacking on its turn, it would have rolled 1d4 for extra DP to soften the blow.
 
 **Combat maneuvers.** Instead of attacking, you can attempt to disarm, shove, trip, grapple, blind, or otherwise hinder an opponent. Resolve these with an appropriate check.
 
 **Opportunity attacks.** When a creature leaves your melee reach, you may immediately attack them as a free action. You can only make one opportunity attack per round.
 
-**Unarmed & improvised.** Fists deal 1d2 + MGT bonus damage. Bottles, chair legs, rocks: 1d4 + MGT bonus damage.
+**Unarmed & improvised.** Fists deal 1d2 + Might Bonus damage. Bottles, chair legs, rocks: 1d4 + Might Bonus damage.
 
 **Ranged attacks.** Ranged and throwing weapons cannot target creatures beyond their listed range, or creatures within melee reach. When shooting into melee, there is a 1-in-6 chance your shot strikes a random ally in the melee instead of your intended target. Ammunition for ranged weapons is abstracted and not tracked.
-
-**Marking usage.** For each weapon, shield, and armor used in combat, roll 1d6 after every encounter, and mark usage on a 1. A blacksmith can repair equipment for 10% of the item's price per dot. For throwing weapons (e.g. javelins), mark a dot each time you throw the weapon instead, then after combat, roll 1d6 for each marked dot to recover it and clear the dot on a 3–6.
 
 **Dual-wielding.** Roll with both weapons then keep the higher result.
 
 ### CONDITIONS
 
-Effects and maneuvers can impose the conditions below. Unless an effect says otherwise, a condition lasts until the encounter ends, the effect's stated duration runs out, or a reasonable action clears it. The Referee may adjust any of these in play.
+Effects and maneuvers can impose the conditions below. A condition lasts until the encounter ends, the effect's stated duration runs out, or a reasonable action clears it.
 
-- **Blinded.** You roll damage and any sight-based check with disadvantage, and gain no benefit from cover.
+- **Blinded.** Roll damage and any sight-based check with disadvantage.
 - **Prone.** You move only by crawling at half speed, and standing up uses your move. Attackers in melee roll damage against you with advantage; attackers at range roll with disadvantage.
-- **Grappled.** Your speed is 0. You may still act, and may break free by spending an action on a MGT or GRC check (difficulty set by the grappler).
-- **Restrained.** Your speed is 0, and you roll damage and GRC checks with disadvantage. Escaping takes an action and a check set by the source.
-- **Stunned.** You cannot move, act, or defend until the condition ends.
-- **Paralyzed / petrified.** You cannot move, act, defend, or speak, and you are helpless (a helpless creature can be slain instantly). Paralysis ends with its duration; petrification ends only when cured by magic.
-- **Charmed.** You treat the source as a trusted friend and will not knowingly harm them. You may resist orders that clearly endanger you (Referee's call).
-- **Asleep / unconscious.** You are prone and helpless and cannot act. Damage or a firm shake wakes a sleeper; an unconscious creature wakes as its effect allows.
-- **Invisible.** You cannot be seen. You roll damage, and any attempt to hide or surprise, with advantage. An attacker who cannot locate you rolls damage against you with disadvantage.
-- **Surprised.** You cannot act during the first round of combat (see Actions: Surprise).
+- **Grappled.** Your speed is 0. You may still act, and may break free by spending an action on a check.
+- **Restrained.** Your speed is 0, and you roll damage and Grace checks with disadvantage. Escaping takes an action and a check.
+- **Paralyzed / Stunned / Petrified.** You cannot move, act, or speak.
+- **Charmed.** You treat the source as a trusted friend and will not knowingly harm them.
 
 ### MORALE
 
@@ -442,7 +440,7 @@ At a breaking point (first casualty, half their number dead, leader slain, facin
 
 PCs can wield magic through arcane spellbooks or divine relics, rare items that cannot be copied or created, only purchased, discovered, or taken. When available for sale, prices typically range from 100 to 1000 gp depending on the power and rarity of the spell or prayer.
 
-**Innate abilities.** Some creatures produce magical effects naturally. These follow the same rules as spells or prayers but use no usage dots. Instead, once used, there is a 2-in-6 chance the creature recharges the ability at the start of its round.
+**Innate abilities.** Some creatures produce magical effects naturally. These follow the same rules as spells or prayers but use no usage dots. Instead, once used, there is a 2-in-6 chance the creature recharges the ability at the start of its turn.
 
 ### CASTING
 
@@ -456,41 +454,41 @@ Both spells and prayers require a main action, a free hand, and the ability to s
 
 A spellbook contains a single specific spell. It occupies 1 inventory slot and has 3 usage dots.
 
-- **Charm.** Up to MND bonus humanoids regard you as a trusted friend for 1 hour. They may realize they were influenced when the spell ends.
-- **Sleep.** Make a MND check against each of up to MND bonus creatures within range. Each target you beat falls asleep for 1 hour. Loud noise or a shake wakes them.
-- **Counterspell.** When a creature you can see casts a spell within range, you may cast this immediately as a free action. Make a MND check to end their spell.
-- **Detect magic.** You sense magical auras within range by focusing for a few minutes. With a MND check, you can also learn an aura's nature and function.
-- **Fly.** A willing creature gains a flying speed equal to their movement for MND bonus minutes.
-- **Invisibility.** A willing creature becomes invisible for MND bonus minutes, or until they take a main action.
+- **Charm.** Up to Mind Bonus humanoids regard you as a trusted friend for 1 hour. They may realize they were influenced when the spell ends.
+- **Sleep.** Make a Mind check against each of up to Mind Bonus creatures within range. Each target you beat falls asleep for 1 hour. Loud noise or a shake wakes them.
+- **Counterspell.** When a creature you can see casts a spell within range, you may cast this immediately as a free action. Make a Mind check to end their spell.
+- **Detect magic.** You sense magical auras within range by focusing for a few minutes. With a Mind check, you can also learn an aura's nature and function.
+- **Fly.** A willing creature gains a flying speed equal to their movement for Mind Bonus minutes.
+- **Invisibility.** A willing creature becomes invisible for Mind Bonus turns, or until they take a main action or suffer damage. While invisible, attackers who cannot locate them roll damage against them with disadvantage, and their own attacks roll damage with advantage.
 - **Mirror image.** Two illusory duplicates of yourself shimmer into being. Each vanishes when it takes any damage, leaves your line of sight, or after 1 watch.
-- **Magic missile.** Bolts of pale fire streak from your hand, striking up to MND bonus targets (or the same target multiple times) for 1d4 direct damage each.
-- **Fireball.** A roaring sphere of flame erupts at a point you can see. All creatures within 8 meters take 2d6 + MND bonus damage.
-- **Elemental wall.** Conjure a wall of fire or ice up to 30 meters long, 2 meters wide, and 4 meters tall, lasting MND bonus rounds. Creatures passing through a fire wall take 1d8 damage. An ice wall blocks line of sight and has 10 HP.
-- **Web.** Sticky, flammable strands fill a 6-meter cube. Trapped creatures cannot move unless they spend an action and succeed on a MGT check.
-- **Telekinesis.** You grip one object with your mind and move it up to 6 meters per round for MND bonus rounds. Manipulating something held or worn by an unwilling creature requires a MND check.
+- **Magic missile.** Bolts of pale fire streak from your hand, striking up to Mind Bonus targets (or the same target multiple times) for 1d4 direct damage each.
+- **Fireball.** A roaring sphere of flame erupts at a point you can see. All creatures within 8 meters take 2d6 + Mind Bonus damage.
+- **Elemental wall.** Conjure a wall of fire or ice up to 30 meters long, 2 meters wide, and 4 meters tall, lasting Mind Bonus rounds. Creatures passing through a fire wall take 1d8 damage. An ice wall blocks line of sight and has 10 HP.
+- **Web.** Sticky, flammable strands fill a 6-meter cube. Trapped creatures cannot move unless they spend an action and succeed on a Might check.
+- **Telekinesis.** You grip one object with your mind and move it up to 6 meters per round for Mind Bonus rounds. Manipulating something held or worn by an unwilling creature requires a Mind check.
 - **Mirrorwalk.** A mirror you touch becomes a two-way gate to another mirror you have touched today.
-- **Message.** Send a message of up to MND bonus × 10 words to a creature you have met. The message arrives instantly regardless of distance.
-- **Golem.** A Stone Golem rises from the ground and obeys your commands for MND bonus hours, then stands inert.
+- **Message.** Send a message of up to Mind Bonus × 10 words to a creature you have met. The message arrives instantly regardless of distance.
+- **Golem.** A Stone Golem rises from the ground and obeys your commands for Mind Bonus hours, then stands inert.
 
 ### EXAMPLE RELICS
 
 Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has 1 usage dot, but grants access to all prayers your deity permits. Acting against that nature, such as a priest of light wielding dark magic, risks the deity's displeasure.
 
-- **Commune.** Ask your deity a question. The answer, if there is one, comes in HRT bonus × 2 words or fewer.
-- **Aura of courage.** Allies who can see or hear you add your HRT bonus to their morale scores and have advantage on checks to resist fear for a day.
-- **Smite.** Declared as part of a melee attack. Add 1d8 + HRT bonus damage to your strike. Against undead and fiends, the additional damage is doubled.
-- **Lay on hands.** A creature you touch regains 1d6 + HRT bonus HP.
-- **Purify.** Cure one creature of poison, disease, or mundane affliction. Curing a magical affliction requires a HRT check.
-- **Light.** Holy light radiates from you in a HRT bonus × 4 meter radius for an hour. Undead and fiends within the light must check morale.
-- **Truth sense.** You instinctively know when a creature speaks a deliberate lie for HRT bonus hours.
-- **Ward.** A silver circle 8 meters across appears on the ground around you. Until you leave the circle, HRT bonus things you name at casting cannot cross it.
-- **Entangle.** Roots erupt from the ground in a 6-meter radius around a point you can see. Trapped creatures cannot move unless they spend an action and succeed on a MGT check.
+- **Commune.** Ask your deity a question. The answer, if there is one, comes in Heart Bonus × 2 words or fewer.
+- **Aura of courage.** Allies who can see or hear you add your Heart Bonus to their morale scores and have advantage on checks to resist fear for a day.
+- **Smite.** Declared as part of a melee attack. Add 1d8 + Heart Bonus damage to your strike. Against undead and fiends, the additional damage is doubled.
+- **Lay on hands.** A creature you touch regains 1d6 + Heart Bonus HP.
+- **Purify.** Cure one creature of poison, disease, or mundane affliction. Curing a magical affliction requires a Heart check.
+- **Light.** Holy light radiates from you in a Heart Bonus × 4 meter radius for an hour. Undead and fiends within the light must check morale.
+- **Truth sense.** You instinctively know when a creature speaks a deliberate lie for Heart Bonus hours.
+- **Ward.** A silver circle 8 meters across appears on the ground around you. Until you leave the circle, Heart Bonus things you name at casting cannot cross it.
+- **Entangle.** Roots erupt from the ground in a 6-meter radius around a point you can see. Trapped creatures cannot move unless they spend an action and succeed on a Might check.
 - **Speak with animals.** You may speak with and understand beasts for 1 watch. They react as NPCs and are not compelled to cooperate.
-- **Wild shape.** You transform into a beast you have seen for HRT bonus hours. You use the beast's HP, MGT, GRC, and movement, but keep your MND and HRT. You cannot cast or use equipment in this form. Reduced to 0 HP, you return to your true form, unconscious, at 1 HP.
-- **Lightning.** A bolt of lightning cuts a line 10 meters long and 2 meters wide. All creatures in its path take 2d8 + HRT bonus damage.
-- **Drain.** Touch a creature to deal 1d6 + HRT bonus direct damage. You regain HP equal to the damage dealt.
-- **Hex.** A creature has disadvantage on checks involving an attribute you name for HRT bonus minutes.
-- **Speak with dead.** The spirit of a corpse you touch manifests and answers HRT bonus questions honestly.
+- **Wild shape.** You transform into a beast you have seen for Heart Bonus hours. You use the beast's HP, Might, Grace, and movement, but keep your Mind and Heart. You cannot cast or use equipment in this form. Reduced to 0 HP, you return to your true form, unconscious, at 1 HP.
+- **Lightning.** A bolt of lightning cuts a line 10 meters long and 2 meters wide. All creatures in its path take 2d8 + Heart Bonus damage.
+- **Drain.** Touch a creature to deal 1d6 + Heart Bonus direct damage. You regain HP equal to the damage dealt.
+- **Hex.** A creature has disadvantage on checks involving an attribute you name for Heart Bonus minutes.
+- **Speak with dead.** The spirit of a corpse you touch manifests and answers Heart Bonus questions honestly.
 
 ---
 
@@ -508,9 +506,9 @@ Not every danger swings a sword.
 - **Extreme heat.** Resting requires two rations instead of one.
 - **Burning.** Fire deals 2d6 damage. A creature that is on fire takes this damage at the start of each of its turns until the flames are extinguished. Drop and roll (main action) to extinguish.
 - **Falling.** 1d4 damage every 2m fallen beyond the first 2. If three or more dice show their max value, you die on impact.
-- **Suffocating.** Hold breath for 6 + MGT bonus rounds. After that, fall unconscious and suffer 2d6 direct damage each round.
-- **Intoxication.** MGT check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.
-- **Poison.** Make an MGT check when exposed or suffer the poison's effects. Mark usage to coat one weapon strike or one drink.
+- **Suffocating.** Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage at the start of each of your turns.
+- **Intoxication.** Might check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.
+- **Poison.** Make an Might check when exposed or suffer the poison's effects. Mark usage to coat one weapon strike or one drink.
 
 ---
 
@@ -532,7 +530,7 @@ When traveling through untamed lands, consult the Travel Oracle once per watch.
 
 **Exploring.** Spending a watch exploring a hex may reveal hidden ruins, lairs, overgrown paths, and buried things. Some secrets require a check.
 
-**Navigation.** In bad weather (storms, fog, blizzards) or featureless terrain (open sea, deep desert, forest at night), make a HRT check. On a failure, you arrive at a random adjacent hex instead of your intended destination.
+**Navigation.** In bad weather (storms, fog, blizzards) or featureless terrain (open sea, deep desert, forest at night), make a Heart check. On a failure, you arrive at a random adjacent hex instead of your intended destination.
 
 **Foraging.** Spend a watch and make a group check to gather 1d4 rations on a success. Difficulty varies by terrain and conditions.
 
@@ -575,7 +573,7 @@ When lingering in a place of danger, or backtracking, consult the Delving Oracle
 
 **Light.** Creatures without a light source or the ability to see in darkness halve their movement, are surprised by all encounters, trigger all traps, cannot map, and make all checks with disadvantage. Light sources mark usage while lit and may be extinguished by wind, water, or other hazards.
 
-**Doors.** Most doors open freely. Stuck or barred doors require a MGT check to force; locked doors require GRC and lockpicks or improvised tools (with disadvantage). Listening at a door requires a HRT check.
+**Doors.** Most doors open freely. Stuck or barred doors require a Might check to force; locked doors require Grace and lockpicks or improvised tools (with disadvantage). Listening at a door requires a Heart check.
 
 ---
 
@@ -606,17 +604,17 @@ Common folk hired for various tasks. They might follow you into dungeons but won
 - **Expert hirelings (40 gp/day).** Alchemists, translators, spies.
 
 **Hireling.** Common folk. Won't fight or risk themselves.
-HP 6, DP 0, MRL 5, MGT 1, GRC 1, MND 1, HRT 1, MOV 10m, ATK punch (1d2, 2m).
+HP 6, DP 0, MRL 5, Might 1, Grace 1, Mind 1, Heart 1, MOV 10m, ATK punch (1d2, 2m).
 
 ### MERCENARIES
 
 Trained combatants who are willing to fight for you but refuse to enter dungeons. Daily wage is 30 gp.
 
 **Swordsman.** Blade for hire to anyone who pays. Won't enter dungeons.
-HP 12, DP 2, MRL 8, MGT 3, GRC 1, MND 1, HRT 1, MOV 10m, ATK sword (1d6+2, 2m).
+HP 12, DP 2, MRL 8, Might 3, Grace 1, Mind 1, Heart 1, MOV 10m, ATK sword (1d6+2, 2m).
 
 **Archer.** Steady-handed bowman. Won't enter dungeons.
-HP 8, DP 1, MRL 8, MGT 1, GRC 3, MND 1, HRT 1, MOV 10m, ATK longbow (1d6+2, 60m).
+HP 8, DP 1, MRL 8, Might 1, Grace 3, Mind 1, Heart 1, MOV 10m, ATK longbow (1d6+2, 60m).
 
 ### AVAILABILITY
 
@@ -640,7 +638,7 @@ Use these procedures to resolve large-scale battles without tracking individual 
 
 **Preparation.** Both sides declare their objective (rout the enemy, seize territory, rescue prisoners) and calculate their combat power. Each unit equals 1 power and costs 100,000 gp/month to field. Some examples might include: 1 archmage, 5 battle clerics, 25 cavalry, 100 archers, or 200 untrained foot soldiers.
 
-**Battle.** Each round, one side makes a check, adding their total power as a bonus against a difficulty of 10 plus the opponent's power. A side with a clear advantage (defending a castle, ambush, high ground) rolls with advantage; a clear disadvantage rolls with disadvantage. The losing side loses 10% of its original strength and makes a morale check against 10 minus the number of rounds lost. Losing a round by 10 or more inflicts 20% casualties instead. Once per battle, a commander may make a HRT challenge roll to negate their side's first failed morale check with an inspiring speech. The battle ends when one side fails a morale check, is destroyed, or withdraws. The victor achieves their stated objective.
+**Battle.** Each round, one side makes a check, adding their total power as a bonus against a difficulty of 10 plus the opponent's power. A side with a clear advantage (defending a castle, ambush, high ground) rolls with advantage; a clear disadvantage rolls with disadvantage. The losing side loses 10% of its original strength and makes a morale check against 10 minus the number of rounds lost. Losing a round by 10 or more inflicts 20% casualties instead. Once per battle, a commander may make a Heart challenge roll to negate their side's first failed morale check with an inspiring speech. The battle ends when one side fails a morale check, is destroyed, or withdraws. The victor achieves their stated objective.
 
 ---
 
@@ -742,74 +740,74 @@ Roll 1d20 on each column and combine the results for a quest hook.
 
 **Rat swarm.** 
 Dozens of rats moving as one. Half damage from single-target attacks. Sees in darkness.
-HP 9, DP 0, MRL 4, MGT 1, GRC 3, MND 0, HRT 0
+HP 9, DP 0, MRL 4, Might 1, Grace 3, Mind 0, Heart 0
 MOV 10m, ATK bites (1d4+1, 2m).
 
 **Goblin.** Sneaky and cowardly. Sees in darkness.
-HP 7, DP 0, MRL 4, MGT 1, GRC 3, MND 1, HRT 1, MOV 10m, ATK dagger (1d6+1, 2m) or sling (1d4+3, 20m).
+HP 7, DP 0, MRL 4, Might 1, Grace 3, Mind 1, Heart 1, MOV 10m, ATK dagger (1d6+1, 2m) or sling (1d4+3, 20m).
 
 **Skeleton.** Mindless undead. Immune to poison and mental effects. Sees in darkness.
-HP 7, DP 1, MRL 11, MGT 1, GRC 1, MND 0, HRT 0, MOV 10m, ATK claws (1d4+1, 2m).
+HP 7, DP 1, MRL 11, Might 1, Grace 1, Mind 0, Heart 0, MOV 10m, ATK claws (1d4+1, 2m).
 
 **Wolf.** Hunts in packs. Roll damage with advantage when another wolf is within 2m of the target.
-HP 10, DP 0, MRL 6, MGT 2, GRC 3, MND 0, HRT 0, MOV 14m, ATK bite (1d6+2, 2m).
+HP 10, DP 0, MRL 6, Might 2, Grace 3, Mind 0, Heart 0, MOV 14m, ATK bite (1d6+2, 2m).
 
 **Zombie.** Relentless undead. 3-in-6 chance it rises again with 1 HP when killed. Fire prevents this.
-HP 12, DP 0, MRL 12, MGT 2, GRC 0, MND 0, HRT 0, MOV 6m, ATK slam (1d6+1, 2m).
+HP 12, DP 0, MRL 12, Might 2, Grace 0, Mind 0, Heart 0, MOV 6m, ATK slam (1d6+1, 2m).
 
 **Bandit.** Likes to ambush.
-HP 8, DP 1, MRL 5, MGT 2, GRC 2, MND 1, HRT 1, MOV 10m, ATK sword (1d6+1, 2m) or bow (1d6+1, 60m).
+HP 8, DP 1, MRL 5, Might 2, Grace 2, Mind 1, Heart 1, MOV 10m, ATK sword (1d6+1, 2m) or bow (1d6+1, 60m).
 
 **Giant spider.** A bitten target must roll against paralytic poison.
-HP 10, DP 0, MRL 6, MGT 2, GRC 5, MND 1, HRT 1, MOV 12m, ATK bite (1d6+1, 2m) or use the web spell.
+HP 10, DP 0, MRL 6, Might 2, Grace 5, Mind 1, Heart 1, MOV 12m, ATK bite (1d6+1, 2m) or use the web spell.
 
-**Harpy.** Creatures that hear the song must make a MND check or move toward the harpy.
-HP 8, DP 0, MRL 6, MGT 1, GRC 3, MND 3, HRT 3, MOV 8m (16m flying), ATK claws (1d6+1, 2m).
+**Harpy.** Creatures that hear the song must make a Mind check or move toward the harpy.
+HP 8, DP 0, MRL 6, Might 1, Grace 3, Mind 3, Heart 3, MOV 8m (16m flying), ATK claws (1d6+1, 2m).
 
 **Blink dog.** Feytouched hound.
-HP 12, DP 0, MRL 7, MGT 2, GRC 4, MND 2, HRT 2, MOV 12m, ATK bite (1d6+1, 2m).
+HP 12, DP 0, MRL 7, Might 2, Grace 4, Mind 2, Heart 2, MOV 12m, ATK bite (1d6+1, 2m).
 
 **Bandit leader.** Nearby bandits use the leader's MRL. Commands from the back line.
-HP 12, DP 2, MRL 9, MGT 3, GRC 2, MND 2, HRT 2, MOV 10m, ATK greatsword (1d10+2, 2m).
+HP 12, DP 2, MRL 9, Might 3, Grace 2, Mind 2, Heart 2, MOV 10m, ATK greatsword (1d10+2, 2m).
 
 **Orc warrior.** Aggressive and territorial.
-HP 12, DP 2, MRL 8, MGT 3, GRC 1, MND 1, HRT 1, MOV 10m, ATK axe (1d8+2, 2m) or javelin (1d4+2, 25m).
+HP 12, DP 2, MRL 8, Might 3, Grace 1, Mind 1, Heart 1, MOV 10m, ATK axe (1d8+2, 2m) or javelin (1d4+2, 25m).
 
 **Stone golem.** Immune to poison and mental effects.
-HP 16, DP 3, MRL 12, MGT 3, GRC 0, MND 0, HRT 0, MOV 8m, ATK slam (1d8+3, 2m).
+HP 16, DP 3, MRL 12, Might 3, Grace 0, Mind 0, Heart 0, MOV 8m, ATK slam (1d8+3, 2m).
 
 **Mimic.** Disguises itself as a chest, door, or piece of furniture. Attacks with surprise if unnoticed.
-HP 14, DP 2, MRL 8, MGT 3, GRC 1, MND 1, HRT 1, MOV 4m, ATK bite (1d8+2, 2m).
+HP 14, DP 2, MRL 8, Might 3, Grace 1, Mind 1, Heart 1, MOV 4m, ATK bite (1d8+2, 2m).
 
 **Ogre.** Dim-witted and brutal. Throws boulders at range.
-HP 20, DP 1, MRL 7, MGT 5, GRC 1, MND 0, HRT 0, MOV 10m, ATK greatclub (1d10+3, 2m) or boulder (1d8+3, 30m).
+HP 20, DP 1, MRL 7, Might 5, Grace 1, Mind 0, Heart 0, MOV 10m, ATK greatclub (1d10+3, 2m) or boulder (1d8+3, 30m).
 
 **Werewolf.** Immune to mundane weapons in beast form. Reverts to human form at 0 HP, unconscious.
-HP 18, DP 1, MRL 9, MGT 4, GRC 3, MND 2, HRT 2, MOV 12m, ATK claws (1d8+2, 2m).
+HP 18, DP 1, MRL 9, Might 4, Grace 3, Mind 2, Heart 2, MOV 12m, ATK claws (1d8+2, 2m).
 
 **Ghost.** Immune to mundane weapons. Passes through walls. Sees in darkness.
-HP 8, DP 0, MRL 10, MGT 1, GRC 1, MND 3, HRT 4, MOV 10m, ATK touch (1d6 direct, 2m).
+HP 8, DP 0, MRL 10, Might 1, Grace 1, Mind 3, Heart 4, MOV 10m, ATK touch (1d6 direct, 2m).
 
 **Living armor.** Held together by magic. Loud when moving. Immune to mental effects. Sees in darkness.
-HP 16, DP 3, MRL 12, MGT 4, GRC 1, MND 1, HRT 1, MOV 6m, ATK halberd (1d6+2, 4m).
+HP 16, DP 3, MRL 12, Might 4, Grace 1, Mind 1, Heart 1, MOV 6m, ATK halberd (1d6+2, 4m).
 
 **Gelatinous cube.** Immune to piercing weapons. Engulfed targets are trapped and take ongoing damage.
-HP 22, DP 0, MRL 12, MGT 3, GRC 0, MND 0, HRT 0, MOV 4m, ATK engulf (1d6 ongoing, 2m).
+HP 22, DP 0, MRL 12, Might 3, Grace 0, Mind 0, Heart 0, MOV 4m, ATK engulf (1d6 ongoing, 2m).
 
-**Brain flayer.** Psionic horror from the deep. Psychic blast: all creatures within 6m must make a MND check or be stunned for 1 round (recharges on 1–2). If a stunned creature is grappled at the start of the Brain Flayer's turn, it begins extracting the brain — the victim dies in 2 rounds unless freed.
-HP 16, DP 1, MRL 8, MGT 3, GRC 2, MND 7, HRT 3, MOV 10m, ATK tentacles (1d6+2, 2m, grapples on hit).
+**Brain flayer.** Psionic horror from the deep. Psychic blast: all creatures within 6m must make a Mind check or be stunned for 1 round (recharges on 1–2). If a stunned creature is grappled at the start of the Brain Flayer's turn, it begins extracting the brain (the victim dies in 2 rounds unless freed).
+HP 16, DP 1, MRL 8, Might 3, Grace 2, Mind 7, Heart 3, MOV 10m, ATK tentacles (1d6+2, 2m, grapples on hit).
 
-**Basilisk.** Any creature meeting its gaze must make a MND check or be petrified until cured by magic.
-HP 14, DP 2, MRL 7, MGT 3, GRC 1, MND 4, HRT 1, MOV 8m, ATK bite (1d6+2, 2m).
+**Basilisk.** Any creature meeting its gaze must make a Mind check or be petrified until cured by magic.
+HP 14, DP 2, MRL 7, Might 3, Grace 1, Mind 4, Heart 1, MOV 8m, ATK bite (1d6+2, 2m).
 
-**Troll.** Regenerates 1d6 HP at the start of each round. Fire and acid prevent regeneration for 1 round. Sees in darkness.
-HP 24, DP 1, MRL 9, MGT 5, GRC 2, MND 1, HRT 1, MOV 12m, ATK claws (1d8+3, 2m).
+**Troll.** Regenerates 1d6 HP at the start of each of its turns. Fire and acid prevent regeneration for 1 round. Sees in darkness.
+HP 24, DP 1, MRL 9, Might 5, Grace 2, Mind 1, Heart 1, MOV 12m, ATK claws (1d8+3, 2m).
 
-**Vampire.** Undead lord. Regenerates 1d6 HP at the start of each round (prevented by sunlight or radiant damage for 1 round). Charming gaze: a creature meeting its eyes must make a MND check or be charmed for 1 hour (recharges on 1–2). Reforms in its coffin after 1d4 days unless destroyed by sunlight, a stake through the heart, or running water.
-HP 40, DP 2, MRL 11, MGT 5, GRC 5, MND 5, HRT 6, MOV 12m, ATK drain (1d8+3 direct, 2m, heals equal to damage dealt).
+**Vampire.** Undead lord. Regenerates 1d6 HP at the start of each of its turns (prevented by sunlight or radiant damage for 1 round). Charming gaze: a creature meeting its eyes must make a Mind check or be charmed for 1 hour (recharges on 1–2). Reforms in its coffin after 1d4 days unless destroyed by sunlight, a stake through the heart, or running water.
+HP 40, DP 2, MRL 11, Might 5, Grace 5, Mind 5, Heart 6, MOV 12m, ATK drain (1d8+3 direct, 2m, heals equal to damage dealt).
 
 **Lich.** Undead sorcerer of immense power. Sees in darkness. Carries 3 spellbooks. Can only be permanently killed by destroying the phylactery first.
-HP 30, DP 2, MRL 12, MGT 2, GRC 2, MND 8, HRT 6, MOV 10m, ATK touch (1d8 direct, 2m) or spells.
+HP 30, DP 2, MRL 12, Might 2, Grace 2, Mind 8, Heart 6, MOV 10m, ATK touch (1d8 direct, 2m) or spells.
 
 **Red dragon.** Immune to fire. Hoards gold obsessively. Likes to be flattered.
-HP 100, DP 3, MRL 11, MGT 8, GRC 5, MND 6, HRT 5, MOV 12m (24m flying), ATK claws (2d6+4, 2m) or fire breath (2d10 to all targets in a 10m cone, recharges on 1–2).
+HP 100, DP 3, MRL 11, Might 8, Grace 5, Mind 6, Heart 5, MOV 12m (24m flying), ATK claws (2d6+4, 2m) or fire breath (2d10 to all targets in a 10m cone, recharges on 1–2).

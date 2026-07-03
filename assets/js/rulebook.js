@@ -100,7 +100,7 @@ function enhanceTables() {
 /* monster / NPC stat blocks: NAME + special, then two mono stat rows
    (core attributes, then MRL/MOV/ATK) — regrouped from the source line */
 function enhanceStatBlocks() {
-  const MAIN = ["HP", "DP", "MGT", "GRC", "MND", "HRT"];
+  const MAIN = ["HP", "DP", "Might", "Grace", "Mind", "Heart"];
   const SUB  = ["MRL", "MOV", "ATK"];
   docEl.querySelectorAll("p").forEach(p => {
     const m = p.innerHTML.match(/^([\s\S]*?)<br\s*\/?>\s*(HP\b[\s\S]*)$/);
@@ -128,8 +128,8 @@ function parseStats(str) {
   const stats = {};
   const atk = str.match(/\bATK\s+([\s\S]+?)\.?\s*$/);
   if (atk) { stats.ATK = atk[1].trim(); str = str.slice(0, atk.index); }
-  str.split(",").forEach(part => {
-    const kv = part.trim().match(/^([A-Z]{2,3})\s+([\s\S]+)$/);
+  str.split(/,|<br\s*\/?>/i).forEach(part => {
+    const kv = part.trim().match(/^([A-Za-z]{2,5})\s+([\s\S]+)$/);
     if (kv) stats[kv[1]] = kv[2].trim();
   });
   return stats;

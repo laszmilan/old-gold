@@ -47,7 +47,7 @@
   --space-6:    3.5rem;
 
   /* layout */
-  --measure:      40rem;   /* reading column (rulebook, generators card) */
+  --measure:      38rem;   /* reading column (rulebook, generators card) */
   --sidebar:      20rem;
   --topbar:       3.25rem;
   /* shared page padding, so every standalone page lines up */
@@ -107,7 +107,7 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   font-size: var(--fs-body);
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -377,6 +377,9 @@ main {
 .doc hr { border: none; margin: 0; }
 
 .doc img { max-width: 100%; height: auto; filter: grayscale(1); }
+/* the ancestry party plate keeps its color; the grayscale house style is for
+   the line-art spot illustrations */
+.doc img[src$="ancestries.png"] { filter: none; }
 
 /* loading / error message */
 .doc .doc-status {
@@ -584,10 +587,11 @@ main {
 }
 .gen-title-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-3);
+  margin: 0 0 var(--space-2);
   padding-bottom: .55rem;
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);   /* masthead rule, same as the rulebook h1 */
 }
 .gen-heading {
   position: relative;
@@ -596,53 +600,31 @@ main {
   padding: 0;
   border-bottom: none;
 }
-.gen-heading::before {
-  content: "Generator";
-  display: block;
-  margin-bottom: .15rem;
-  font-family: var(--sans);
-  font-size: var(--fs-micro);
-  font-weight: var(--w-bold);
-  letter-spacing: var(--ls-label);
-  text-transform: uppercase;
-  color: var(--muted);
-}
+/* reroll — the shared ghost button voice, with a spin on hover */
 .gen-reroll {
   flex: 0 0 auto;
-  width: 3rem;
-  height: 3rem;
-  margin-top: .25rem;
-  display: grid;
-  place-items: center;
-  border: 1.5px solid var(--ink);
-  border-radius: 50%;
-  background: var(--paper);
-  color: var(--ink);
+  gap: .55rem;
   cursor: pointer;
-  transition: background .12s ease, color .12s ease, transform .12s ease;
 }
 .gen-reroll svg {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.8;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: transform .18s ease;
 }
-.gen-reroll:hover {
-  background: var(--ink);
-  color: var(--paper);
-  transform: rotate(-18deg);
-}
-.gen-reroll:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.gen-reroll:hover svg { transform: translateY(-1px) rotate(-70deg); }
+/* deck under the masthead — same voice as the rulebook's h1 + p subtitle */
 .gen-lead {
   position: relative;
   max-width: 42rem;
-  font-family: var(--sans);
-  font-style: normal;
-  font-size: var(--fs-ui);
-  line-height: 1.6;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--fs-deck);
+  line-height: 1.5;
   color: var(--muted);
-  margin: .8rem 0 var(--space-3);
+  margin: 0 0 var(--space-3);
 }
 .gen-controls {
   position: relative;
@@ -652,23 +634,19 @@ main {
   background: var(--paper);
 }
 
-/* the rolled character card */
+/* the rolled character card — name up top, vitals + attributes in a side
+   rail spanning both rows, labeled details below the name */
 .pc-card {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(12.5rem, .55fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "head   side"
+    "detail side";
   gap: var(--space-3);
-  border: 1px solid var(--ink);
-  background: var(--paper);
-  padding: var(--space-3);
 }
-.pc-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: .32rem;
-  background: var(--ink);
-}
+.pc-head { grid-area: head; }
 .pc-name {
   font-family: var(--serif);
   font-weight: var(--w-semibold);
@@ -684,64 +662,94 @@ main {
   margin: .25rem 0 0;
 }
 .pc-side {
+  grid-area: side;
   display: grid;
-  gap: var(--space-3);
+  gap: .55rem;
   align-content: start;
+}
+.pc-vitals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .55rem;
 }
 .pc-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .55rem;
 }
+/* one shared stat-tile voice: micro-caps key over a bold figure */
+.pc-vitals > span,
 .pc-stat {
-  padding: .55rem .65rem;
-  border: 1px solid var(--hair);
-  font-family: var(--sans);
-  font-size: var(--fs-ui);
-  white-space: nowrap;
-}
-.pc-stat b { font-family: var(--sans); font-weight: var(--w-bold); }
-.pc-stat i { font-style: normal; color: var(--muted); }
-.pc-vitals {
-  font-family: var(--sans);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .55rem;
-  font-size: var(--fs-ui);
-}
-.pc-vitals span {
-  display: grid;
-  gap: .1rem;
-  min-height: 3.2rem;
+  gap: .15rem;
+  min-height: 3.8rem;
   place-content: center;
+  padding: .45rem .35rem;
   border: 1px solid var(--ink);
+  background: var(--paper);
+  font-family: var(--sans);
   text-align: center;
 }
-.pc-vitals b {
+.pc-vitals b,
+.pc-stat b {
   font-family: var(--sans);
   font-size: var(--fs-micro);
   font-weight: var(--w-bold);
   letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pc-num {
+  font-weight: var(--w-bold);
+  font-size: 1.35rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.pc-num i {
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--fs-small);
   color: var(--muted);
 }
 .pc-detail {
-  margin: var(--space-3) 0 0;
+  grid-area: detail;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .75rem var(--space-3);
+  gap: .9rem var(--space-3);
+  align-content: start;
 }
 .pc-detail > div { display: grid; gap: .2rem; }
 .pc-detail dt {
   margin: 0;
   font-family: var(--sans);
-  font-size: var(--fs-tiny);
+  font-size: var(--fs-micro);
   letter-spacing: var(--ls-caps);
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold);   /* gold key labels, same idiom as the EXAMPLE flags */
 }
 .pc-detail dd {
   margin: 0;
   line-height: 1.45;
+}
+/* ancestry trait — rules text, so it closes the stat rail as a mini
+   statblock (same filled-card voice as the bestiary's .statblock) */
+.pc-trait {
+  padding: .6rem .8rem;
+  border: 1px solid var(--ink);
+  border-left: 3px solid var(--ink);
+  background: var(--surface);
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+.pc-trait b {
+  display: block;
+  margin-bottom: .15rem;
+  font-size: var(--fs-micro);
+  font-weight: var(--w-bold);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
 }
 
 /* ----- dice roller ----- */
@@ -834,8 +842,13 @@ main {
   }
   .gen-switch { flex: 1 0 max-content; }
   .gen-switch::after { display: none; }
-  .pc-card { grid-template-columns: 1fr; }
-  .pc-side { order: -1; }
+  /* stacked card: name first, then the stat rail, then the details */
+  .pc-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "head" "side" "detail";
+  }
+  .pc-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .pc-detail {
     grid-template-columns: 1fr;
     gap: var(--space-2);
@@ -853,16 +866,14 @@ main {
     align-items: center;
     gap: var(--space-2);
   }
-  .gen-reroll {
-    width: 2.65rem;
-    height: 2.65rem;
-    margin-top: 0;
-  }
+  /* icon-only reroll: the tight title row has no room for the label */
+  .gen-reroll { padding: .55rem .7rem .45rem; }
+  .gen-reroll .gen-reroll-label { display: none; }
   .gen-controls { padding: var(--space-2); }
   .dice-quick { grid-template-columns: repeat(3, 1fr); }
   .dice-entry { flex-direction: column; }
   .dice-entry .btn { width: 100%; }
-  .pc-card { padding: var(--space-3); }
+  .pc-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pc-detail > div { grid-template-columns: 1fr; gap: 0; }
 }
 
@@ -873,8 +884,6 @@ main {
 
 @media (min-width: 1280px) {
   .gen-doc { width: min(100%, 78rem); }
-  .pc-detail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .pc-detail > div:nth-child(5) { grid-column: span 2; }
 }
 
 @media (max-height: 760px) and (min-width: 821px) {
@@ -1032,9 +1041,7 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
   overflow: hidden;
   /* on desktop the grid stretches this to the hero's height; once stacked the
      art is absolutely positioned and gives no intrinsic height, so anchor the
-     panel to a near-square ratio — the wide artwork ratio made too flat a
-     rectangle, and a squarer plate gives the contained art vertical breathing
-     room so the downward bias never pushes the tail past the frame */
+     panel to a square ratio that matches the square 1:1 cover art */
   aspect-ratio: 1 / 1;
 }
 @media (min-width: 821px) { .hero-cover { aspect-ratio: auto; } }
@@ -1046,8 +1053,8 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
   pointer-events: none;
 }
 /* the img fills the area inside the gold frame; `contain` keeps the dragon's
-   ratio (no crop) and `object-position` biases it low WITHIN that box, so the
-   tail can never spill past the frame the way a transform would */
+   ratio (no crop). The art ships on a square 1:1 canvas with the dragon already
+   centered, so it sits centered in the frame — no positional bias needed */
 .hero-cover-img {
   position: absolute;
   top: clamp(1rem, 2.5vw, 1.75rem);
@@ -1055,7 +1062,7 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
   width: calc(100% - 2 * clamp(1rem, 2.5vw, 1.75rem));
   height: calc(100% - 2 * clamp(1rem, 2.5vw, 1.75rem));
   object-fit: contain;
-  object-position: 50% 70%;
+  object-position: 50% 50%;
 }
 
 /* stacked (mobile/tablet) hero: the big --pad-block top gap is there to balance
