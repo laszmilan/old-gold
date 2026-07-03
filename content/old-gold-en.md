@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Old Gold is a fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat. It is my love letter to tabletop RPGs, blending the rules and ideas I love from both Old School Renaissance design and modern games. I hope you'll enjoy it!*
+*Old Gold is a fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat, where you play a party of adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that waits there. It is my love letter to tabletop RPGs, blending the rules and ideas I love from both Old School Renaissance design and modern games. I spent years making it, and I share it hoping you'll find as much joy at the table as we have.*
 
 ### WHAT YOU NEED
 
@@ -101,13 +101,13 @@ HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 f
 | 2–5 | Unconscious at 1 HP for 1d4 watches. |
 | 6 | You recover to 1 HP and may act. |
 
-**Resting.** To rest, spend a watch sleeping and consume a ration. A rest interrupted for more than an hour grants no benefit. A successful rest restores 1d6 HP, but you can only benefit from one rest per day. If you go a full day without resting, you have disadvantage on all rolls until you do.
+**Resting.** To rest, spend a watch sleeping and consume a ration. A successful rest restores 1d6 HP, but you can only benefit from one rest per day. A rest interrupted for more than an hour grants no benefit. If you go a full day without resting, you have disadvantage on all rolls until you do.
 
 **Deprivation.** Extended lack of food or water eventually requires Death Rolls at the start of each day. Extended lack of sleep gives a 1-in-6 chance of falling asleep for 1d4 watches at the start of each watch.
 
 ### DEFENSE POINTS
 
-DP represents armor, cover, and magical protection. Your base DP is 0. When you take damage, subtract your DP and apply the rest to your HP. Damage reduced to 0 or below deals nothing.
+DP represents armor, cover, and magical protection. Your base DP is 0. When you take damage from any source, subtract your DP and apply the rest to your HP. Damage reduced to 0 or below deals nothing.
 
 **Cover.** Partial cover grants +2 DP, while full cover blocks attacks entirely.
 
@@ -120,10 +120,10 @@ PCs can carry equipment in 12 inventory slots, divided across three locations.
 | Location | Slots | Access |
 |---|---|---|
 | Hands | 2 | Ready to use. |
-| Body | 4 | Swap to hands as free action. |
+| Body | 4 | Swap to hands as a free action. |
 | Pack | 6 | Retrieve with an action. |
 
-Most items take one slot, but bulky or heavy items take two. You cannot carry items beyond your capacity. The slots on the character sheet are sized for sticky notes. Write item names, dots, and effects on these as needed, then move them between slots, pass them to another player, or set them aside as fiction demands.
+Most items take one slot, while bulky or heavy ones take two, and you cannot carry more than your slots hold. Write each item's name, dots, and effects on its sticky note, then move it between slots, hand it to another player, or set it aside as the fiction demands.
 
 **Depletion.** Most items carry three usage dots. Mark a dot whenever you use an item in a way that might spend, damage, or wear it out. When the last dot is filled, the item is spent: broken, empty, or gone. Some items refill rather than break, for example a lantern clears its dots with lantern oil. How a dot is spent depends on the item:
 
@@ -131,16 +131,17 @@ Most items take one slot, but bulky or heavy items take two. You cannot carry it
 - **Light sources.** Mark a dot for each period the light burns, as listed in Light Sources.
 - **Weapons, armor & shields.** Roll 1d6 after each combat and mark a dot on a 1. A blacksmith repairs each marked dot for 10% of the item's price.
 - **Throwing weapons.** Each dot is one weapon, so a full slot holds three. Mark a dot as you throw one, then after combat roll 1d6 for each and recover it on a 2–6, clearing the dot.
+- **Ammunition.** Arrows, bolts, and sling stones are not tracked. Assume you carry enough.
 - **Consumables.** Each dot is one dose, such as a potion, ration, or vial of poison. Mark a dot as you use it; when the last is gone, so is the item.
 - **Spellbooks & relics.** Mark a dot when you cast a spell or invoke a prayer, then clear all dots on a successful rest. A relic has only one dot.
-
-### STARTING EQUIPMENT
-
-Choose a fitting combination of weapon, armor, spellbook, or relic for your character. You also start with 10 + 2d20 gp and you are assumed to have a waterskin, bedroll, flint & steel, and basic clothing on you unless the fiction demands otherwise (these take no slots).
 
 ### COINAGE
 
 Gold Pieces (gp) are the standard currency used throughout the realm. A day's unskilled labor pays 10 gp. The first 250 gp you carry takes no slots, but beyond that, each 250 gp requires a pouch (1 slot). In larger settlements, you can safely store gold and items, but retrieving them costs 1% of the stored value.
+
+### STARTING EQUIPMENT
+
+Choose a fitting combination of weapon, armor, spellbook, or relic for your character. You also start with 10 + 2d20 gp and you are assumed to have a waterskin, bedroll, flint & steel, and basic clothing on you unless the fiction demands otherwise (these take no slots). A Referee may adjust starting wealth to fit a character's background. See Equipment for the full tables and prices.
 
 ### ADVANCEMENT
 
@@ -244,8 +245,8 @@ You share a bond with each player sitting next to you (or pair characters in sol
 | 7 | Traveling companions who simply kept moving together |
 | 8 | Bonded over drink, game, or a shared habit |
 | 9 | Bound to the same third person |
-| 10 | Both survived something that should have killed you |
-| 11 | Distrust each other, but circumstances made you allies |
+| 10 | Both survived something that should have killed them |
+| 11 | Distrust each other, but circumstances made them allies |
 | 12 | Bound by a secret neither can afford to have revealed |
 
 ---
@@ -349,7 +350,7 @@ When the outcome of an action is uncertain, make a check: roll 1d20, add your re
 
 **Advantage & disadvantage.** When you have advantage, roll twice and take the higher result. Conversely, when you have disadvantage, roll twice and take the lower one. These effects can apply to any roll (a check, a damage roll, even a death roll). They do not stack and cancel each other out.
 
-**Helping.** Once per rest, you can help an ally if you can reasonably contribute to their task. When helped, the ally makes their check with advantage.
+**Helping.** When an ally can meaningfully contribute to your task, you make the check with advantage.
 
 **Group challenges.** When multiple adventurers face the same challenge (sneaking past guards, crossing a river), each rolls individually and the group succeeds if at least half succeed.
 
@@ -383,7 +384,7 @@ When the sequence of actions matters, the game shifts into rounds. Each round, e
 
 Creatures act in order of their Grace, highest first. PCs act before NPCs when tied. If multiple PCs share the same Grace, they decide among themselves.
 
-**Surprise.** Surprising your opponents requires preparation and an appropriate check. Surprised creatures cannot act during the first round.
+**Surprise.** A successful ambush requires preparation and an appropriate check (for example, Grace to spring a trap unseen, or Heart to notice one coming). As always, the player rolls whenever a PC is involved. Surprised creatures cannot act during the first round.
 
 ### MOVEMENT
 
@@ -415,13 +416,13 @@ In Old Gold you only need to roll for damage; use your weapon's damage die, add 
 
 **Unarmed & improvised.** Fists deal 1d2 + Might Bonus damage. Bottles, chair legs, rocks: 1d4 + Might Bonus damage.
 
-**Ranged attacks.** Ranged and throwing weapons cannot target creatures beyond their listed range, or creatures within melee reach. When shooting into melee, there is a 1-in-6 chance your shot strikes a random ally in the melee instead of your intended target. Ammunition for ranged weapons is abstracted and not tracked.
+**Ranged attacks.** Ranged and throwing weapons cannot target creatures beyond their listed range, or creatures within melee reach. When shooting into melee, there is a 1-in-6 chance your shot strikes a random ally in the melee instead of your intended target.
 
 **Dual-wielding.** Roll with both weapons then keep the higher result.
 
 ### CONDITIONS
 
-Effects and maneuvers can impose the conditions below. A condition lasts until the encounter ends, the effect's stated duration runs out, or a reasonable action clears it.
+Effects and maneuvers can impose the conditions below. A condition lasts until the encounter ends, the effect's stated duration runs out, or a reasonable action clears it. Beyond their mechanics, conditions should shape the fiction.
 
 - **Blinded.** Roll damage and any sight-based check with disadvantage.
 - **Prone.** You move only by crawling at half speed, and standing up uses your move. Attackers in melee roll damage against you with advantage; attackers at range roll with disadvantage.
@@ -429,6 +430,7 @@ Effects and maneuvers can impose the conditions below. A condition lasts until t
 - **Restrained.** Your speed is 0, and you roll damage and Grace checks with disadvantage. Escaping takes an action and a check.
 - **Paralyzed / Stunned / Petrified.** You cannot move, act, or speak.
 - **Charmed.** You treat the source as a trusted friend and will not knowingly harm them.
+- **Frightened.** While the source of your fear remains in sight, you cannot willingly move toward it, and you roll damage against it with disadvantage.
 
 ### MORALE
 
@@ -452,9 +454,9 @@ Both spells and prayers require a main action, a free hand, and the ability to s
 
 ### EXAMPLE SPELLBOOKS
 
-A spellbook contains a single specific spell. It occupies 1 inventory slot and has 3 usage dots.
+A spellbook contains a single specific spell. It occupies 1 inventory slot and has 3 usage dots that refill on a rest.
 
-- **Charm.** Up to Mind Bonus humanoids regard you as a trusted friend for 1 hour. They may realize they were influenced when the spell ends.
+- **Charm.** Make a Mind check against each of up to Mind Bonus humanoids within range. Each you beat regards you as a trusted friend for 1 hour, and may realize they were influenced when it ends.
 - **Sleep.** Make a Mind check against each of up to Mind Bonus creatures within range. Each target you beat falls asleep for 1 hour. Loud noise or a shake wakes them.
 - **Counterspell.** When a creature you can see casts a spell within range, you may cast this immediately as a free action. Make a Mind check to end their spell.
 - **Detect magic.** You sense magical auras within range by focusing for a few minutes. With a Mind check, you can also learn an aura's nature and function.
@@ -472,7 +474,7 @@ A spellbook contains a single specific spell. It occupies 1 inventory slot and h
 
 ### EXAMPLE RELICS
 
-Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has 1 usage dot, but grants access to all prayers your deity permits. Acting against that nature, such as a priest of light wielding dark magic, risks the deity's displeasure.
+Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has 1 usage dot that refills on a rest, but grants access to all prayers your deity permits. Acting against that nature, such as a priest of light wielding dark magic, risks the deity's displeasure.
 
 - **Commune.** Ask your deity a question. The answer, if there is one, comes in Heart Bonus × 2 words or fewer.
 - **Aura of courage.** Allies who can see or hear you add your Heart Bonus to their morale scores and have advantage on checks to resist fear for a day.
@@ -482,12 +484,12 @@ Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has
 - **Light.** Holy light radiates from you in a Heart Bonus × 4 meter radius for an hour. Undead and fiends within the light must check morale.
 - **Truth sense.** You instinctively know when a creature speaks a deliberate lie for Heart Bonus hours.
 - **Ward.** A silver circle 8 meters across appears on the ground around you. Until you leave the circle, Heart Bonus things you name at casting cannot cross it.
-- **Entangle.** Roots erupt from the ground in a 6-meter radius around a point you can see. Trapped creatures cannot move unless they spend an action and succeed on a Might check.
+- **Bless.** Up to Heart Bonus allies who can hear you each gain advantage on one roll of their choice before the encounter ends.
 - **Speak with animals.** You may speak with and understand beasts for 1 watch. They react as NPCs and are not compelled to cooperate.
 - **Wild shape.** You transform into a beast you have seen for Heart Bonus hours. You use the beast's HP, Might, Grace, and movement, but keep your Mind and Heart. You cannot cast or use equipment in this form. Reduced to 0 HP, you return to your true form, unconscious, at 1 HP.
 - **Lightning.** A bolt of lightning cuts a line 10 meters long and 2 meters wide. All creatures in its path take 2d8 + Heart Bonus damage.
 - **Drain.** Touch a creature to deal 1d6 + Heart Bonus direct damage. You regain HP equal to the damage dealt.
-- **Hex.** A creature has disadvantage on checks involving an attribute you name for Heart Bonus minutes.
+- **Hex.** Make a Heart check against a creature within range. If you beat it, they have disadvantage on checks involving an attribute you name for Heart Bonus minutes.
 - **Speak with dead.** The spirit of a corpse you touch manifests and answers Heart Bonus questions honestly.
 
 ---
@@ -497,18 +499,18 @@ Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has
 Not every danger swings a sword.
 
 - **Rain.** Heavy rain reduces visibility, drowns out sound, slows movement, and turns ground to mud. Prolonged rain may cause flooding.
-- **Lightning.** 2d10 damage. Frightens animals and ignites flammable materials.
+- **Lightning.** 2d10 damage. Nearby animals become Frightened and flammable materials ignite.
 - **Snow.** Reduces visibility and slows movement. Heavy snow disorients and counts as difficult terrain.
 - **Extreme cold.** Without proper gear, suffer 1d6 direct damage every watch. Resting gives no benefit without fire and shelter.
 - **Fog.** Reduces visibility and disorients. Navigation checks are required even in familiar terrain.
 - **Wind.** Halves the range of ranged and thrown weapons. Strong wind drowns out sound, slows movement, and may blow over unsecured objects. Carries scents.
 - **Storm.** Combines rain, wind, and lightning at their worst.
-- **Extreme heat.** Resting requires two rations instead of one.
+- **Extreme heat.** Without water and shade, suffer 1d3 direct damage each watch, and resting consumes an extra ration.
 - **Burning.** Fire deals 2d6 damage. A creature that is on fire takes this damage at the start of each of its turns until the flames are extinguished. Drop and roll (main action) to extinguish.
 - **Falling.** 1d4 damage every 2m fallen beyond the first 2. If three or more dice show their max value, you die on impact.
 - **Suffocating.** Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage at the start of each of your turns.
 - **Intoxication.** Might check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.
-- **Poison.** Make an Might check when exposed or suffer the poison's effects. Mark usage to coat one weapon strike or one drink.
+- **Poison.** Make a check to resist when exposed, or suffer its effects. Mark usage to coat one weapon strike or one drink.
 
 ---
 
@@ -534,7 +536,7 @@ When traveling through untamed lands, consult the Travel Oracle once per watch.
 
 **Foraging.** Spend a watch and make a group check to gather 1d4 rations on a success. Difficulty varies by terrain and conditions.
 
-**Mounts & vehicles.** Mounts and vehicles don't increase travel speed, but they expand what you can carry (inventory slots equal HP). Ships travel 1 hex per watch on water. Airships are rare and wondrous, and they travel above in a straight line, ignoring the terrain.
+**Mounts & vehicles.** Mounts and vehicles don't increase travel speed, but they expand what you can carry (inventory slots equal HP). Ships travel 3 hexes per watch on water. Airships are rare and wondrous, traveling 3 hexes per watch in a straight line, ignoring the terrain below.
 
 | Name | HP / Slt | Crew | Price |
 |---|---|---|---|
