@@ -330,7 +330,7 @@ main {
   max-width: min(48rem, 100%);
 }
 .table-wrap table { margin: 0; }
-.doc table { width: 100%; border-collapse: collapse; font-size: var(--fs-ui); }
+.doc table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
 .doc thead th {
   text-align: left;
   font-family: var(--sans);

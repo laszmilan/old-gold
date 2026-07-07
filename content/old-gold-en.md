@@ -137,7 +137,11 @@ Most items take one slot, while bulky or heavy ones take two, and you cannot car
 
 ### COINAGE
 
-Gold Pieces (gp) are the standard currency used throughout the realm. A day's unskilled labor pays 10 gp. The first 250 gp you carry takes no slots, but beyond that, each 250 gp requires a pouch (1 slot). In larger settlements, you can safely store gold and items, but retrieving them costs 1% of the stored value.
+Gold Pieces (gp) are the standard currency used throughout the realm, and a day's unskilled labor pays 10 gp. The first 250 gp you carry takes no slots, but beyond that, each 250 gp requires a pouch (1 slot).
+
+**Selling.** Merchants pay less for anything worn, damaged, or partly spent, half as a rule of thumb, little or nothing for the badly used. Valuables like gems or jewelry sell at full price in a city and half in a village, while bulky trade goods like silk or ore are the reverse.
+
+**Banking.** In larger settlements, you can safely store gold and items, but retrieving them costs 1% of the stored value.
 
 ### STARTING EQUIPMENT
 
@@ -267,7 +271,13 @@ You share a bond with each player sitting next to you (or pair characters in sol
 
 When used, weapons and shields occupy hand slots and armor occupies body slots.
 
-**Masterwork equipment.** Costs 10 times the base price. Masterwork weapons increase their damage die by one step (e.g. from 1d6 to 1d8), while masterwork armor grants +1 additional DP.
+**Masterwork equipment.** Costs 10 times the base price. A masterwork weapon deals +1 damage, and masterwork armor grants +1 DP.
+
+**Magic items.** Rarer still, some gear has a spell or prayer bound into it. Beyond serving as its base gear, it carries a magical effect, always active in some and invoked in others. An invoked effect spends usage dots like the spellbook or relic it draws on and refills them on a rest. A magic item cannot be crafted, only found, taken, or bargained for, and since it cannot be damaged or destroyed through mundane means, it never suffers wear.
+
+- **Flaming blade.** A melee weapon that, on command, wreathes itself in fire for an hour, shedding light in a 4m radius and adding 1d4 damage to every strike. It marks one of its three dots each time it is lit.
+- **Sharkskin mail.** Medium armor whose scaled links let you swim at your full speed and breathe water as freely as air. The gift is always active and spends no dots.
+- **Shadow lantern.** A lantern with a single dot. Once lit, it burns for an hour, and within its glow shadows replay the events of the past day as silent silhouettes.
 
 | Weapon | Description | gp |
 |---|---|---|
@@ -320,25 +330,38 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 | Healer's kit | 1 slot, 3 dots. Heal 1d3 + Heart Bonus HP. Advantage on the rest's HP roll. | 50 |
 | Disguise kit | 1 slot, 3 dots. Heart check to pass as another person. | 100 |
 | Sack | 1 slot. Carries small items together. | 1 |
-| Pouch | 1 slot. Holds 250 gp or small valuables. | 5 |
+| Pouch | 1 slot. Holds 250 gp. | 1 |
+
+### VALUABLES & TRADE GOODS
+
+Example worths for treasure a party finds and sells. A sackful of valuables fills one slot, while trade goods are bulky, taking two slots each.
+
+| gp | Valuables | Trade goods |
+|---|---|---|
+| 50 | Silver goblet, ivory comb, illuminated page | Bolt of fine cloth, keg of dye |
+| 100 | Pearl, gold bracelet, silver-inlaid dagger | Cask of aged wine, crate of tea bricks |
+| 250 | Gold necklace, garnet, master's small painting | Bale of furs, barrel of whale oil |
+| 500 | Emerald, golden chalice, ancient funeral mask | Chest of spices, roll of silk |
+| 1,000 | Jeweled crown, diamond, solid-gold idol | Silver ingots, chest of rare incense |
 
 ### SPELLBOOKS & RELICS
 
 | Item | Description | gp |
 |---|---|---|
-| Spellbook | 1 slot. Contains a single spell. | 100–1000 |
-| Relic | 1 slot, 1 usage. Holy object granting access to a deity's prayers. | 100–1000 |
+| Spellbook | 1 slot. Contains a single spell. | 50–5000 |
+| Relic | 1 slot, 1 usage. Holy object granting access to a deity's prayers. | 50–5000 |
 
 ---
 
 ## CHALLENGES
 
-When the outcome of an action is uncertain, make a check: roll 1d20, add your relevant attribute score and any applicable bonuses. You succeed if the total exceeds the difficulty; you fail on equal or lower. Only call for a check when the result is uncertain and failure or success has meaningful or interesting consequences.
+When the outcome of an action is uncertain, make a check: roll 1d20, add your relevant attribute score and any applicable bonuses. You succeed if the total exceeds the difficulty and you fail on equal or lower. Only call for a check when the result is genuinely uncertain and failure or success has meaningful or interesting consequences.
 
 **Difficulty.** When acting against another creature, difficulty equals 10 plus their relevant attribute score. Otherwise, set difficulty by the task itself.
 
 | Task | Difficulty |
 |---|---|
+| Easy | 7 |
 | Normal | 10 |
 | Troublesome | 13 |
 | Difficult | 16 |
@@ -406,7 +429,7 @@ Drawing a weapon, drinking a potion, flipping a lever, shouting a warning. Anyth
 
 ## COMBAT
 
-In Old Gold you only need to roll for damage; use your weapon's damage die, add your relevant attribute bonus (Might for melee, Grace for ranged), and subtract the target's DP (which is higher if they used the defend action).
+In Old Gold you only need to roll for damage. Use your weapon's damage die, add your relevant attribute bonus (Might for melee, Grace for ranged), and subtract the target's DP (which is higher if they used the defend action).
 
 > Aldric (Might 5, so a +3 melee bonus) swings a sword (1d6) at an orc warrior (DP 2). He rolls a 4: 4 + 3 = 7 damage, minus the orc's 2 DP, for 5 to its HP. Had the orc defended instead of attacking on its turn, it would have rolled 1d4 for extra DP to soften the blow.
 
@@ -440,7 +463,7 @@ At a breaking point (first casualty, half their number dead, leader slain, facin
 
 ## MAGIC
 
-PCs can wield magic through arcane spellbooks or divine relics, rare items that cannot be copied or created, only purchased, discovered, or taken. When available for sale, prices typically range from 100 to 1000 gp depending on the power and rarity of the spell or prayer.
+PCs can wield magic through arcane spellbooks or divine relics, rare items that cannot be copied or created, only purchased, discovered, or taken. Their price is always bargained for, depending on the power and rarity of the spell or prayer.
 
 **Innate abilities.** Some creatures produce magical effects naturally. These follow the same rules as spells or prayers but use no usage dots. Instead, once used, there is a 2-in-6 chance the creature recharges the ability at the start of its turn.
 
@@ -593,6 +616,44 @@ When the party encounters a creature unexpectedly, determine their number, dista
 
 ---
 
+## TREASURE
+
+Treasure is everything the party might recover from a dungeon or earn from a patron: coin, valuables, trade goods, gear, or magic items. Split it between loot and pay however the fiction suggests (a patron might offer half up front and let the party keep what they find). The amount depends on how dangerous the adventure is and how long it runs, both relative to the party attempting it (a Brutal challenge for novices might be a Normal task for veterans).
+
+Add together the XP each adventurer needs for their next level (the XP Required column under Advancement), then take the share of that total shown below. That share is the treasure's worth in gold, not experience. The party splits it, and it advances them only as they spend it during downtime (see Advancement).
+
+| Danger | Half a session | About a session | Several sessions |
+|---|---|---|---|
+| **Normal** | 10% | 20% | 40% |
+| **Difficult** | 20% | 40% | 80% |
+| **Brutal** | 30% | 60% | 120% |
+
+- **Normal.** Dangerous enough. Carelessness or bad luck can still get someone killed.
+- **Difficult.** The party is tested. Success costs resources, and mistakes cost lives.
+- **Brutal.** The party is outmatched. Survival demands creativity, sacrifice, or retreat.
+
+> Four companions at level 5 each need 16,000 XP for level 6, 64,000 in total. Recovering a noble's stolen signet from a bandit camp (Normal, half a session) is worth about 6,400 gp. A haunted barrow that truly tests them (Difficult, about a session) holds some 25,600. A megadungeon that will take weeks and likely a life (Brutal, several sessions) holds some 76,800, more than enough to lift the whole party a level in theory, though in practice not all of it will be spent on advancement.
+
+This is a guideline for stocking dungeons and setting payments, not a promise that every dangerous encounter pays out (a quick ambush by something far beyond the party may be Brutal on paper, but it shouldn't automatically yield treasure). Treat these numbers as estimates, not targets, and stray from them whenever the story is better for it.
+
+**Slowing advancement (optional).** Because XP costs double each level, every level takes about the same number of adventures. If you'd rather the highest levels be harder-won, use the Adjusted Reward column instead of XP Required when calculating treasure. It matches the usual pace at low levels but falls behind at higher ones, stretching the later levels up to about three times as long.
+
+| Level | Adjusted Reward | ≈ Sessions to level |
+|---|---|---|
+| 1 | 1,000 | 3 |
+| 2 | 2,000 | 3 |
+| 3 | 3,000 | 3 |
+| 4 | 5,000 | 4 |
+| 5 | 8,000 | 5 |
+| 6 | 14,000 | 6 |
+| 7 | 25,000 | 6 |
+| 8 | 45,000 | 7 |
+| 9 | 80,000 | 8 |
+
+*Assumes Difficult, session-length adventures.*
+
+---
+
 ## RECRUITING
 
 You can recruit various followers to aid your adventures.
@@ -646,15 +707,15 @@ Use these procedures to resolve large-scale battles without tracking individual 
 
 ## CONSTRUCTION
 
-The following costs represent general estimates only; actual construction times and prices may vary depending on condition, quality, location, significance, or special features. To estimate the cost of a structure not listed, use these examples. The standard cost to rent an entire building is 1% of its total cost per month.
+The following costs represent general estimates, actual construction times and prices may vary depending on condition, quality, location, significance, or special features. To estimate the cost of a structure not listed, use these examples. The standard cost to rent an entire building is 1% of its total cost per month.
 
 | Name | Description | Price | Time |
 |---|---|---|---|
-| Humble | Hovel, makeshift camp | 250 | Weeks |
-| Common | A timber house or small workshop | 5,000 | Months |
-| Respectable | Large residence, guildhall, tavern | 100,000 | Years |
-| Wealthy | Fortified keep, temple, mansion | 1,000,000 | Years |
-| Grand | Palace, cathedral, great fortress | 5,000,000 | Decades |
+| Humble | Hovel, makeshift camp. | 250 | Weeks |
+| Common | A timber house or small workshop. | 5,000 | Months |
+| Respectable | Large residence, guildhall, tavern. | 100,000 | Years |
+| Wealthy | Fortified keep, temple, mansion. | 1,000,000 | Years |
+| Grand | Palace, cathedral, great fortress. | 5,000,000 | Decades |
 
 **Owning land.** In the wild, you may build freely, but the land is yours only as long as you can hold it. To build within or near a settlement, you need permission from a landlord, noble, guild, faction, or other authority, or purchase it for 20% of the planned building's cost.
 
@@ -666,7 +727,7 @@ The following costs represent general estimates only; actual construction times 
 
 ## GOODS & SERVICES
 
-Gold is hard to earn, easy to lose, and dangerous to carry.
+Between adventures, coin buys a roof, a hot meal, and comfort.
 
 ### LODGING
 

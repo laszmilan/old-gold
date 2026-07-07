@@ -1,5 +1,5 @@
-# Claude Code local, machine-specific settings
-.claude/settings.local.json
+.claude/
+.agents/
 
 # OS cruft
 .DS_Store
