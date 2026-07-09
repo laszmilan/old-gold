@@ -166,6 +166,8 @@ You begin at level 1 with 0 XP and gain 1 XP for each gp spent on downtime activ
 
 Upon leveling up, increase an attribute of your choice by 1 (no attribute may exceed 9), and add a level's worth of HP as described in Health Points. If you raise Might, add 3 to your maximum HP as well.
 
+**Beyond level 10.** Characters stop advancing at level 10. Gold that would have gone toward advancement can instead be spent on ships, strongholds, soldiers, and other lasting investments.
+
 ### FINISHING TOUCHES
 
 Give your adventurer a fitting name or roll on the table below.
@@ -620,7 +622,7 @@ When the party encounters a creature unexpectedly, determine their number, dista
 
 Treasure is everything the party might recover from a dungeon or earn from a patron: coin, valuables, trade goods, gear, or magic items. Split it between loot and pay however the fiction suggests (a patron might offer half up front and let the party keep what they find). The amount depends on how dangerous the adventure is and how long it runs, both relative to the party attempting it (a Brutal challenge for novices might be a Normal task for veterans).
 
-Add together the XP each adventurer needs for their next level (the XP Required column under Advancement), then take the share of that total shown below. That share is the treasure's worth in gold, not experience. The party splits it, and it advances them only as they spend it during downtime (see Advancement).
+Add together the XP each adventurer needs for their next level (the XP Required column under Advancement), then take the share of that total shown below. That share is the treasure's worth in gold, not experience. The party splits it, and it advances them only as they spend it during downtime (see Advancement). Level 10 characters use the level 10 XP Required number as well.
 
 | Danger | Half a session | About a session | Several sessions |
 |---|---|---|---|
@@ -638,17 +640,17 @@ This is a guideline for stocking dungeons and setting payments, not a promise th
 
 **Slowing advancement (optional).** Because XP costs double each level, every level takes about the same number of adventures. If you'd rather the highest levels be harder-won, use the Adjusted Reward column instead of XP Required when calculating treasure. It matches the usual pace at low levels but falls behind at higher ones, stretching the later levels up to about three times as long.
 
-| Level | Adjusted Reward | ≈ Sessions to level |
+| Level | Adjusted Reward | ≈ Sessions to buy a level |
 |---|---|---|
-| 1 | 1,000 | 3 |
-| 2 | 2,000 | 3 |
-| 3 | 3,000 | 3 |
-| 4 | 5,000 | 4 |
-| 5 | 8,000 | 5 |
-| 6 | 14,000 | 6 |
-| 7 | 25,000 | 6 |
-| 8 | 45,000 | 7 |
-| 9 | 80,000 | 8 |
+| 2 | 1,000 | 3 |
+| 3 | 2,000 | 3 |
+| 4 | 3,000 | 3 |
+| 5 | 5,000 | 4 |
+| 6 | 8,000 | 5 |
+| 7 | 14,000 | 6 |
+| 8 | 25,000 | 6 |
+| 9 | 45,000 | 7 |
+| 10 | 80,000 | 8 |
 
 *Assumes Difficult, session-length adventures.*
 
