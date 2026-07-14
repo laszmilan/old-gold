@@ -7,16 +7,16 @@ const I18N = Site.i18n({
     homeTagline: "A fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat.",
     homeRead: "Read the rulebook",
     homeDiscord: "Join the Discord",
-    homeItch: "Get it on itch.io",
-    homeFree: "Pay what you want on itch.io",
+    homeItch: "Support on itch.io",
+    homeModel: "The full rulebook is free to read online. To support it, download the character sheet on itch.io and pay what you want.",
   },
   hu: {
     skip: "Ugrás a tartalomhoz",
     homeTagline: "Fantasy kalandjáték a merész felfedezésről, a kreatív problémamegoldásról és a pörgős, taktikus harcról.",
     homeRead: "Szabálykönyv olvasása",
     homeDiscord: "Csatlakozz a Discordhoz",
-    homeItch: "Töltsd le az itch.io-n",
-    homeFree: "Fizess annyit, amennyit szeretnél az itch.io-n",
+    homeItch: "Támogasd az itch.io-n",
+    homeModel: "A teljes szabálykönyv ingyen olvasható online. Ha támogatnád, töltsd le a karakterlapot az itch.io-n, és fizess annyit, amennyit szeretnél.",
   },
 });
 

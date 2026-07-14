@@ -12,7 +12,7 @@ Tabletop roleplaying games, such as Old Gold, follow a simple game loop: the Ref
 
 ### WHAT YOU NEED
 
-At least one polyhedral dice set (d4, d6, d8, d10, d12, d20), paper, pencil, the provided game sheets, and 50×15mm sticky notes to track your inventory.
+At least one polyhedral dice set (d4, d6, d8, d10, d12, d20), paper, pencil, and 50×15mm sticky notes to track your inventory. Download the character sheet on [itch.io](https://tinyravenpress.itch.io/old-gold/) and join our [Discord](https://discord.gg/WssHvFgUZ).
 
 ### GAME NOTATIONS
 
@@ -42,8 +42,6 @@ Layout and illustrations by [Illustrator's Name].
 Inspired by The Black Hack, Knave 2e and Mausritter.
 Licensed under Creative Commons Attribution 4.0.
 Special thanks to our playtesters: [Playtester Names].
-
----
 
 ## CHARACTER CREATION
 
@@ -263,8 +261,6 @@ You share a bond with each player sitting next to you (or pair characters in sol
 | 11 | Distrust each other, but circumstances made them allies |
 | 12 | Bound by a secret neither can afford to have revealed |
 
----
-
 ## EQUIPMENT
 
 ### LIGHT SOURCES
@@ -363,8 +359,6 @@ Example worths for treasure a party finds and sells. A sackful of valuables fill
 | Spellbook | 1 slot, 3 dots. Contains a single spell. | 50–5,000 |
 | Relic | 1 slot, 1 dot. Holy object granting access to a deity's prayers. | 50–5,000 |
 
----
-
 ## CHALLENGES
 
 When the outcome of an action is uncertain, make a check: roll 1d20 and add your relevant attribute score. You succeed if the total exceeds the difficulty and you fail on equal or lower. Only call for a check when the result is genuinely uncertain and failure or success has meaningful or interesting consequences.
@@ -395,8 +389,6 @@ When the outcome of an action is uncertain, make a check: roll 1d20 and add your
 
 **Retrying.** You cannot retry a failed check unless circumstances change (new tools, new information, a different approach, or enough time) or you're willing to pay the price (mark usage, raise the difficulty, take damage, or accept a narrative consequence).
 
----
-
 ## TIME
 
 When precision matters, time is measured in these scales:
@@ -408,8 +400,6 @@ When precision matters, time is measured in these scales:
 | Watch | 6 hours | Travel, rest, downtime |
 
 A minute is 6 rounds, an hour is 6 turns, a day is 4 watches.
-
----
 
 ## ACTIONS
 
@@ -436,8 +426,6 @@ Your main action is one complex interaction, such as attacking, casting a spell,
 ### FREE ACTIONS
 
 Drawing a weapon, drinking a potion, flipping a lever, shouting a warning. Anything brief and simple within the bounds of what's realistically possible in a single moment.
-
----
 
 ## COMBAT
 
@@ -474,8 +462,6 @@ Effects and maneuvers can impose the conditions below. A condition lasts until t
 ### MORALE
 
 At a breaking point (first casualty, half their number dead, leader slain, facing something terrifying) NPCs must check morale. Roll 2d6, and if the result exceeds their morale score, they flee, surrender, or retreat.
-
----
 
 ## MAGIC
 
@@ -532,8 +518,6 @@ Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has
 - **Hex.** Make a Heart check against a creature within range. If you beat it, for Heart Bonus minutes they have disadvantage on checks involving an attribute you name.
 - **Speak with dead.** The spirit of a corpse you touch manifests and answers Heart Bonus questions honestly.
 
----
-
 ## HAZARDS & WEATHER EFFECTS
 
 Not every danger swings a sword.
@@ -551,8 +535,6 @@ Not every danger swings a sword.
 - **Suffocating.** Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage at the start of each of your turns.
 - **Intoxication.** Might check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.
 - **Poison.** When exposed, make a Might check to resist, or suffer its effects. Mark usage to coat one weapon strike or one drink.
-
----
 
 ## OVERLAND TRAVEL
 
@@ -604,8 +586,6 @@ When traveling through untamed lands, consult the Travel Oracle once per watch.
 
 Hirelings cost their daily wages on top of the purchase price. Vehicles requiring crew won't move without them.
 
----
-
 ## DUNGEON DELVING
 
 A dungeon is any dangerous, contained place worth exploring: ancient ruins, monster lairs, forgotten tombs, cursed manors, deep caves. The rules below assume someone has prepared a map, marked the rooms, and decided what lives, lurks, and waits inside, whether that's the Referee, a published adventure, or your own imagination.
@@ -626,8 +606,6 @@ When lingering in a place of danger, or backtracking, consult the Delving Oracle
 
 **Doors.** Most doors open freely. Stuck or barred doors require a Might check to force, and locked doors a Grace check with lockpicks or improvised tools (the latter with disadvantage). Listening at a door requires a Heart check.
 
----
-
 ## RANDOM ENCOUNTERS
 
 When the party meets a creature unexpectedly, settle how many, how far, and how they react.
@@ -643,8 +621,6 @@ When the party meets a creature unexpectedly, settle how many, how far, and how 
 | 6–8 | Cautious. Watches, questions, follows. |
 | 9–10 | Neutral. Goes about its business. |
 | 11–12 | Friendly. Willing to help, trade, or parley. |
-
----
 
 ## TREASURE
 
@@ -682,8 +658,6 @@ This is a guideline for stocking dungeons and setting payments, not a promise th
 
 *Assumes Difficult, session-length adventures.*
 
----
-
 ## RECRUITING
 
 You can recruit followers to aid your adventures.
@@ -720,8 +694,6 @@ The number of potential recruits present and willing to work in a given settleme
 
 Followers generated like PCs. They take equal shares of treasure, gain levels over time, and only follow higher-level PCs. Companions don't check morale.
 
----
-
 ## WARFARE
 
 Use these procedures to resolve large-scale battles without tracking individual actions.
@@ -731,8 +703,6 @@ Use these procedures to resolve large-scale battles without tracking individual 
 **Battle.** Each round, one side makes a check, adding their total power as a bonus against a difficulty of 10 plus the opponent's power. Roll with advantage for a clear edge (defending a castle, ambush, high ground), or disadvantage when badly outmatched. The losing side loses 10% of its original strength, or 20% if it lost the round by 10 or more, then makes a morale check against 10 minus the number of rounds it has lost.
 
 **Resolution.** The battle ends when a side fails a morale check, is destroyed, or withdraws, and the victor achieves their stated objective. Once per battle, a commander may make a Heart check to negate their side's first failed morale check with an inspiring speech.
-
----
 
 ## CONSTRUCTION
 
@@ -753,8 +723,6 @@ The following costs are estimates, actual construction times and prices may vary
 **Owning land.** In the wild, you may build freely, but the land is yours only as long as you can hold it. To build within or near a settlement, you need permission from a landlord, noble, guild, faction, or other authority, or purchase it for 20% of the planned building's cost.
 
 **Running a business.** A business or investment, when operations run smoothly, generates an annual profit equal to 2d6% of its initial investment.
-
----
 
 ## ROOM & BOARD
 
@@ -914,8 +882,6 @@ A dungeon takes its name from what it looks like, what it is, and what haunts it
 | 6 | Shattered | Deep | Spider Queen |
 | 7 | Gilded | Sanctum | Drowned |
 | 8 | Blackened | Halls | Old Gods |
-
----
 
 ## BESTIARY
 

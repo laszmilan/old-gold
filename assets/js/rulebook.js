@@ -17,6 +17,27 @@ const I18N = Site.i18n({
   },
 });
 
+/* closing calls to action, woven into the prose as plain links (no buttons).
+   Built from CONFIG so the links have one source and vanish when unset. The
+   front-matter line is a quiet community pointer; the end line is the warm
+   "you finished the book" ask, where the most engaged reader is. */
+const CTA = {
+  en: {
+    endLead: "That's the whole rulebook.",
+    endBoth: "If you enjoyed it, join our %discord% and support Old Gold on %itch%.",
+    endDiscord: "If you enjoyed it, come and join our %discord%.",
+    endItch: "If you enjoyed it, support Old Gold on %itch%.",
+    discord: "Discord", itch: "itch.io",
+  },
+  hu: {
+    endLead: "Ennyi a szabálykönyv.",
+    endBoth: "Ha tetszett, csatlakozz a %discord%, és támogasd a játékot az %itch%.",
+    endDiscord: "Ha tetszett, csatlakozz a %discord%.",
+    endItch: "Ha tetszett, támogasd a játékot az %itch%.",
+    discord: "Discordunkhoz", itch: "itch.io-n",
+  },
+};
+
 const docEl = document.getElementById("doc");
 const tocEl = document.getElementById("toc");
 
@@ -56,6 +77,7 @@ function render(markdown) {
   enhanceStatBlocks();
   markRuleParagraphs();
   // markChapterOpeners();   // drop caps OFF for now (function + CSS kept; re-enable here)
+  injectEndCta();
   buildToc(headings);
   setDocTitle();
   setupScrollSpy(headings);
@@ -128,6 +150,31 @@ function markRuleParagraphs() {
       if (label.length <= 40 && /[.:]$/.test(label)) p.classList.add("rule");
     }
   });
+}
+
+/* fill a CTA template's %discord% / %itch% tokens with plain links (styled by
+   .doc a — ink underline, gold on hover). A token stays only in a template we
+   picked because its link exists, so no dangling tokens are rendered. */
+function fillCta(tpl, t) {
+  const link = (href, label) =>
+    `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
+  return tpl
+    .replace("%discord%", link(CONFIG.discord, t.discord))
+    .replace("%itch%", link(CONFIG.itch, t.itch));
+}
+
+/* warm closing line appended after the last rule; degrades to whichever of the
+   two links is configured, and drops out entirely if neither is */
+function injectEndCta() {
+  if (typeof CONFIG === "undefined") return;
+  const hasD = !!CONFIG.discord, hasI = !!CONFIG.itch;
+  if (!hasD && !hasI) return;
+  const t = CTA[Site.lang()] || CTA.en;
+  const clause = hasD && hasI ? t.endBoth : hasD ? t.endDiscord : t.endItch;
+  const aside = document.createElement("aside");
+  aside.className = "rulebook-end";
+  aside.innerHTML = `<p>${t.endLead} ${fillCta(clause, t)}</p>`;
+  docEl.appendChild(aside);
 }
 
 /* drop cap on a chapter's opening paragraph — but only when it's a real prose

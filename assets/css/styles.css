@@ -297,11 +297,11 @@ main {
   padding-bottom: var(--space-2);
   border-bottom: 3px solid var(--gold);   /* masthead rule — the gold accent */
 }
-.doc h1 + p { /* deck / subtitle */
+.doc h1 + p { /* deck / subtitle — a touch above body (17px), lightly softened from ink */
   font-family: var(--serif);
   font-style: italic;
-  font-size: var(--fs-deck);
-  color: var(--muted);
+  font-size: 1.0625rem;
+  color: var(--ink-soft);
   margin: 0 0 var(--space-5);
 }
 
@@ -461,6 +461,18 @@ main {
    the UA gives hr overflow:hidden, which blocks margin collapsing through it
    and was adding the preceding paragraph's margin on top of the h2's. */
 .doc hr { display: none; }
+
+/* closing call to action after the last rule: small, plain, ink — a quiet
+   functional note, not a decorative flourish. Links inherit .doc a (underline,
+   gold on hover). Set off from the bestiary by space; flattened away in print. */
+.doc .rulebook-end { margin-top: var(--space-5); }
+.doc .rulebook-end p {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  color: var(--ink);
+}
+@media print { .doc .rulebook-end { display: none; } }
 
 .doc img { max-width: 100%; height: auto; filter: grayscale(1); }
 /* the ancestry party plate and the kneeling knight keep their color; the
@@ -969,6 +981,17 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
    a single stacked column */
 @container (max-width: 31rem) {
   .hero-actions { grid-template-columns: 1fr; max-width: 22rem; }
+}
+/* the business-model note: plain, readable, secondary — states that the rules
+   are free to read and itch is the support/PWYW path. Sits between the CTAs and
+   the caps contact line, sharing the hero-text column's left edge and gap. */
+.hero-note {
+  margin: 0;
+  max-width: 32rem;
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--muted);
 }
 .hero-meta {
   margin: 0;
