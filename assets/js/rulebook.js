@@ -46,6 +46,8 @@ async function loadLang(lang) {
   render(markdown);
 }
 
+let firstRender = true;
+
 function render(markdown) {
   docEl.innerHTML = marked.parse(markdown.trim());
 
@@ -57,6 +59,14 @@ function render(markdown) {
   buildToc(headings);
   setDocTitle();
   setupScrollSpy(headings);
+
+  // honor a #deep-link once the content exists — the browser's native anchor
+  // jump ran before the fetch finished, so it found nothing to scroll to
+  if (firstRender && location.hash) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView({ behavior: "instant", block: "start" });
+  }
+  firstRender = false;
 }
 
 /* stable ids + hover § anchors for h2/h3 */
@@ -97,42 +107,15 @@ function enhanceTables() {
   });
 }
 
-/* monster / NPC stat blocks: NAME + special, then two mono stat rows
-   (core attributes, then MRL/MOV/ATK) — regrouped from the source line */
+/* monster / NPC stat blocks: leave the source paragraph exactly as written and
+   just wrap it in the grey box (any emphasis lives in the Markdown) */
 function enhanceStatBlocks() {
-  const MAIN = ["HP", "DP", "Might", "Grace", "Mind", "Heart"];
-  const SUB  = ["MRL", "MOV", "ATK"];
   docEl.querySelectorAll("p").forEach(p => {
-    const m = p.innerHTML.match(/^([\s\S]*?)<br\s*\/?>\s*(HP\b[\s\S]*)$/);
-    if (!m || !/\bDP\b/.test(m[2]) || !/\bMRL\b/.test(m[2])) return;
-
-    const head = m[1].match(/^\s*<strong>([\s\S]*?)<\/strong>\s*([\s\S]*)$/);
-    const name = (head ? head[1] : m[1]).replace(/\.\s*$/, "").trim();
-    const special = head ? head[2].trim() : "";
-
-    const stats = parseStats(m[2]);
-    const row = keys => keys.filter(k => stats[k]).map(k => `<b>${k}</b> ${stats[k]}`).join(", ");
-
+    const html = p.innerHTML;
+    if (!/^\s*<strong>[\s\S]*?<\/strong>\s*HP\b/.test(html)) return;
+    if (!/\bDP\b/.test(html) || !/\bMorale\b/.test(html) || !/\bNA\b/.test(html)) return;
     p.classList.add("statblock");
-    p.innerHTML =
-      `<span class="stat-name">${name}</span>` +
-      (special ? `<span class="stat-special">${special}</span>` : "") +
-      `<span class="stat-row">${row(MAIN)}</span>` +
-      `<span class="stat-row">${row(SUB)}</span>`;
   });
-}
-
-/* parse "HP 6, DP 0, ... MOV 10m, ATK punch (1d2, 2m)." → { HP:"6", ... }.
-   ATK is the tail (its value can contain commas); the rest are comma fields. */
-function parseStats(str) {
-  const stats = {};
-  const atk = str.match(/\bATK\s+([\s\S]+?)\.?\s*$/);
-  if (atk) { stats.ATK = atk[1].trim(); str = str.slice(0, atk.index); }
-  str.split(/,|<br\s*\/?>/i).forEach(part => {
-    const kv = part.trim().match(/^([A-Za-z]{2,5})\s+([\s\S]+)$/);
-    if (kv) stats[kv[1]] = kv[2].trim();
-  });
-  return stats;
 }
 
 /* tag run-in "rule label" paragraphs (e.g. "DYING. ...") for distinct styling */
@@ -222,37 +205,32 @@ function setupScrollSpy(headings) {
   if (spied[0]) setActive(spied[0].id);
 }
 
-/* contents toggle + reading-progress bar */
+/* contents toggle — unified panel behavior (toggle, scrim, Escape,
+   click-to-dismiss, close-on-select-when-covering-the-text) lives in Site.sidebar */
 function setupChrome() {
-  // unified contents-panel behavior (toggle, scrim, Escape, click-to-dismiss,
-  // close-on-select-when-covering-the-text) all lives in Site.sidebar
   Site.sidebar({ content: document.querySelector("main"), selectLinks: tocEl });
-
-  // reading-progress bar — tracks the scroll region, not the window
-  const scroller = document.getElementById("scrollarea");
-  const progress = document.getElementById("progress");
-  const onScroll = () => {
-    const max = scroller.scrollHeight - scroller.clientHeight;
-    progress.style.width = (max > 0 ? (scroller.scrollTop / max) * 100 : 0) + "%";
-  };
-  scroller.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  onScroll();
 }
 
-/* friendly message if the file can't be fetched (e.g. opened via file://) */
+/* friendly message if the file can't be fetched — the Live Server hint is for
+   local file:// viewing only; visitors on the live site get a retry instead */
 function showLoadError(err, lang) {
-  const msg = String(err.message).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  const esc = s => String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  const hint = location.protocol === "file:"
+    ? `This page reads the rulebook from a local file, which browsers only allow
+       when the site is served over <strong>http</strong>, not opened directly
+       from disk.<br><br>
+       <strong>To view it:</strong> in VS Code, install the
+       <strong>Live Server</strong> extension, then right-click
+       <code>index.html</code> → <strong>Open with Live Server</strong>.`
+    : `This is usually a connection hiccup.
+       <button class="inline-link" type="button" data-retry>Try again</button>`;
   docEl.innerHTML = `
     <h1>OLD GOLD</h1>
     <p class="doc-status">
-      <strong>Couldn't load <code>${LANGS[lang]}</code>.</strong><br><br>
-      This page reads the rulebook from a local file, which browsers only allow
-      when the site is served over <strong>http</strong>, not opened directly
-      from disk.<br><br>
-      <strong>To view it:</strong> in VS Code, install the
-      <strong>Live Server</strong> extension, then right-click
-      <code>index.html</code> → <strong>Open with Live Server</strong>.<br><br>
-      <span style="opacity:.7">(${msg})</span>
+      <strong>Couldn't load the rulebook (<code>${esc(LANGS[lang])}</code>).</strong><br><br>
+      ${hint}<br><br>
+      <span style="opacity:.7">(${esc(err.message)})</span>
     </p>`;
+  const retry = docEl.querySelector("[data-retry]");
+  if (retry) retry.addEventListener("click", () => loadLang(lang));
 }

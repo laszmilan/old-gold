@@ -1,6 +1,6 @@
 /* OLD GOLD — generators page. A set of random generators listed in a switcher,
    with the active one rendered in the main workbench
-   and deep-linked by URL hash (#dice). Each generator is a self-describing
+   and deep-linked by URL hash (#character). Each generator is a self-describing
    module in GENERATORS; the page builds the list, the controls, and the i18n
    table from that list, so adding a generator is one entry, no extra plumbing. */
 
@@ -17,25 +17,25 @@ const ANCESTRY = {
   dwarf: {
     name: "Dwarf", move: "8m", languages: "Common, Dwarvish",
     attrDice: 6, hpAdvantage: true,
-    trait: "Rolls HP with advantage. Advantage to resist poison.",
+    trait: "Advantage on HP rolls and to resist poison",
     names: ["Járnda", "Vrannik", "Grudnir", "Kelvor", "Stennig", "Ongdur", "Feldar", "Hegril", "Dáli", "Brúni", "Midrik", "Andveg"],
   },
   elf: {
     name: "Elf", move: "12m", languages: "Common, Sylvan",
     attrDice: 6, hpAdvantage: false,
-    trait: "Advantage to resist charm, sleep, and other mental effects.",
+    trait: "Advantage to resist mental effects",
     names: ["Varenthas", "Celindyl", "Fendalus", "Therylon", "Nyveris", "Seralyn", "Maeraphon", "Evrandir", "Aelinor", "Galrion", "Yphera", "Abrion"],
   },
   human: {
     name: "Human", move: "10m", languages: "Common",
     attrDice: 7, hpAdvantage: false,
-    trait: "Starts with 7 attribute points instead of 6.",
+    trait: "Starts with 7 attribute points instead of 6",
     names: ["Garric", "Mara", "Eirik", "Hegwin", "Seren", "Treven", "Connig", "Aldwen", "Haldric", "Brynn", "Wynna", "Drystan"],
   },
   halfkin: {
     name: "Halfkin", move: "8m", languages: "Common",
     attrDice: 6, hpAdvantage: false,
-    trait: "May reroll natural 1s on checks.",
+    trait: "May reroll natural 1s on checks",
     names: ["Bramble", "Sedge", "Poppy", "Nettle", "Thistle", "Flint", "Tansy", "Moss", "Mallow", "Rue", "Sorrel", "Clover"],
   },
 };
@@ -61,11 +61,58 @@ function rollAttributes(n) {
 
 const bonus = (score) => Math.ceil(score / 2);
 
+/* STARTING EQUIPMENT — a weapon plus one of armor / spellbook / relic, per
+   CHARACTER CREATION. Weapons split by governing attribute so the generator
+   arms the character to their strength; damage bakes in the bonus like a
+   statblock. Spells reuse the MAGIC chapter's list. */
+const WEAPONS = {
+  Might: [
+    { name: "Sword", die: 6, reach: "2m" },
+    { name: "Mace", die: 6, reach: "2m" },
+    { name: "Spear", die: 4, reach: "4m" },
+    { name: "Greataxe", die: 10, reach: "2m" },
+    { name: "Halberd", die: 6, reach: "4m" },
+    { name: "Handaxe", die: 4, reach: "thrown" },
+  ],
+  Grace: [
+    { name: "Dagger", die: 6, reach: "2m" },
+    { name: "Rapier", die: 6, reach: "2m" },
+    { name: "Shortbow", die: 4, reach: "20m" },
+    { name: "Sling", die: 4, reach: "20m" },
+    { name: "Longbow", die: 6, reach: "60m" },
+  ],
+};
+const SPELLS = ["Charm", "Sleep", "Counterspell", "Detect magic", "Fly", "Invisibility", "Mirror image", "Magic missile", "Fireball", "Elemental wall", "Web", "Telekinesis", "Mirrorwalk", "Message", "Golem"];
+
+/* pick a weapon fitting the higher of Might/Grace, damage with its bonus baked in */
+function rollWeapon(attrs) {
+  const attr = attrs.Grace > attrs.Might ? "Grace" : "Might";
+  const w = pick(WEAPONS[attr]);
+  const b = bonus(attrs[attr]);
+  const range = w.reach === "thrown" ? `${Math.max(b * 6, 2)}m` : w.reach;
+  return `${w.name} (1d${w.die}${b ? `+${b}` : ""}, ${range})`;
+}
+
+/* the second starting item: a caster gets a book/relic when that is their top
+   attribute, everyone else takes armor (which raises DP) */
+function rollFocus(attrs) {
+  if (attrs.Mind >= 3 && attrs.Mind >= attrs.Might && attrs.Mind >= attrs.Grace && attrs.Mind >= attrs.Heart) {
+    return { type: "Spellbook", desc: pick(SPELLS), dp: 0 };
+  }
+  if (attrs.Heart >= 3 && attrs.Heart >= attrs.Might && attrs.Heart >= attrs.Grace && attrs.Heart >= attrs.Mind) {
+    return { type: "Relic", desc: "a prayer of your patron", dp: 0 };
+  }
+  return d(2) === 1
+    ? { type: "Armor", desc: "light armor", dp: 1 }
+    : { type: "Armor", desc: "medium armor", dp: 2 };
+}
+
 function generateCharacter() {
   const key = pick(ANCESTRY_KEYS);
   const anc = ANCESTRY[key];
   const attrs = rollAttributes(anc.attrDice);
   const hpRoll = anc.hpAdvantage ? Math.max(d(6), d(6)) : d(6);  // Dwarves roll with advantage
+  const focus = rollFocus(attrs);
   return {
     key,
     name: pick(anc.names),
@@ -75,147 +122,94 @@ function generateCharacter() {
     motivation: pick(MOTIVATION),
     attrs,
     hp: 6 + 3 * attrs.Might + hpRoll,
-    dp: 0,
+    dp: focus.dp,
     move: anc.move,
     languages: anc.languages,
+    weapon: rollWeapon(attrs),
+    focus,
+    gold: 20 + d(20) + d(20),
   };
 }
 
 function renderCharacter(pc, t) {
   const anc = ANCESTRY[pc.key];
   const stats = ATTRS.map(a =>
-    `<span class="pc-stat"><b>${a}</b><span class="pc-num">${pc.attrs[a]} <i>(+${bonus(pc.attrs[a])})</i></span></span>`
+    `<span class="pc-cell"><b>${a}</b><span class="pc-num">${pc.attrs[a]} <i>(+${bonus(pc.attrs[a])})</i></span></span>`
   ).join("");
+  // weapon, the second item (armor/spellbook/relic) and gold read as one gear
+  // line, comma-joined, so it rides a full-width row (like the ancestry bonus)
+  // just under it, before the paired short traits
+  const inventory = `${pc.weapon}, ${pc.focus.desc}, ${pc.gold} gp`;
   const detail = [
-    [t["character.lblLanguages"], pc.languages],
+    [t["character.lblAncestry"], anc.trait, "pc-row--wide"],
+    [t["character.lblInventory"], inventory, "pc-row--wide"],
     [t["character.lblAppearance"], pc.appearance],
     [t["character.lblPersonality"], pc.personality],
     [t["character.lblMotivation"], pc.motivation],
-  ].map(([dt, dd]) => `<div><dt>${dt}</dt><dd>${dd}</dd></div>`).join("");
+    [t["character.lblLanguages"], pc.languages],
+  ].map(([dt, dd, cls]) => `<div${cls ? ` class="${cls}"` : ""}><dt>${dt}</dt><dd>${dd}</dd></div>`).join("");
 
   return `
     <article class="pc-card">
-      <header class="pc-head">
-        <h2 class="pc-name">${pc.name}</h2>
-        <p class="pc-sub">${anc.name} &middot; ${pc.background} &middot; ${t["character.lvl1"]}</p>
-      </header>
       <div class="pc-side">
-        <div class="pc-vitals">
-          <span><b>HP</b><span class="pc-num">${pc.hp}</span></span>
-          <span><b>DP</b><span class="pc-num">${pc.dp}</span></span>
-          <span><b>MOV</b><span class="pc-num">${pc.move}</span></span>
-        </div>
-        <div class="pc-stats">${stats}</div>
-        <div class="pc-trait"><b>${anc.name}</b>${anc.trait}</div>
+        <span class="pc-cell pc-cell--wide"><b>HP</b><span class="pc-num">${pc.hp}</span></span>
+        <span class="pc-cell pc-cell--wide"><b>DP</b><span class="pc-num">${pc.dp}</span></span>
+        <span class="pc-cell pc-cell--wide"><b>SPD</b><span class="pc-num">${pc.move}</span></span>
+        ${stats}
       </div>
       <dl class="pc-detail">${detail}</dl>
     </article>`;
 }
 
-/* ===========================================================
-   DICE ROLLER — parse "NdM(+/-K)", roll, show total + the dice
-   =========================================================== */
-function parseDice(str) {
-  const m = /^\s*(\d*)\s*d\s*(\d+)\s*([+-]\s*\d+)?\s*$/i.exec(str || "");
-  if (!m) return null;
-  const count = m[1] ? parseInt(m[1], 10) : 1;
-  const sides = parseInt(m[2], 10);
-  const modifier = m[3] ? parseInt(m[3].replace(/\s+/g, ""), 10) : 0;
-  if (count < 1 || count > 100 || sides < 2 || sides > 1000) return null;
-  return { count, sides, modifier };
-}
-
-const signLabel = (n) => (n > 0 ? ` + ${n}` : n < 0 ? ` − ${Math.abs(n)}` : "");
-
-function rollDice({ count, sides, modifier }) {
-  const dice = Array.from({ length: count }, () => d(sides));
-  const sum = dice.reduce((a, b) => a + b, 0);
-  return { dice, modifier, total: sum + modifier, label: `${count}d${sides}${signLabel(modifier)}` };
-}
-
-function renderDice(r) {
+/* the rolled name and its line ride the masthead, next to Reroll, in the
+   card's own display face — the slot the pane label used to hold */
+function headCharacter(pc, t) {
+  const anc = ANCESTRY[pc.key];
   return `
-    <article class="dice-result">
-      <p class="dice-expr">${r.label}</p>
-      <span class="dice-total">${r.total}</span>
-      <p class="dice-breakdown">[${r.dice.join(", ")}]${signLabel(r.modifier)}</p>
-    </article>`;
+    <h2 class="pc-name">${pc.name}</h2>
+    <p class="pc-sub">${anc.name} &middot; ${pc.background} &middot; ${t["character.lvl1"]}</p>`;
 }
-
-const diceModule = {
-  i18n: {
-    en: { label: "Dice", lead: "Roll any dice expression — like 2d6+1 — or tap a die.", roll: "Roll", error: "Try an expression like 2d6+1." },
-    hu: { label: "Kocka", lead: "Dobj bármilyen kifejezést — pl. 2d6+1 — vagy koppints egy kockára.", roll: "Dobás", error: "Próbálj egy kifejezést, pl. 2d6+1." },
-  },
-  mount({ stage, t, id, state, save }) {
-    const s = state || { expr: "1d6", result: null };
-    stage.innerHTML = `
-      <div class="gen-title-row">
-        <h1 class="gen-heading" id="genTitle">${t[id + ".label"]}</h1>
-      </div>
-      <p class="gen-lead">${t[id + ".lead"]}</p>
-      <div class="gen-controls dice-controls">
-        <div class="dice-quick">
-          ${[4, 6, 8, 10, 12, 20].map(n => `<button class="dice-chip" type="button" data-die="${n}">d${n}</button>`).join("")}
-        </div>
-        <div class="dice-entry">
-          <input class="dice-input" type="text" spellcheck="false" autocomplete="off" aria-label="${t[id + ".roll"]}">
-          <button class="btn btn-solid" type="button" data-roll>${t[id + ".roll"]}</button>
-        </div>
-      </div>
-      <div class="gen-out" data-out></div>`;
-
-    const input = stage.querySelector(".dice-input");
-    const out = stage.querySelector("[data-out]");
-    input.value = s.expr;   // set as a property, never interpolated into HTML
-
-    const draw = () => { out.innerHTML = s.result ? renderDice(s.result) : ""; };
-    const roll = () => {
-      const parsed = parseDice(input.value);
-      if (!parsed) { s.result = null; out.innerHTML = `<p class="dice-error">${t[id + ".error"]}</p>`; save(s); return; }
-      s.expr = input.value.trim();
-      s.result = rollDice(parsed);
-      save(s);
-      draw();
-    };
-
-    draw();   // restore the last result after a language switch
-    stage.querySelector("[data-roll]").addEventListener("click", roll);
-    input.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); roll(); } });
-    stage.querySelectorAll(".dice-chip").forEach(c =>
-      c.addEventListener("click", () => { input.value = "1d" + c.dataset.die; roll(); }));
-    save(s);
-  },
-};
 
 /* ===========================================================
    MODULE HELPERS + REGISTRY
    =========================================================== */
-/* the common "one Roll button" generator: roll() makes state, render() draws it */
+/* the shared masthead action: the solid roll button with the circling-arrow
+   icon, dropped into the .gen-head action slot by every pane */
+const rollButton = (label) => `
+  <button class="btn btn-solid gen-reroll" type="button" data-roll>
+    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 12a8 8 0 1 1-2.34-5.66"></path>
+      <polyline points="20 4 20 10 14 10"></polyline>
+    </svg>
+    <span>${label}</span>
+  </button>`;
+
+/* the common "one Roll button" generator: roll() makes state, render() draws
+   it into the pane; an optional head() draws the pane's masthead title. The
+   reroll button lives in the masthead's action slot. An optional announce()
+   supplies a short line for screen readers on each reroll. */
 function rollModule(def) {
   return {
     i18n: def.i18n,
-    mount({ stage, t, id, state, save }) {
+    mount({ stage, actions, head, t, id, state, save }) {
       if (state == null) { state = def.roll(); save(state); }
       stage.innerHTML = `
-        <div class="gen-title-row">
-          <h1 class="gen-heading" id="genTitle">${t[id + ".label"]}</h1>
-          <button class="btn btn-ghost gen-reroll" type="button" data-roll aria-label="${t[id + ".roll"]}" title="${t[id + ".roll"]}">
-            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20 12a8 8 0 1 1-2.34-5.66"></path>
-              <polyline points="20 4 20 10 14 10"></polyline>
-            </svg>
-            <span class="gen-reroll-label">${t[id + ".reroll"]}</span>
-          </button>
-        </div>
-        <p class="gen-lead">${t[id + ".lead"]}</p>
-        <div class="gen-out" data-out></div>`;
+        ${t[id + ".lead"] ? `<p class="gen-lead">${t[id + ".lead"]}</p>` : ""}
+        <div class="gen-out" data-out></div>
+        <p class="sr-only" data-status role="status"></p>`;
+      actions.innerHTML = rollButton(t[id + ".reroll"]);
       const out = stage.querySelector("[data-out]");
-      out.innerHTML = def.render(state, t);
-      stage.querySelector("[data-roll]").addEventListener("click", () => {
+      const status = stage.querySelector("[data-status]");
+      const draw = () => {
+        out.innerHTML = def.render(state, t);
+        if (head && def.head) head.innerHTML = def.head(state, t);
+      };
+      draw();
+      actions.querySelector("[data-roll]").addEventListener("click", () => {
         state = def.roll();
         save(state);
-        out.innerHTML = def.render(state, t);
+        draw();
+        if (def.announce) status.textContent = def.announce(state, t);
       });
     },
   };
@@ -226,31 +220,38 @@ const GENERATORS = [
     i18n: {
       en: {
         label: "Character", roll: "Roll a character", reroll: "Reroll",
-        lead: "Roll up a ready-to-play level 1 adventurer for Old Gold.",
+        lead: "",
         lvl1: "Level 1",
+        lblAncestry: "Ancestry bonus",
         lblLanguages: "Languages", lblAppearance: "Appearance",
         lblPersonality: "Personality", lblMotivation: "Motivation",
+        lblWeapon: "Weapon", lblArmor: "Armor", lblSpellbook: "Spellbook",
+        lblRelic: "Relic", lblGold: "Gold", lblInventory: "Inventory",
       },
       hu: {
         label: "Karakter", roll: "Karakter dobása", reroll: "Újradobás",
-        lead: "Dobj egy játékra kész, 1. szintű kalandozót az Old Goldhoz.",
+        lead: "",
         lvl1: "1. szint",
+        lblAncestry: "Származási bónusz",
         lblLanguages: "Nyelvek", lblAppearance: "Külső",
         lblPersonality: "Jellem", lblMotivation: "Motiváció",
+        lblWeapon: "Fegyver", lblArmor: "Páncél", lblSpellbook: "Varázskönyv",
+        lblRelic: "Ereklye", lblGold: "Arany", lblInventory: "Felszerelés",
       },
     },
     roll: generateCharacter,
     render: renderCharacter,
+    head: headCharacter,
+    announce: (pc) => `${pc.name} — ${ANCESTRY[pc.key].name}, ${pc.background}`,
   })),
-  Object.assign({ id: "dice" }, diceModule),
 ];
 const GENS = Object.fromEntries(GENERATORS.map(g => [g.id, g]));
 
 /* fold every module's strings into one namespaced i18n table (character.lead …),
    merged onto the page-level + shared chrome strings */
 const PAGE_I18N = {
-  en: { skip: "Skip to content", titleSuffix: "Generators", genListLabel: "Generators" },
-  hu: { skip: "Ugrás a tartalomhoz", titleSuffix: "Generátorok", genListLabel: "Generátorok" },
+  en: { skip: "Skip to content", titleSuffix: "Generators", genPageTitle: "Generators" },
+  hu: { skip: "Ugrás a tartalomhoz", titleSuffix: "Generátorok", genPageTitle: "Generátorok" },
 };
 const I18N = (() => {
   const en = { ...PAGE_I18N.en }, hu = { ...PAGE_I18N.hu };
@@ -265,30 +266,20 @@ const I18N = (() => {
    PAGE CONTROLLER
    =========================================================== */
 const genStage = document.getElementById("genStage");
-const genList = document.getElementById("genList");
+const genActions = document.getElementById("genActions");
+const genTitle = document.getElementById("genTitle");
 const paneState = {};   // last result, kept per generator so it survives switches/lang changes
 let active = null;
 
 const strings = () => I18N[Site.lang()] || I18N.en;
 const fromHash = () => { const id = location.hash.slice(1); return GENS[id] ? id : GENERATORS[0].id; };
 
-/* the switcher is built once; entries are real #hash links (deep-linkable) */
-function buildList() {
-  const t = strings();
-  genList.innerHTML = GENERATORS.map(g =>
-    `<a class="gen-switch" href="#${g.id}" data-gen="${g.id}">${t[g.id + ".label"]}</a>`
-  ).join("");
-}
-
 function renderActive() {
   active = fromHash();
-  genList.querySelectorAll("a").forEach(a => {
-    const on = a.dataset.gen === active;
-    a.classList.toggle("active", on);
-    a.setAttribute("aria-current", on ? "true" : "false");
-  });
+  const t = strings();
+  genActions.innerHTML = "";   // panes without an action leave the slot empty
   GENS[active].mount({
-    stage: genStage, t: strings(), id: active,
+    stage: genStage, actions: genActions, head: genTitle, t, id: active,
     state: paneState[active],
     save: (s) => { paneState[active] = s; },
   });
@@ -300,11 +291,9 @@ function applyLang(lang) {
   const t = I18N[lang] || I18N.en;
   Site.applyStrings(t);
   document.title = "Old Gold — " + t.titleSuffix;
-  genList.querySelectorAll("a").forEach(a => { a.textContent = t[a.dataset.gen + ".label"]; });
   renderActive();   // re-render the active generator in the new language, keeping its result
 }
 
-buildList();
 Site.setupTabs();
 Site.onLang(applyLang);
 window.addEventListener("hashchange", renderActive);

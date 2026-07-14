@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Old Gold — Page not found</title>
+  <meta name="robots" content="noindex">
+
+  <!-- served by GitHub Pages from any missing path, so every URL is absolute -->
+  <link rel="icon" href="/assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    /* one-page layout, on top of the shared shell */
+    .scrollarea {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nf {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--pad-block) var(--pad-inline);
+    }
+
+    /* the message is a paper card on the desk, like every content object */
+    .nf-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      max-width: 34rem;
+      padding: clamp(2rem, 6vw, 3rem) clamp(1.5rem, 6vw, 3.5rem);
+      background: var(--paper);
+      border: 1px solid var(--ink);
+      box-shadow: var(--shadow-gold);
+      text-align: center;
+    }
+
+    .nf-code {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: var(--w-semibold);
+      font-size: clamp(4.5rem, 14vw, 7.5rem);
+      line-height: 1;
+      letter-spacing: var(--ls-title);
+      padding-bottom: var(--space-2);
+      border-bottom: 3px solid var(--gold);
+      /* the masthead rule, as everywhere */
+    }
+
+    .nf-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: var(--w-semibold);
+      font-size: var(--fs-h2);
+      letter-spacing: var(--ls-heading);
+      text-transform: uppercase;
+    }
+
+    .nf-lead {
+      margin: 0 0 var(--space-2);
+      max-width: 28rem;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: var(--fs-deck);
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body class="page-plain">
+
+  <header class="topbar">
+    <div class="topbar-side topbar-left"></div>
+
+    <nav class="tabs" aria-label="Primary">
+      <button class="tabs-toggle" id="tabsToggle" type="button" aria-expanded="false" aria-controls="tabsMenu">
+        <span>Old Gold</span>
+        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <div class="tabs-menu" id="tabsMenu">
+        <a class="tab" href="/">Home</a>
+        <a class="tab" href="/rulebook.html">Rulebook</a>
+        <a class="tab" href="/generators.html">Generators</a>
+      </div>
+    </nav>
+
+    <div class="topbar-side topbar-right"></div>
+  </header>
+
+  <div class="scrollarea">
+    <main class="nf" id="top">
+      <div class="nf-card">
+        <p class="nf-code">404</p>
+        <h1 class="nf-title">Page not found</h1>
+        <p class="nf-lead">Whatever was here has been moved, buried, or never existed.</p>
+        <a class="btn btn-solid" href="/">Back to the entrance</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="/assets/js/site.js"></script>
+  <script>Site.setupTabs();</script>
+</body>
+
+</html>

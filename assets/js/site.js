@@ -30,9 +30,6 @@ const Site = (() => {
     document.querySelectorAll("[data-i18n]").forEach(el => {
       if (t[el.dataset.i18n] != null) el.textContent = t[el.dataset.i18n];
     });
-    document.querySelectorAll("[data-i18n-html]").forEach(el => {
-      if (t[el.dataset.i18nHtml] != null) el.innerHTML = t[el.dataset.i18nHtml];
-    });
     document.querySelectorAll("[data-i18n-aria]").forEach(el => {
       if (t[el.dataset.i18nAria] != null) el.setAttribute("aria-label", t[el.dataset.i18nAria]);
     });
@@ -43,7 +40,13 @@ const Site = (() => {
 
   /* the live language is the source of truth on <html lang> */
   const lang = () => document.documentElement.lang || "en";
-  const startLang = (dict) => { const s = recall("og-lang"); return dict[s] ? s : "en"; };
+  /* restore the stored language only while its switch button is enabled
+     (HU is disabled for now, so a stored "hu" falls back to English) */
+  const startLang = (dict) => {
+    const s = recall("og-lang");
+    const btn = document.querySelector(`.lang-btn[data-lang="${s}"]`);
+    return dict[s] && btn && !btn.disabled ? s : "en";
+  };
 
   /* wire the language buttons; `handler(lang)` runs only on a real change */
   function onLang(handler) {
@@ -55,16 +58,19 @@ const Site = (() => {
   }
 
   /* shared contents sidebar — one behavior for the rulebook TOC and the
-     generators list. The panel is a fixed overlay at every width and starts
-     closed on every page load (so navigating between pages never carries a
-     stale-open panel). Pass the page's content element and its list of item
-     links so the shared rules below can be wired uniformly:
+     generators list. The panel is a fixed overlay at every width. On wide
+     desktops (≥88rem, where the centered reading column clears the panel) it
+     starts open — a rulebook's contents are primary navigation — unless the
+     user's last hamburger click said otherwise (og-toc). Narrower screens
+     start closed. Pass the page's content element and its list of item links
+     so the shared rules below can be wired uniformly:
 
-       - the hamburger (#navToggle) toggles it; Escape and the scrim close it
+       - the hamburger (#navToggle) toggles it (and records the choice);
+         Escape and the scrim close it
        - clicking into the content closes it (on mobile the drawer overlays the
          page; on desktop it's the "done with the menu" gesture)
        - selecting an item closes it only while the panel covers the text — the
-         mobile drawer, or a desktop window too narrow (<80rem) for the centered
+         mobile drawer, or a desktop window too narrow (<88rem) for the centered
          reading column to clear the panel; on a wide screen it stays open
 
      Returns null on pages without a toggle (e.g. home). */
@@ -74,7 +80,7 @@ const Site = (() => {
     if (!navToggle) return null;
     const scrim = document.getElementById("scrim");
     const mobile   = window.matchMedia("(max-width: 820px)");  // slide-in drawer + scrim
-    const overlaps = window.matchMedia("(max-width: 80rem)");  // open panel covers the reading column
+    const overlaps = window.matchMedia("(max-width: 88rem)");  // open panel covers the centered sheet (20rem panel vs a ~44.5rem sheet)
 
     const isOpen = () => mobile.matches
       ? body.classList.contains("nav-open")
@@ -92,9 +98,22 @@ const Site = (() => {
       syncExpanded();
     };
 
-    navToggle.addEventListener("click", () => (isOpen() ? close() : open()));
+    /* desktop start state: the user's last explicit choice wins; with no
+       choice recorded, open only where the sheet clears the panel */
+    if (!mobile.matches) {
+      const pref = recall("og-toc");
+      body.classList.toggle("sidebar-collapsed", pref ? pref !== "open" : overlaps.matches);
+    }
+
+    navToggle.addEventListener("click", () => {
+      const opening = !isOpen();
+      opening ? open() : close();
+      if (!mobile.matches) store("og-toc", opening ? "open" : "closed");
+    });
     if (scrim) scrim.addEventListener("click", close);
-    document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && isOpen()) { close(); navToggle.focus(); }
+    });
     mobile.addEventListener("change", () => { body.classList.remove("nav-open"); syncExpanded(); });
 
     if (content) content.addEventListener("click", () => { if (isOpen()) close(); });
