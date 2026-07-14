@@ -4,5 +4,5 @@
 const CONFIG = {
   discord: "https://discord.gg/WssHvFgUZ",
   email: "team@tinyravenpress.com",
-  itch: "https://tinyravenpress.itch.io/",
+  itch: "https://tinyravenpress.itch.io/old-gold/",
 };
