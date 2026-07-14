@@ -98,11 +98,14 @@ const Site = (() => {
       syncExpanded();
     };
 
-    /* desktop start state: the user's last explicit choice wins; with no
-       choice recorded, open only where the sheet clears the panel */
+    /* desktop start state: never start open where the panel would cover the
+       centered sheet (<88rem), whatever the stored choice — an open panel over
+       the text is the one state to avoid on load. Above that width the sheet
+       clears the panel, so the user's last explicit choice wins, defaulting to
+       open (a rulebook's contents are primary navigation) */
     if (!mobile.matches) {
       const pref = recall("og-toc");
-      body.classList.toggle("sidebar-collapsed", pref ? pref !== "open" : overlaps.matches);
+      body.classList.toggle("sidebar-collapsed", overlaps.matches || (pref ? pref !== "open" : false));
     }
 
     navToggle.addEventListener("click", () => {

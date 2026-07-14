@@ -184,20 +184,37 @@ function setDocTitle() {
 
 /* scroll-spy: highlight the chapter you're reading */
 function setupScrollSpy(headings) {
+  const scroller = document.getElementById("scrollarea");
   const links = new Map([...tocEl.querySelectorAll("a")].map(a => [a.dataset.target, a]));
   let current = null;
+
+  // While a click on a TOC entry smooth-scrolls the page to its target, the page
+  // sweeps through every heading in between, and each would yank the TOC to
+  // follow — snapping it to wherever the page currently is (e.g. the bottom) then
+  // chasing back up. Hold the panel still for the duration of that click-scroll:
+  // keep the highlight in sync, but don't move the TOC until the page settles.
+  let holdTocScroll = false;
+  let releaseTimer = null;
+  scroller.addEventListener("scrollend", () => { holdTocScroll = false; clearTimeout(releaseTimer); });
+  tocEl.addEventListener("click", e => {
+    if (!e.target.closest("a")) return;
+    holdTocScroll = true;
+    clearTimeout(releaseTimer);
+    releaseTimer = setTimeout(() => { holdTocScroll = false; }, 1500);   // fallback if scrollend never fires
+  });
+
   const setActive = id => {
     if (id === current) return;
     links.forEach(a => a.classList.remove("active"));
     const a = links.get(id);
-    if (a) { a.classList.add("active"); current = id; a.scrollIntoView({ block: "nearest" }); }
+    if (a) { a.classList.add("active"); current = id; if (!holdTocScroll) a.scrollIntoView({ block: "nearest" }); }
   };
 
   const spy = new IntersectionObserver((entries) => {
     const visible = entries.filter(e => e.isIntersecting)
       .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
     if (visible.length) setActive(visible[0].target.id);
-  }, { root: document.getElementById("scrollarea"), rootMargin: "0px 0px -70% 0px", threshold: 0 });
+  }, { root: scroller, rootMargin: "0px 0px -70% 0px", threshold: 0 });
   // observe the masthead too, so "00" lights up while you're at the top
   const h1 = docEl.querySelector("h1");
   const spied = h1 ? [h1, ...headings] : headings;

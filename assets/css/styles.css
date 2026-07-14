@@ -11,9 +11,10 @@
   --gold:       #8c6f28;   /* the one accent — used sparingly; deep enough for AA text on white (~4.7:1) */
 
   /* desk shadow — a hard offset that lifts "printed matter" off the desk.
-     Big sheets cast a pale, grayed gold tint (full gold reads as a slab at
-     sheet size); only small controls (buttons) cast full gold */
-  --shadow-gold: .3rem .3rem 0 color-mix(in srgb, var(--muted) 25%, color-mix(in srgb, var(--gold) 35%, var(--paper)));
+     Big sheets cast a neutral grey (a gold tint reads as a smudge at sheet
+     size, and the one accent belongs on the masthead rules + buttons); only
+     small controls (buttons) still cast full gold */
+  --shadow-sheet: .3rem .3rem 0 color-mix(in srgb, var(--muted) 40%, var(--paper));
 
   /* type families */
   --serif:      "EB Garamond", Georgia, "Times New Roman", serif;   /* display: titles + headings */
@@ -73,20 +74,31 @@ html[lang="hu"] { --label-example: "Példa"; --label-contents: "Tartalom"; }
    (Firefox); otherwise modern Chrome/Edge would honor them and ignore the
    webkit rules below, capping the bar at "thin". */
 @supports not selector(::-webkit-scrollbar) {
-  * { scrollbar-width: thin; scrollbar-color: var(--muted) transparent; }
-  .sidebar .toc { scrollbar-color: transparent transparent; }
-  .sidebar:hover .toc,
-  .sidebar:focus-within .toc { scrollbar-color: var(--muted) transparent; }
+  * { scrollbar-width: thin; scrollbar-color: var(--ink) transparent; }
 }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--muted);
+  background-color: var(--ink);
   border: 2px solid transparent;   /* inset the thumb without a painted rail */
   background-clip: padding-box;
+  border-radius: 999px;            /* round the slim thumb into a soft pill */
 }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--ink); }
 ::-webkit-scrollbar-corner { background: transparent; }
+/* the page's own scrollbar gets the TOC's floating-thumb treatment: a wide
+   track fills the 1.5rem gutter that scrollbar-gutter already reserves on
+   .scrollarea, and the thumb's wide left/right transparent border narrows the
+   painted bar to the same slim ~6px stripe, centred in that gutter — so it sits
+   inset from the screen edge by the same gap the TOC thumb keeps from the panel
+   edge, instead of hugging the corner. Scoped to .scrollarea, so the code-block
+   and table scrollbars keep the standard 10px bar. */
+.scrollarea::-webkit-scrollbar { width: 1rem; }
+.scrollarea::-webkit-scrollbar-thumb { border-width: 5px; min-height: 2.5rem; }  /* equal insets all round → clean pill */
+/* inset the track top/bottom to the same lines the TOC scroll sits on (halved
+   from the sidebar's padding); both bars start just under the top bar, so they
+   begin and end together */
+.scrollarea::-webkit-scrollbar-track { margin: clamp(0.425rem, 1vw, 0.625rem) 0 .25rem; }
 
 /* visually hidden, still read by assistive tech */
 .sr-only {
@@ -172,22 +184,32 @@ body.page-plain .scrollarea {
   width: var(--sidebar);
   height: calc(100vh - var(--topbar));
   height: calc(100dvh - var(--topbar));
-  border-right: 1px solid var(--hair);
-  /* the CONTENTS flag sits close under the top bar, not down at the sheet's top line */
-  padding: clamp(0.85rem, 2vw, 1.25rem) 0 0.5rem 1.75rem;
+  border-right: 1px solid var(--ink);   /* same ink frame as the sheet, not a faint hairline */
+  /* the CONTENTS flag sits close under the top bar, not down at the sheet's top
+     line. Equal left indent and right gutter (1rem) centre the list; the right
+     gutter is filled by the scrollbar track below. Top/bottom padding halved so
+     the scroll (and the list) sit closer to the panel's ends. */
+  padding: clamp(0.425rem, 1vw, 0.625rem) 0 0.25rem 1rem;
   overflow: hidden;
   background: var(--paper);
   display: flex;
   flex-direction: column;
   transition: transform .26s ease;
 }
-.sidebar .toc { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding-right: .35rem; }
-/* the list's own scrollbar hugs the panel's right hairline and stays hidden
-   until the panel is hovered/focused, so at rest only the page's bar shows */
-.sidebar .toc::-webkit-scrollbar { width: 8px; }
-.sidebar .toc::-webkit-scrollbar-thumb { background-color: transparent; }
-.sidebar:hover .toc::-webkit-scrollbar-thumb,
-.sidebar:focus-within .toc::-webkit-scrollbar-thumb { background-color: var(--muted); }
+.sidebar .toc { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+/* the list's own scrollbar stays visible at rest and sits centred in the right
+   gutter: the track spans the whole 1rem gutter (matching the left indent), and
+   the thumb's equal transparent border all round narrows the painted bar to a
+   slim ~6px stripe centred within it — so it floats midway between the list and
+   the panel edge, and border-radius rounds it to a clean pill (equal insets are
+   what let the rounding read the same regardless of thumb length). */
+.sidebar .toc::-webkit-scrollbar { width: 1rem; }
+.sidebar .toc::-webkit-scrollbar-thumb {
+  background-color: var(--ink);
+  border: 5px solid transparent;   /* 1rem track − 2×5px = 6px painted thumb, centred */
+  min-height: 2.5rem;
+  background-clip: padding-box;
+}
 
 /* small gold flag at the head of the list — same idiom as the EXAMPLE labels */
 nav.toc::before {
@@ -252,7 +274,7 @@ main {
   padding: var(--sheet-pad);
   background: var(--paper);
   border: 1px solid var(--ink);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-sheet);
 }
 .doc:empty { display: none; }   /* no bare sheet while the markdown loads */
 
@@ -486,7 +508,7 @@ main {
   height: var(--topbar);
   padding: 0 .9rem;
   background: var(--paper);
-  border-bottom: 1px solid var(--hair);
+  border-bottom: 1px solid var(--ink);   /* same ink frame as the sheet, not a faint hairline */
 }
 /* equal flanks keep the tab group centered; the right flank never shrinks
    below the language switch, so long tab labels can't overlap it */
@@ -578,7 +600,19 @@ main {
 .nav-toggle:hover { color: var(--gold); }
 .nav-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .nav-toggle svg { display: block; }
-.nav-toggle svg line { stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+/* the three bars morph into a close (×) while the panel is open, so the same
+   control reads as "close the contents". aria-expanded is the single source of
+   truth (site.js keeps it true for both the desktop slide-out and the mobile
+   drawer); each bar rotates/translates about the viewBox centre (12,12). */
+.nav-toggle svg line {
+  stroke: currentColor; stroke-width: 1.6; stroke-linecap: round;
+  transform-box: view-box;
+  transform-origin: center;
+  transition: transform .26s ease, opacity .18s ease;
+}
+.nav-toggle[aria-expanded="true"] svg line:nth-child(1) { transform: rotate(45deg)  translateY(5px);  }
+.nav-toggle[aria-expanded="true"] svg line:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] svg line:nth-child(3) { transform: rotate(-45deg) translateY(-5px); }
 
 /* ===========================================================
    GENERATORS PAGE — the switcher rail beside one workbench
@@ -600,7 +634,7 @@ main {
   padding: clamp(1.15rem, 2.35vw, 1.85rem);
   border: 1px solid var(--ink);
   background: var(--paper);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-sheet);
 }
 /* masthead row: the pane's title and its one action (roll/reroll) over the
    gold masthead rule, as everywhere */
@@ -970,7 +1004,7 @@ body.home .scrollarea { display: flex; flex-direction: column; scrollbar-gutter:
   background: var(--ink);
   color: var(--paper);
   overflow: hidden;
-  box-shadow: var(--shadow-gold);   /* the cover is a desk object like the rest */
+  box-shadow: var(--shadow-sheet);   /* the cover is a desk object like the rest */
   /* on desktop the grid stretches this to the hero's height; once stacked the
      art is absolutely positioned and gives no intrinsic height, so anchor the
      panel to a square ratio that matches the square 1:1 cover art */
