@@ -52,7 +52,7 @@
     <div class="topbar-side topbar-right">
       <div class="lang" role="group" aria-label="Language" data-i18n-aria="langGroup">
         <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" type="button" data-lang="hu" aria-pressed="false" disabled>HU</button>
+        <button class="lang-btn" type="button" data-lang="hu" aria-pressed="false" disabled title="Coming soon">HU</button>
       </div>
     </div>
   </header>
@@ -93,11 +93,15 @@
           </p>
         </div>
 
-        <!-- cover plate: black panel + gold inner frame, with the cover art inside -->
+        <!-- cover plate: black panel + gold inner frame, with the cover art inside.
+             WebP twin with the PNG kept as the <picture> fallback. -->
         <aside class="hero-cover">
-          <img class="hero-cover-img" src="assets/img/hero-cover-img.png"
-               alt="A dragon curled asleep atop a hoard of gold coins"
-               width="1450" height="1450" fetchpriority="high">
+          <picture>
+            <source type="image/webp" srcset="assets/img/hero-cover-img.webp">
+            <img class="hero-cover-img" src="assets/img/hero-cover-img.png"
+                 alt="A dragon curled asleep atop a hoard of gold coins"
+                 width="1450" height="1450" fetchpriority="high">
+          </picture>
         </aside>
       </section>
 

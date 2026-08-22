@@ -297,6 +297,10 @@ main {
   padding-bottom: var(--space-2);
   border-bottom: 3px solid var(--gold);   /* masthead rule — the gold accent */
 }
+/* balance wrapped headings/taglines instead of leaving orphan words
+   (progressive enhancement; ignored where unsupported) */
+.doc h1, .doc h2, .doc h3,
+.hero-title, .hero-tagline { text-wrap: balance; }
 .doc h1 + p { /* deck / subtitle — a touch above body (17px), lightly softened from ink */
   font-family: var(--serif);
   font-style: italic;
@@ -475,14 +479,16 @@ main {
 @media print { .doc .rulebook-end { display: none; } }
 
 .doc img { max-width: 100%; height: auto; filter: grayscale(1); }
-/* the ancestry party plate and the kneeling knight keep their color; the
-   grayscale house style is for the line-art spot illustrations */
+/* the painted plates keep their color; the grayscale house style is for the
+   line-art spot illustrations */
 .doc img[src$="ancestries.png"],
-.doc img[src$="knight-kneeling.png"] { filter: none; }
+.doc img[src$="knight-kneeling.png"],
+.doc img[src$="thief-at-door.png"] { filter: none; }
 .doc img[src$="ancestries.png"] { display: block; margin-inline: auto; max-width: 90%; }
-/* the knight is a spot illustration — center it and cap its height to roughly
-   match the ancestries plate's rendered height, so the two read as a pair */
-.doc img[src$="knight-kneeling.png"] {
+/* the knight and the thief are spot illustrations — center them and cap their
+   height to roughly match the ancestries plate, so the three read as a set */
+.doc img[src$="knight-kneeling.png"],
+.doc img[src$="thief-at-door.png"] {
   display: block;
   margin: var(--space-4) auto;
   max-height: 18rem;
@@ -589,7 +595,9 @@ main {
   text-underline-offset: 3px;
 }
 .lang-btn:disabled {
-  color: var(--hair);
+  /* visible-but-secondary: --hair read as a rendering bug, not a disabled state */
+  color: var(--muted);
+  opacity: .55;
   cursor: not-allowed;
 }
 .lang-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
@@ -782,6 +790,7 @@ main {
   font-size: 1.35rem;
   line-height: 1.1;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 .pc-num i {
   font-style: normal;

@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Old Gold is a fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat, where you play a party of adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. It is my love letter to tabletop RPGs, drawing on what I love from both OSR and modern design. I spent years making it, and I share it hoping you'll find as much joy at the table as I have.*
+*Old Gold is a tabletop roleplaying game (TTRPG) of daring exploration, creative problem-solving, and fast-paced tactical combat, where you play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it at the table as I have.*
 
 ## INTRODUCTION
 
@@ -33,12 +33,12 @@ You can undertake this journey alone or with friends.
 
 ### ROUNDING
 
-When dividing, always round up.
+Always round up.
 
 ### CREDITS
 
 Old Gold was designed by Milán László.
-Layout and illustrations by [Illustrator's Name].
+Illustrations by [Illustrator's Name].
 Inspired by The Black Hack, Knave 2e and Mausritter.
 Licensed under Creative Commons Attribution 4.0.
 Special thanks to our playtesters: [Playtester Names].
@@ -53,7 +53,7 @@ Choose your ancestry or roll 1d4.
 
 **1. Dwarf.** Sturdy as the fortresses they carve, they are fiercely loyal and famous for their love of beer. Dwarves stand 120 cm tall and live 200 years, their bodies turning to stone, ore, and gems upon death. Advantage on checks to resist poison (including alcohol), and roll HP with advantage at character creation and when leveling up. Speed 8m. Speak Common and Dwarvish.
 
-**2. Elf.** Quiet and keen-eyed, Elves are drawn to old knowledge and the wild places of the world. They stand 200 cm tall and live up to 500 years, their bodies becoming seeds and green growth upon death. Advantage on checks to resist charm and other mental effects. Speed 12m. Speak Common and Sylvan.
+**2. Elf.** Quiet and strong-willed, Elves are drawn to old knowledge and the wilderness. They stand 200 cm tall and live up to 500 years, their bodies becoming seeds and green growth upon death. Advantage on checks to resist mental effects (such as Charm). Speed 12m. Speak Common and Sylvan.
 
 **3. Halfkin.** Stubborn and warm-hearted, Halfkin prefer good food and a quiet life (though trouble finds them anyway). They stand 80 cm tall and live 100 years. They may reroll natural 1s on checks. Speed 8m. Speak Common.
 
@@ -63,7 +63,7 @@ Choose your ancestry or roll 1d4.
 
 ### LANGUAGES
 
-You may begin play knowing an additional language if it fits your character. A new language can also be learned during downtime.
+You may start knowing one additional language if it fits your character. A new language can also be learned during downtime.
 
 | Name | Description |
 |---|---|
@@ -78,7 +78,7 @@ You may begin play knowing an additional language if it fits your character. A n
 
 ### ATTRIBUTES
 
-Four attributes ranging from 0 to 9 measure your PC's strengths and weaknesses. Each attribute has a score and a bonus (half the score). Scores are used for checks and to calculate maximum HP, while bonuses are used for everything else (damage, range, magical effects, and in any other formula).
+Four attributes ranging from 0 to 9 measure your PC's strengths and weaknesses. Each attribute has a score and a bonus (half the score). Scores are used for checks and to calculate maximum HP, while bonuses are used for everything else (such as damage, range or magical effects).
 
 | 1d4 | Attribute | Governs |
 |---|---|---|
@@ -91,7 +91,7 @@ Either distribute 6 points among your attributes, or roll 6d4 on the table above
 
 ### INSPIRATION
 
-When you do something exceptionally creative or courageous, something your character can be proud of, you become inspired. While inspired, you may reroll any check, damage, or spell effect, accepting the new result. Inspiration does not stack, and is lost when used or after a rest.
+When you do something exceptionally creative or courageous, something your character can be proud of, you become inspired. Spend your Inspiration to reroll any roll you make. Inspiration does not stack, and is lost after a rest.
 
 ### HEALTH POINTS
 
@@ -603,6 +603,8 @@ When lingering in a place of danger, or backtracking, consult the Delving Oracle
 **Running.** Characters who run can cover up to 6 rooms per turn. They cannot map, automatically trigger traps, and are surprised by all encounters.
 
 **Light.** Creatures without a light source or the ability to see in darkness halve their Speed, are surprised by all encounters, trigger all traps, cannot map, and make all checks with disadvantage. Light sources mark usage while lit and may be extinguished by wind, water, or other hazards.
+
+![A cloaked thief crouches on a stairway, working a tool into the lock of a door set in a stone arch.](assets/img/thief-at-door.png)
 
 **Doors.** Most doors open freely. Stuck or barred doors require a Might check to force, and locked doors a Grace check with lockpicks or improvised tools (the latter with disadvantage). Listening at a door requires a Heart check.
 

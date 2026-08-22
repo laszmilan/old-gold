@@ -74,6 +74,7 @@ function render(markdown) {
 
   const headings = prepareHeadings();
   enhanceTables();
+  enhanceImages();
   enhanceStatBlocks();
   markRuleParagraphs();
   // markChapterOpeners();   // drop caps OFF for now (function + CSS kept; re-enable here)
@@ -110,7 +111,9 @@ function prepareHeadings() {
 
 const slug = (s, used) => {
   let base = s.toLowerCase().trim()
-    .replace(/[^\w\s-]/g, "")
+    // keep letters from any alphabet (á, ő, ű …) so Hungarian headings get
+    // readable ids instead of "#kzremkdk"; ASCII headings are unaffected
+    .replace(/[^\p{L}\p{N}\s-]/gu, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-") || "section";
   let id = base, n = 2;
@@ -126,6 +129,25 @@ function enhanceTables() {
     wrap.className = "table-wrap";
     table.parentNode.insertBefore(wrap, table);
     wrap.appendChild(table);
+  });
+}
+
+/* illustrations: serve the WebP twin via <picture> (the PNG src stays as the
+   fallback), and lazy-load everything below the fold */
+function enhanceImages() {
+  docEl.querySelectorAll("img").forEach(img => {
+    const src = img.getAttribute("src");
+    if (src && /\.png$/i.test(src)) {
+      const picture = document.createElement("picture");
+      const source = document.createElement("source");
+      source.type = "image/webp";
+      source.srcset = src.replace(/\.png$/i, ".webp");
+      picture.appendChild(source);
+      img.parentNode.insertBefore(picture, img);
+      picture.appendChild(img);
+    }
+    img.loading = "lazy";
+    img.decoding = "async";
   });
 }
 
@@ -185,7 +207,7 @@ function markChapterOpeners() {
     const p = h.nextElementSibling;
     if (!p || p.tagName !== "P") return;
     if (p.classList.contains("rule") || p.classList.contains("statblock")) return;
-    if (!/^[A-Za-z]/.test(p.textContent.trim())) return;   // need a letter to cap
+    if (!/^\p{L}/u.test(p.textContent.trim())) return;   // need a letter to cap (any alphabet)
     if (p.textContent.trim().length >= 120) p.classList.add("dropcap");
   });
 }
