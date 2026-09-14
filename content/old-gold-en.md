@@ -1,10 +1,10 @@
 # OLD GOLD
 
-*Old Gold is a tabletop roleplaying game (TTRPG) of daring exploration, creative problem-solving, and fast-paced tactical combat, where you play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it at the table as I have.*
+*Old Gold is a tabletop roleplaying game (TTRPG) of daring exploration, creative problem-solving, and fast-paced tactical combat. You play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
 
 ## INTRODUCTION
 
-Tabletop roleplaying games, such as Old Gold, follow a simple game loop: the Referee (or yourself, if playing solo) sets a scene, players say or do what their characters would, and the dice settle whatever is uncertain as the fiction reacts.
+Tabletop roleplaying games, such as Old Gold, follow a simple game loop: the Referee (or yourself, if playing solo) sets a scene, players say or do what their characters would, and the dice settle whatever is uncertain.
 
 **Being a good Referee.** You are a neutral arbiter. When a situation isn't covered by the rules, you make common-sense rulings. You let the story emerge from what the players do, and let the dice fall where they may. You are the eyes, ears, and nose of the players. You telegraph danger, and you reward clever thinking.
 
@@ -42,6 +42,16 @@ Illustrations by [Illustrator's Name].
 Inspired by The Black Hack, Knave 2e and Mausritter.
 Licensed under Creative Commons Attribution 4.0.
 Special thanks to our playtesters: [Playtester Names].
+
+## TIME
+
+| Scale | Duration | Used For |
+|---|---|---|
+| Round | 10 seconds | Combat, quick actions |
+| Turn | 10 minutes | Dungeon delving, longer actions |
+| Watch | 6 hours | Travel, rest, downtime |
+
+6 rounds is a minute, 6 turns is an hour, 4 watches is a day. Weeks, months, years, and so on as needed. In combat, a round ends when every creature has acted.
 
 ## CHARACTER CREATION
 
@@ -99,7 +109,7 @@ HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 f
 
 > Bramble the halfkin, Might 1, starts with 6 + (1 × 3) = 9 HP and rolls 2 at level 1: 11 maximum HP. Reaching level 2, he rolls 5 and raises his Might to 2, gaining 5 HP from the roll and 3 from Might for a new maximum of 19.
 
-**Dying.** While at 0 HP, you fall prone, unable to act, and must make a Death Roll at the start of your turn. NPCs usually die at 0 HP, and a creature that is unconscious or otherwise helpless can be slain instantly.
+**Dying.** While at 0 HP, you fall prone, unable to act, and must make a Death Roll each time you would act. NPCs usually die at 0 HP, and a creature that is unconscious or otherwise helpless can be slain instantly.
 
 | 1d6 | Death Roll Outcome |
 |---|---|
@@ -113,7 +123,7 @@ HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 f
 
 ### DEFENSE POINTS
 
-DP represents armor, cover, and magical protection. Your base DP is 0. When you take damage from any source, subtract your DP and apply the rest to your HP. Damage reduced to 0 or below deals nothing.
+DP represents armor, cover, and magical protection. Your base DP is 0. When you take damage from any source, subtract your DP. If any damage is left, apply it to your HP.
 
 **Cover.** Partial cover grants +2 DP, while full cover blocks attacks entirely.
 
@@ -318,7 +328,7 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 | Weakening poison | 1 slot. Disadvantage on Might and Grace rolls for 1d4 watches or until cured. | 200 |
 | Sleep poison | 1 slot. Asleep for 1d4 watches. Damage or shaking may wake the victim. | 300 |
 | Paralytic poison | 1 slot. Paralyzed for 1d6 hours. | 400 |
-| Lethal poison | 1 slot. 1d6 direct damage now and at the start of each of the victim's turns for 6 rounds. | 500 |
+| Lethal poison | 1 slot. 1d6 direct damage now and each time the victim would act for the next 6 rounds. | 500 |
 
 ### ADVENTURING GEAR
 
@@ -389,18 +399,6 @@ When the outcome of an action is uncertain, make a check: roll 1d20 and add your
 
 **Retrying.** You cannot retry a failed check unless circumstances change (new tools, new information, a different approach, or enough time) or you're willing to pay the price (mark usage, raise the difficulty, take damage, or accept a narrative consequence).
 
-## TIME
-
-When precision matters, time is measured in these scales:
-
-| Scale | Duration | Used For |
-|---|---|---|
-| Round | 10 seconds | Combat, urgent actions |
-| Turn | 10 minutes | Dungeon exploration |
-| Watch | 6 hours | Travel, rest, downtime |
-
-A minute is 6 rounds, an hour is 6 turns, a day is 4 watches.
-
 ## ACTIONS
 
 When the sequence of actions matters, the game shifts into rounds. Each round, every creature may move, take a main action, and perform a reasonable number of free actions. Rounds are used for combat, but also for chases, collapsing tunnels, tense negotiations, or any other situation where seconds count.
@@ -420,7 +418,7 @@ You may move up to your Speed per round. Difficult terrain (dense brush, rubble,
 Your main action is one complex interaction, such as attacking, casting a spell, praying, or making an ability check. You can also:
 
 - **Sprint.** Move up to your Speed again.
-- **Defend.** Roll 1d4 and gain that much DP until the start of your next turn.
+- **Defend.** Roll 1d4 and gain that much DP until you would act again.
 - **Disengage.** Move without provoking opportunity attacks.
 
 ### FREE ACTIONS
@@ -433,7 +431,7 @@ In Old Gold you only need to roll for damage. Use your weapon's damage die, add 
 
 ![A knight kneels with bowed head, both hands resting on a sword planted point-down.](assets/img/knight-kneeling.png)
 
-> Aldric (Might 5, so a +3 melee bonus) swings a sword (1d6) at an Orc Warrior (DP 2). He rolls a 4: 4 + 3 = 7 damage, minus the orc's 2 DP, for 5 to its HP. Had the orc defended instead of attacking on its turn, it would have rolled 1d4 for extra DP to soften the blow.
+> Aldric (Might 5, so a +3 melee bonus) swings a sword (1d6) at an Orc Warrior (DP 2). He rolls a 4: 4 + 3 = 7 damage, minus the orc's 2 DP, for 5 to its HP. Had the orc defended instead of attacking when it acted, it would have rolled 1d4 for extra DP to soften the blow.
 
 **Combat maneuvers.** Instead of attacking, you can attempt to disarm, shove, trip, grapple, blind, or otherwise hinder an opponent. Resolve these with an appropriate check.
 
@@ -473,7 +471,7 @@ Both spells and prayers require a main action, the spellbook or relic in hand, a
 
 **Defaults.** Unless stated otherwise, spells and prayers last 1 round and have a range of 60 meters. An item is anything that fits in one hand. An object is anything up to human-sized.
 
-**Innate abilities.** Some creatures produce magical effects naturally. These follow the same rules as spells or prayers but use no usage dots. Instead, once used, there is a 2-in-6 chance the creature recharges the ability at the start of its turn.
+**Innate abilities.** Some creatures produce magical effects naturally. These follow the same rules as spells or prayers but use no usage dots. Instead, once used, there is a 2-in-6 chance the creature recharges the ability the next time it would act.
 
 **Your table, your magic.** The spells and prayers below are starting points. Modify them, write your own, or adapt from other systems. Just remember: any spell or prayer you introduce, your enemies can use too.
 
@@ -530,9 +528,9 @@ Not every danger swings a sword.
 - **Wind.** Halves the range of ranged and thrown weapons. Strong wind drowns out sound, slows movement, and may blow over unsecured objects. Carries scents.
 - **Storm.** Combines rain, wind, and lightning at their worst.
 - **Extreme heat.** Without water and shade, suffer 1d3 direct damage each watch, and resting consumes an extra ration.
-- **Burning.** Fire deals 2d6 damage. A creature that is on fire takes this damage at the start of each of its turns until the flames are extinguished. Drop and roll (main action) to extinguish.
+- **Burning.** Fire deals 2d6 damage. A creature that is on fire takes this damage each time it would act until the flames are extinguished. Drop and roll (main action) to extinguish.
 - **Falling.** 1d4 damage every 2m fallen beyond the first 2. If three or more dice show their max value, you die on impact.
-- **Suffocating.** Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage at the start of each of your turns.
+- **Suffocating.** Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage each time you would act.
 - **Intoxication.** Might check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.
 - **Poison.** When exposed, make a Might check to resist, or suffer its effects. Mark usage to coat one weapon strike or one drink.
 
@@ -921,13 +919,13 @@ A dungeon takes its name from what it looks like, what it is, and what haunts it
 
 **Living Armor.** HP 16, DP 3, Might 4, Grace 1, Mind 1, Heart 1, Speed 6m, Morale 12, ATK halberd (1d6+2, 4m), NA 1d4. Held together by magic. Loud when moving. Immune to mental effects.
 
-**Gelatinous Cube.** HP 22, DP 0, Might 3, Grace 0, Mind 0, Heart 0, Speed 4m, Morale 12, ATK engulf (1d6, 2m), NA 1. Immune to piercing weapons like spears and arrows. Engulfed targets are restrained and take 1d6 damage at the start of each of their turns until they escape.
+**Gelatinous Cube.** HP 22, DP 0, Might 3, Grace 0, Mind 0, Heart 0, Speed 4m, Morale 12, ATK engulf (1d6, 2m), NA 1. Immune to piercing weapons like spears and arrows. Engulfed targets are restrained and take 1d6 damage each time they would act until they escape.
 
-**Brain Flayer.** HP 16, DP 1, Might 3, Grace 2, Mind 7, Heart 3, Speed 10m, Morale 8, ATK tentacles (1d6+2, 2m, grapples on hit), NA 1d3. Psionic horror from the deep. Psychic blast (innate): each creature within 6m makes a Mind check or is stunned for 1 round. At the start of its turn, if a creature it has grappled is also stunned, it begins extracting the brain. The victim dies in 2 rounds unless freed.
+**Brain Flayer.** HP 16, DP 1, Might 3, Grace 2, Mind 7, Heart 3, Speed 10m, Morale 8, ATK tentacles (1d6+2, 2m, grapples on hit), NA 1d3. Psionic horror from the deep. Psychic blast (innate): each creature within 6m makes a Mind check or is stunned for 1 round. Each time it acts, if a creature it has grappled is also stunned, it begins extracting the brain. The victim dies in 2 rounds unless freed.
 
 **Basilisk.** HP 14, DP 2, Might 3, Grace 1, Mind 4, Heart 1, Speed 8m, Morale 7, ATK bite (1d6+2, 2m), NA 1d2. A many-legged reptile whose gaze turns the living to stone. Innate magic: Petrify.
 
-**Troll.** HP 24, DP 1, Might 5, Grace 2, Mind 1, Heart 1, Speed 12m, Morale 9, ATK claws (1d8+3, 2m), NA 1d2. Regenerates 1d6 HP at the start of each of its turns. Sunlight prevents regeneration. Sees in darkness.
+**Troll.** HP 24, DP 1, Might 5, Grace 2, Mind 1, Heart 1, Speed 12m, Morale 9, ATK claws (1d8+3, 2m), NA 1d2. Regenerates 1d6 HP each time it would act. Sunlight prevents regeneration. Sees in darkness.
 
 **Demon.** HP 22, DP 2, Might 5, Grace 3, Mind 3, Heart 2, Speed 10m (20m flying), Morale 10, ATK claws (1d8+3, 2m), NA 1d2. A fiend of the lower planes, wreathed in fire. Immune to fire. Sees in darkness. Innate magic: Fireball. Speaks Abyssal.
 
