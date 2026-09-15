@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Old Gold is a tabletop roleplaying game (TTRPG) of daring exploration, creative problem-solving, and fast-paced tactical combat. You play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
+*Old Gold is a tabletop roleplaying game of daring exploration, creative problem-solving, and fast-paced tactical combat. You play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
 
 ## INTRODUCTION
 

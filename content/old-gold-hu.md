@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Az Old Gold egy asztali szerepjáték (TTRPG) tele merész felfedezésekkel, leleményes problémamegoldásokkal és pörgős, taktikus csatákkal. Olyan kalandozókat irányítasz, akik elég bátrak (vagy bolondok) ahhoz, hogy elfeledett romok és szörnyek járta rengetegek mélyére hatoljanak az ott várakozó régi arany reményében. Remélem, te is annyi örömöt lelsz majd benne, mint én.*
+*Az Old Gold egy asztali szerepjáték tele merész felfedezésekkel, leleményes problémamegoldásokkal és pörgős, taktikus csatákkal. Olyan kalandozókat irányítasz, akik elég bátrak (vagy bolondok) ahhoz, hogy elfeledett romok és szörnyek járta rengetegek mélyére hatoljanak az ott várakozó régi arany reményében. Remélem, te is annyi örömöt lelsz majd benne, mint én.*
 
 ## BEVEZETÉS
 
