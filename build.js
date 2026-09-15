@@ -19,7 +19,7 @@ const LANGS = {
 
 const STRINGS = {
   en: {
-    other: 'hu', otherName: 'Magyar', otherPath: 'hu/',
+    other: 'hu', otherPath: 'hu/',
     contents: 'Contents', close: 'Close', skip: 'Skip to the rules', rules: 'Rulebook',
     title: 'Old Gold — a fantasy adventure game',
     description: 'A fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat, with OSR roots and modern design. Read the full rulebook online, free.',
@@ -35,7 +35,7 @@ const STRINGS = {
     redirect: 'The rulebook has moved to the front page.',
   },
   hu: {
-    other: 'en', otherName: 'English', otherPath: '',
+    other: 'en', otherPath: '',
     contents: 'Tartalom', close: 'Bezárás', skip: 'Ugrás a szabályokhoz', rules: 'Szabálykönyv',
     title: 'Old Gold — fantasy kalandjáték',
     description: 'Fantasy kalandjáték a merész felfedezésről, a kreatív problémamegoldásról és a pörgős, taktikus harcról. A teljes szabálykönyv ingyen olvasható online.',
@@ -51,6 +51,15 @@ const STRINGS = {
     redirect: 'A szabálykönyv átköltözött a nyitóoldalra.',
   },
 };
+
+/* EN | HU, the language you are reading set solid, the other a link */
+function langSwitch(lang) {
+  const here = code => `<span class="on" lang="${code}">${code.toUpperCase()}</span>`;
+  const away = (code, href) => `<a href="${href}" hreflang="${code}" lang="${code}" data-lang-switch>${code.toUpperCase()}</a>`;
+  return '<nav class="lang" aria-label="Language">' +
+    (lang === 'en' ? here('en') + away('hu', 'hu/') : away('en', '../') + here('hu')) +
+    '</nav>';
+}
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const decode = s => String(s).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
@@ -225,7 +234,6 @@ function buildPage(lang, doc) {
   const assets = L.dir ? '../assets/' : 'assets/';
   const canonical = `${CONFIG.site}/${L.dir ? L.dir + '/' : ''}`;
   const index = tocHtml(doc.toc);
-  const other = L.dir ? '../' : 'hu/';
 
   const away = (href, label) => `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
 
@@ -247,7 +255,7 @@ function buildPage(lang, doc) {
 <header class="cover" id="top">
   <div class="cover-top">
     <span>${t.publisher}</span>
-    <a href="${other}" hreflang="${t.other}" lang="${t.other}" data-lang-switch>${t.otherName}</a>
+    ${langSwitch(lang)}
   </div>
   <div class="cover-main">
     <div class="cover-text">

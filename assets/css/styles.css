@@ -40,6 +40,14 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
 .cover-top, .cover-bottom { display: flex; justify-content: space-between; gap: 1rem; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
 .cover-bottom { justify-content: flex-start; flex-wrap: wrap; gap: .5rem 2.5rem; padding-right: 7rem; min-width: 0; }
 .cover-top a, .cover-bottom a { text-decoration: none; }
+.lang { display: flex; align-items: center; }
+.lang > * { padding: 0 .6em; }
+.lang > *:first-child { padding-left: 0; }
+.lang > *:last-child { padding-right: 0; }
+.lang > * + * { border-left: 1px solid var(--rule); }
+.lang .on { color: var(--ink); font-weight: 700; }
+.lang a { color: var(--ink-2); }
+.lang a:hover { color: var(--gold); }
 .cover-bottom a[href^="mailto"] { text-transform: none; letter-spacing: 0; }
 .cover-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; align-items: center; }
 @media (min-width: 900px) {
@@ -133,10 +141,12 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
     align-self: start;
     max-height: calc(100vh - 4rem);
     overflow: auto;
-    /* margin + padding must equal .rules padding-top + the first chapter's
-       margin-top, or the list stops lining up with chapter 01. The padding
-       half must equal the fade below, or the first entry sits faded at rest. */
-    margin-top: .5rem;
+    /* wheeling past either end must not scroll the page underneath: that
+       chains into the reading position, which scrolls the list again */
+    overscroll-behavior: contain;
+    /* the list starts level with the first chapter's title. The padding must
+       equal the fade below, or the first entry sits faded at rest. */
+    margin-top: 6.35rem;
     padding: 1.5rem 0 5rem;
     scrollbar-width: none;
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 1.5rem, #000 calc(100% - 4rem), transparent);
