@@ -13,19 +13,12 @@
     });
   }
 
-  /* carry the current #section across the language switch */
-  document.querySelectorAll('a[data-lang-switch]').forEach(function (a) {
-    var href = a.getAttribute('href');
-    a.addEventListener('click', function () { a.href = href.split('#')[0] + location.hash; });
-  });
-
   var index = document.querySelector('.index');
   var links = {};
   document.querySelectorAll('.index a[href^="#"]').forEach(function (a) {
     links[a.getAttribute('href').slice(1)] = a;
   });
   var heads = [].slice.call(document.querySelectorAll('.rules h2, .rules h3'));
-  if (!heads.length) return;
   var current = null;
 
   /* scroll the column, not the page. The pads clear the mask's fades. */
@@ -57,7 +50,36 @@
   }
   function schedule() { if (!pending) { pending = true; requestAnimationFrame(spy); } }
 
-  window.addEventListener('scroll', schedule, { passive: true });
-  window.addEventListener('resize', schedule, { passive: true });
-  spy();
+  if (heads.length) {
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    spy();
+  }
+
+  /* land where the reader actually is, not on a #hash left over from an
+     earlier click: on the cover that means the top of the other page */
+  document.querySelectorAll('a[data-lang-switch]').forEach(function (a) {
+    var base = a.getAttribute('href').split('#')[0];
+    a.addEventListener('click', function () { a.href = base + (current ? '#' + current : ''); });
+  });
+
+  /* the cover art leans towards the cursor. Mouse only: on a touch screen
+     there is nothing to follow, and the CSS drops it for reduced motion. */
+  var cover = document.querySelector('.cover');
+  if (cover && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var art = cover.querySelector('.cover-art'), frame = null;
+    cover.addEventListener('pointermove', function (e) {
+      if (frame) return;
+      frame = requestAnimationFrame(function () {
+        frame = null;
+        var box = cover.getBoundingClientRect();
+        art.style.setProperty('--px', ((e.clientX - box.left) / box.width * 2 - 1).toFixed(3));
+        art.style.setProperty('--py', ((e.clientY - box.top) / box.height * 2 - 1).toFixed(3));
+      });
+    });
+    cover.addEventListener('pointerleave', function () {
+      art.style.setProperty('--px', 0);
+      art.style.setProperty('--py', 0);
+    });
+  }
 })();

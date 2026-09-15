@@ -150,6 +150,9 @@ function renderDoc(md, lang, assets, idMap) {
 
   html = html.replace(/<hr\s*\/?>\s*/g, '');
 
+  /* links out of the rules open in a new tab, so nobody loses their place */
+  html = html.replace(/<a href="(https?:\/\/[^"]+)">/g, '<a href="$1" target="_blank" rel="noopener">');
+
   /* longest titles first, so "Health Points" wins over "Health" */
   const see = STRINGS[lang].seeWord;
   for (const h of [...toc].sort((a, b) => b.title.length - a.title.length)) {
@@ -224,15 +227,17 @@ function buildPage(lang, doc) {
   const index = tocHtml(doc.toc);
   const other = L.dir ? '../' : 'hu/';
 
+  const away = (href, label) => `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
+
   const links = [
-    CONFIG.discord ? `<a href="${CONFIG.discord}" rel="noopener">Discord</a>` : '',
-    CONFIG.itch ? `<a href="${CONFIG.itch}" rel="noopener">itch.io</a>` : '',
+    CONFIG.discord ? away(CONFIG.discord, 'Discord') : '',
+    CONFIG.itch ? away(CONFIG.itch, 'itch.io') : '',
   ].filter(Boolean).join('\n        ');
 
   const footLinks = [
     CONFIG.email ? `<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>` : '',
-    CONFIG.discord ? `<a href="${CONFIG.discord}" rel="noopener">Discord</a>` : '',
-    CONFIG.itch ? `<a href="${CONFIG.itch}" rel="noopener">itch.io</a>` : '',
+    CONFIG.discord ? away(CONFIG.discord, 'Discord') : '',
+    CONFIG.itch ? away(CONFIG.itch, 'itch.io') : '',
   ].filter(Boolean).join('\n      ');
 
   return head({
@@ -275,8 +280,8 @@ function buildPage(lang, doc) {
   </main>
 
   <footer class="colophon">
-    <p><span>${t.publisher}</span><span>${t.license}</span></p>
     <p>
+      <span>${t.license}</span>
       ${footLinks}
     </p>
   </footer>

@@ -64,13 +64,26 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
   border-bottom: 2px solid var(--gold);
 }
 .cover .note { font-size: .9rem; color: var(--ink-2); max-width: 32em; margin: 1.5rem 0 0; }
-.cover-art { margin: 0; display: flex; align-items: center; justify-content: center; }
+.cover-art { margin: 0; display: flex; align-items: center; justify-content: center; perspective: 1200px; }
+/* the tilt goes on the wrapper, not the image: perspective only reaches a
+   direct child, and a flat rotation would lose the depth */
+.cover-art picture {
+  display: block;
+  transform:
+    rotateY(calc(var(--px, 0) * 3deg))
+    rotateX(calc(var(--py, 0) * -3deg))
+    translate3d(calc(var(--px, 0) * 7px), calc(var(--py, 0) * 7px), 0);
+  transition: transform .5s cubic-bezier(.22, .61, .36, 1);
+}
 .cover-art img {
   display: block;
   width: auto;
   max-width: min(100%, 38rem);
   max-height: 42svh;
   object-fit: contain;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover-art picture { transform: none; transition: none; }
 }
 /* A grid row sized by its own content cannot shrink the art inside it, so the
    cap comes from the viewport. Without this the cover outgrows the screen and
@@ -96,8 +109,10 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
   font-weight: 600; font-size: 1rem;
 }
 .index .toc a:hover, dialog .toc a:hover { color: var(--ink); }
-.index .toc a.current { color: var(--ink); }
-.index .toc a.current .n { color: var(--gold); font-weight: 700; }
+/* the chapter rule above is more specific, so the current entry needs to match it */
+.index .toc a.current,
+.index .toc li.ch > a.current,
+.index .toc a.current .n { color: var(--gold); }
 
 /* ===========================================================
    RULES
