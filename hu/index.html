@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Old Gold — fantasy kalandjáték</title>
+<meta name="description" content="Fantasy kalandjáték a merész felfedezésről, a kreatív problémamegoldásról és a pörgős, taktikus harcról. A teljes szabálykönyv ingyen olvasható online.">
+<meta name="theme-color" content="#faf6ee">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="canonical" href="https://oldgoldrpg.com/hu/">
+<link rel="alternate" hreflang="hu" href="https://oldgoldrpg.com/hu/">
+<link rel="alternate" hreflang="en" href="https://oldgoldrpg.com/">
+<link rel="alternate" hreflang="x-default" href="https://oldgoldrpg.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oldgoldrpg.com/hu/">
+<meta property="og:site_name" content="Old Gold">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:title" content="Old Gold — fantasy kalandjáték">
+<meta property="og:description" content="Fantasy kalandjáték OSR gyökerekkel és modern tervezéssel. A teljes szabálykönyv ingyen olvasható online.">
+<meta property="og:image" content="https://oldgoldrpg.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Egy sárkány alszik összegömbölyödve egy aranyhalmon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldgoldrpg.com/assets/img/og-image.png">
+<link rel="preload" href="../assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/familjen-grotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#rules">Ugrás a szabályokhoz</a>
+
+<header class="cover" id="top">
+  <div class="cover-top">
+    <span>Tiny Raven Press</span>
+    <a href="../" hreflang="en" lang="en" data-lang-switch>English</a>
+  </div>
+  <div class="cover-main">
+    <div class="cover-text">
+      <h1>Old Gold</h1>
+      <p class="deck">Az Old Gold egy asztali szerepjáték tele merész felfedezésekkel, leleményes problémamegoldásokkal és pörgős, taktikus csatákkal. Olyan kalandozókat irányítasz, akik elég bátrak (vagy bolondok) ahhoz, hogy elfeledett romok és szörnyek járta rengetegek mélyére hatoljanak az ott várakozó régi arany reményében. Remélem, te is annyi örömöt lelsz majd benne, mint én.</p>
+      <p class="actions">
+        <a class="primary" href="#rules">Szabálykönyv olvasása</a>
+        <a href="https://discord.gg/WssHvFgUZ" rel="noopener">Discord</a>
+        <a href="https://tinyravenpress.itch.io/old-gold/" rel="noopener">itch.io</a>
+      </p>
+      <p class="note">A teljes szabálykönyv ingyen olvasható online. Ha támogatnád, töltsd le a karakterlapot az itch.io-n, és fizess annyit, amennyit szeretnél.</p>
+    </div>
+    <figure class="cover-art">
+      <picture>
+        <source type="image/webp" srcset="../assets/img/hero-cover-img.webp">
+        <img src="../assets/img/hero-cover-img.png" alt="Egy sárkány alszik összegömbölyödve egy aranyhalmon" width="1450" height="1450" fetchpriority="high">
+      </picture>
+    </figure>
+  </div>
+  <div class="cover-bottom">
+    <a href="#rules">Szabálykönyv ↓</a>
+    <a href="mailto:team@tinyravenpress.com">team@tinyravenpress.com</a>
+  </div>
+</header>
+
+<div class="reading">
+  <nav class="index" aria-label="Tartalom"><ol class="toc"><li class="ch"><a href="#introduction"><span class="n">1</span><span class="t">Bevezetés</span></a><ol><li><a href="#what-you-need"><span class="n">1.1</span><span class="t">Mire lesz szükséged</span></a></li><li><a href="#game-notations"><span class="n">1.2</span><span class="t">Jelölések</span></a></li><li><a href="#modes-of-play"><span class="n">1.3</span><span class="t">Játékmódok</span></a></li><li><a href="#rounding"><span class="n">1.4</span><span class="t">Kerekítés</span></a></li><li><a href="#credits"><span class="n">1.5</span><span class="t">Közreműködők</span></a></li></ol></li><li class="ch"><a href="#time"><span class="n">2</span><span class="t">Idő</span></a></li><li class="ch"><a href="#character-creation"><span class="n">3</span><span class="t">Karakteralkotás</span></a><ol><li><a href="#ancestry"><span class="n">3.1</span><span class="t">Nép</span></a></li><li><a href="#languages"><span class="n">3.2</span><span class="t">Nyelvek</span></a></li><li><a href="#attributes"><span class="n">3.3</span><span class="t">Tulajdonságok</span></a></li><li><a href="#inspiration"><span class="n">3.4</span><span class="t">Ihlet</span></a></li><li><a href="#health-points"><span class="n">3.5</span><span class="t">Életerő pontok</span></a></li><li><a href="#defense-points"><span class="n">3.6</span><span class="t">Védelmi pontok</span></a></li><li><a href="#inventory"><span class="n">3.7</span><span class="t">Felszerelés</span></a></li></ol></li></ol></nav>
+
+  <main class="rules" id="rules">
+    <section class="chapter" data-number="1"><h2 id="introduction"><span class="num">1</span><span class="t">Bevezetés</span></h2>
+<p>Az asztali szerepjátékok, így az Old Gold is, egy egyszerű ciklust követnek: a Játékvezető (vagy te magad, ha egyedül játszol) felvázol egy jelenetet, a játékosok elmondják, mit tesz vagy mond a karakterük, a kockák pedig eldöntik, ami bizonytalan.</p>
+<p class="rule"><strong>Jó Játékvezetőnek lenni.</strong> Semleges döntőbíró vagy. Ha egy helyzetre nem terjednek ki a szabályok, józan ésszel döntesz. Hagyod, hogy a történet a játékosok tetteiből bontakozzon ki, és hagyod, hogy a kockák úgy essenek, ahogy esnek. Te vagy a játékosok szeme, füle és orra. Előre jelzed a veszélyt, és megjutalmazod az okos ötleteket.</p>
+<p class="rule"><strong>Jó játékosnak lenni.</strong> Sokat kérdezel, jegyzetelsz, térképet rajzolsz. Azt is megkérdezed, te mit tennél, nemcsak azt, hogy a karaktered mit tenne. Együtt tervezel és dolgozol a csapatoddal. A győzelemért játszol, de készen állsz a vereségre.</p>
+<h3 id="what-you-need"><span class="num">1.1</span><span class="t">Mire lesz szükséged</span></h3>
+<p>Legalább egy kockakészletre (d4, d6, d8, d10, d12, d20), papírra, ceruzára és 50×15 mm-es öntapadós cetlikre a felszerelésednek. A karakterlapot az <a href="https://tinyravenpress.itch.io/old-gold/">itch.io</a> oldalról töltheted le, és csatlakozhatsz a <a href="https://discord.gg/WssHvFgUZ">Discord</a>-szerverünkhöz is.</p>
+<h3 id="game-notations"><span class="num">1.2</span><span class="t">Jelölések</span></h3>
+<p>Néhány hasznos fogalom:</p>
+<ul>
+<li><strong>XdY.</strong> Dobj X darab Y oldalú kockával, és add össze az eredményeket.</li>
+<li><strong>JK.</strong> Játékoskarakter, egy játékos által irányított kalandozó.</li>
+<li><strong>NJK.</strong> Nem játékos karakter, vagyis a világ minden más szereplője.</li>
+<li><strong>Orákulum.</strong> Véletlen táblázatok, amelyek megválaszolják a kérdéseidet, és váratlan fordulatokkal szolgálnak.</li>
+</ul>
+<h3 id="modes-of-play"><span class="num">1.3</span><span class="t">Játékmódok</span></h3>
+<p>Erre az utazásra elindulhatsz egyedül vagy barátokkal.</p>
+<ul>
+<li><strong>Egyjátékos.</strong> Az egész csapatot te irányítod, te magad vagy a Játékvezető is, a kérdéseket és a fordulatokat orákulumok döntik el.</li>
+<li><strong>Csoportos.</strong> A játékosok együtt irányítják a csapatot, Játékvezető nélkül, közösen döntenek a szabályokról és kérdezik az orákulumokat.</li>
+<li><strong>Vezetett.</strong> Az egyik játékos a Játékvezető, ő írja le a világot, játssza az NJK-kat és dönt a szabályokról, a többiek pedig egy vagy több JK-t irányítanak.</li>
+</ul>
+<h3 id="rounding"><span class="num">1.4</span><span class="t">Kerekítés</span></h3>
+<p>Mindig kerekíts felfelé.</p>
+<h3 id="credits"><span class="num">1.5</span><span class="t">Közreműködők</span></h3>
+<p>A játékot készítette: László Milán.<br>Illusztrációk: [Illusztrátor neve].<br>Ihletet adott: The Black Hack, Knave 2e és Mausritter.<br>Creative Commons Attribution 4.0 licenc alatt.<br>Külön köszönet a tesztjátékosainknak: [Tesztjátékosok nevei].</p>
+</section>
+<section class="chapter" data-number="2"><h2 id="time"><span class="num">2</span><span class="t">Idő</span></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lépték</th>
+<th>Hossz</th>
+<th>Mire használjuk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Kör</td>
+<td>10 másodperc</td>
+<td>Csata, gyors cselekvések</td>
+</tr>
+<tr>
+<td>Forduló</td>
+<td>10 perc</td>
+<td>Kazamaták bejárása, hosszabb cselekvések</td>
+</tr>
+<tr>
+<td>Őrség</td>
+<td>6 óra</td>
+<td>Utazás, pihenés, két kaland közti idő</td>
+</tr>
+</tbody></table></div>
+<p>6 kör egy perc, 6 forduló egy óra, 4 őrség egy nap. Hetek, hónapok, évek stb. értelemszerűen. Csatában akkor telik le egy kör, ha minden lény sorra került egyszer.</p>
+</section>
+<section class="chapter" data-number="3"><h2 id="character-creation"><span class="num">3</span><span class="t">Karakteralkotás</span></h2>
+<p>Ennek a fejezetnek a segítségével néhány perc alatt megalkothatod a kalandozódat.</p>
+<h3 id="ancestry"><span class="num">3.1</span><span class="t">Nép</span></h3>
+<p>Válaszd ki a néped, vagy dobj 1d4-gyel.</p>
+<p class="rule"><strong>1. Törpe.</strong> Olyan szívósak, mint a hegybe vájt váraik, rendíthetetlenül hűségesek és híresek a sör iránti szeretetükről. A törpék 120 cm magasak és 200 évig élnek, a testük a haláluk után kővé, érccé és drágakővé változik. Előnnyel dobnak a méreg elleni próbákon (az alkoholt is beleértve), valamint az ÉP-re karakteralkotáskor és szintlépéskor. Sebesség 8 m. Közös és törp nyelven beszélnek.</p>
+<p class="rule"><strong>2. Elf.</strong> Csendesek és erős akaratúak, vonzza őket az ősi tudás és a természet. 200 cm magasak és akár 500 évig is élnek, a testük a haláluk után maggá és zöldellő hajtássá változik. Előnnyel dobnak az elmét befolyásoló hatások (pl. Elbűvölés) elleni próbákon. Sebesség 12 m. Közös és tünde nyelven beszélnek.</p>
+<p class="rule"><strong>3. Félnép.</strong> Makacsok és melegszívűek, a félnépek kedvelik a jó ételt és a nyugodt életet (bár a baj így is megtalálja őket). 80 cm magasak és 100 évig élnek. A próbákon újradobhatják a természetes 1-eseket. Sebesség 8 m. Közös nyelven beszélnek.</p>
+<p class="rule"><strong>4. Ember.</strong> Nyughatatlanok és alkalmazkodóak, az emberek minden más népnél többen vannak, és a világ minden szegletében megélnek. 170 cm magasak és 70 évig élnek. Karakteralkotáskor 7 pontot oszthatnak szét, vagy 7d4-gyel dobhatnak (lásd <a class="xref" href="#attributes">Tulajdonságok</a>). Sebesség 10 m. Közös nyelven beszélnek.</p>
+<figure class="plate plate-ancestries"><picture><source type="image/webp" srcset="../assets/img/ancestries.webp"><img src="../assets/img/ancestries.png" alt="Négy kalandozó áll együtt: egy botot tartó félnép, egy csuklyás ember, egy vörös szakállú törpe és egy magas, könyvet olvasó elf." loading="lazy" decoding="async" width="2133" height="1138"></picture></figure>
+<h3 id="languages"><span class="num">3.2</span><span class="t">Nyelvek</span></h3>
+<p>Ha illik a karakteredhez, karakteralkotáskor választhatsz egy további nyelvet. Újabbakat két kaland között tanulhatsz.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Név</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Közös</td>
+<td>A legtöbb civilizált nép közös nyelve.</td>
+</tr>
+<tr>
+<td>Törp</td>
+<td>Mély és ütemes, mindenki beszéli, aki a hegyek alatt él.</td>
+</tr>
+<tr>
+<td>Tünde</td>
+<td>A legrégebbi élő nyelv, elfek, tündérek és szellemek suttogják.</td>
+</tr>
+<tr>
+<td>Nyers</td>
+<td>Torokhangú és durva, orkok, goblinok, óriások és trollok beszélik.</td>
+</tr>
+<tr>
+<td>Sárkány</td>
+<td>A sárkányok és gyíkemberek zengő nyelve.</td>
+</tr>
+<tr>
+<td>Pokoli</td>
+<td>Szaggatott és sziszegő, démonok, élőholtak és sötét rituálék használják.</td>
+</tr>
+<tr>
+<td>Mennyei</td>
+<td>Tiszta és csengő, angyalok és szent rendek beszélik.</td>
+</tr>
+<tr>
+<td>Tolvajjelek</td>
+<td>Jelek és kézmozdulatok néma rendszere, az alvilág sajátja.</td>
+</tr>
+</tbody></table></div>
+<h3 id="attributes"><span class="num">3.3</span><span class="t">Tulajdonságok</span></h3>
+<p>A JK-d erősségeit és gyengeségeit négy tulajdonság méri 0 és 9 között. Minden tulajdonságnak van értéke és bónusza (az érték fele). Az értéket a próbákhoz használod, és abból számolod ki a maximális ÉP-det, a bónuszt pedig minden máshoz (pl. sebzés, hatótáv vagy mágia).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d4</th>
+<th>Tulajdonság</th>
+<th>Mire vonatkozik</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Erő</td>
+<td>Fizikum, állóképesség, közelharc</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Kecsesség</td>
+<td>Ügyesség, kezdeményezés, távolsági harc</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Elme</td>
+<td>Intelligencia, tudás, varázslás</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Szív</td>
+<td>Karizma, észlelés, imádkozás</td>
+</tr>
+</tbody></table></div>
+<p>6 pontot oszthatsz szét a tulajdonságaid között, vagy dobhatsz 6d4-gyel a fenti táblázatra (minden kocka +1-et ad ahhoz a tulajdonsághoz, amelyikre esik). Karakteralkotáskor egyik tulajdonság sem lehet 4-nél magasabb (ha egy kocka feljebb vinné, azt dobd újra).</p>
+<h3 id="inspiration"><span class="num">3.4</span><span class="t">Ihlet</span></h3>
+<p>Ihletet akkor kapsz, ha valami kivételesen leleményeset vagy bátrat teszel, valamit, amire a karaktered büszke lehet. Az Ihleted elhasználásával újradobhatod bármelyik dobásodat. Az Ihlet nem halmozódik, és pihenés után elveszíted.</p>
+<h3 id="health-points"><span class="num">3.5</span><span class="t">Életerő pontok</span></h3>
+<p>Az ÉP megmutatja, mennyi sérülést bírsz ki. A maximális ÉP-d 6-ról indul, és az Erő értéked minden pontja után 3-mal nő. Minden szinten (az elsőt is beleértve) dobj 1d6-tal, és add hozzá a maximumodhoz. Az ÉP-d nem csökkenhet 0 alá.</p>
+<aside class="example">
+<p>Bramble félnép Ereje 1, így 6 + (1 × 3) = 9 ÉP-vel kezd. Az első szinten 2-t dob, így a maximum ÉP-je 11. A második szintre érve 5-öt dob, és az Erejét 2-re emeli, így 5 ÉP-t kap a dobásból és 3-at az Erőből, az új maximuma pedig 19.</p>
+</aside>
+<p class="rule"><strong>Haldoklás.</strong> 0 ÉP-n a földre kerülsz, nem tudsz cselekedni, és Haláldobást kell végrehajtanod, valahányszor sorra kerülnél. Az NJK-k általában meghalnak, ha elérik a 0 ÉP-t, az eszméletlen vagy tehetetlen lényeket pedig azonnal meg lehet ölni.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Haláldobás eredménye</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Meghalsz. Írd le az utolsó pillanataidat.</td>
+</tr>
+<tr>
+<td class="numeric">2–5</td>
+<td>1d4 őrségen át eszméletlenül fekszel 1 ÉP-vel.</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Magadhoz térsz 1 ÉP-vel, és cselekedhetsz.</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Pihenés.</strong> A pihenéshez tölts egy őrséget alvással, és fogyassz el egy fejadagot. A pihenés sikertelen, ha egy óránál hosszabb időre megszakad. A sikeres pihenés 1d6 ÉP-t gyógyít, de naponta csak egyszer. Ha egy teljes napot kihagysz, hátránnyal dobsz mindenre, amíg be nem pótolod.</p>
+<p class="rule"><strong>Nélkülözés.</strong> Ha sokáig nem jutsz ételhez vagy vízhez, egy idő után minden nap elején Haláldobást kell végrehajtanod. Ha sokáig nem alszol, minden őrség elején 6-ból 1 az esélye, hogy elalszol 1d4 őrségre.</p>
+<h3 id="defense-points"><span class="num">3.6</span><span class="t">Védelmi pontok</span></h3>
+<p>A VP a páncélt, a fedezéket és a mágikus védelmet jelenti. Az alap VP-d 0. Ha bármilyen forrásból sebzés ér, vond ki belőle a VP-det. Ha marad belőle valami, azt vond le az ÉP-edből.</p>
+<p class="rule"><strong>Fedezék.</strong> A részleges fedezék +2 VP-t ad, a teljes fedezék pedig megállít minden támadást.</p>
+<p class="rule"><strong>Közvetlen sebzés.</strong> Egyes hatások (dermesztő hideg, elmesebzés, méreg) figyelmen kívül hagyják a VP-t.</p>
+<h3 id="inventory"><span class="num">3.7</span><span class="t">Felszerelés</span></h3>
+<p>A JK-k három helyen, összesen 12 rekeszben hordhatnak felszerelést.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Hely</th>
+<th class="numeric">Rekesz</th>
+<th>Hozzáférés</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Kéz</td>
+<td class="numeric">2</td>
+<td>Azonnal használható.</td>
+</tr>
+<tr>
+<td>Test</td>
+<td class="numeric">4</td>
+<td>Ingyenes cselekvéssel kézbe vehető.</td>
+</tr>
+<tr>
+<td>Hátizsák</td>
+<td class="numeric">6</td>
+<td>Egy cselekvéssel vehető elő.</td>
+</tr>
+</tbody></table></div>
+<p>A legtöbb tárgy egy rekeszt foglal el, a terjedelmes vagy nehéz tárgyak kettőt, és csak annyit vihetsz magaddal, amennyi a rekeszeidbe fér. A karakterlapon a rekeszek mérete az öntapadós cetlikhez igazodik: írd fel minden tárgy nevét, karikáit és hatásait a saját cetlijére. A cetliket aztán szabadon mozgathatod a rekeszek között, odaadhatod egy másik játékosnak vagy félreteheted, ahogy a történet kívánja.</p>
+<p class="rule"><strong>Elhasználódás.</strong> A legtöbb tárgyon három karika van. Satírozz be egyet, valahányszor úgy használod a tárgyat, hogy közben elfogyhat, megsérülhet vagy tönkremehet. Ha az utolsó karika is betelt, a tárgy elhasználódott: eltört, kiürült vagy odalett. Néhány tárgy nem törik el, hanem újratölthető, a lámpás például lámpaolajjal. Hogy mitől telik be egy karika, az a tárgytól függ:</p>
+<ul>
+<li><strong>Eszközök és szerszámok.</strong> Satírozz be egy karikát, ha a történetben megsérül vagy elfogy, például ha levágsz egy darabot a kötélből, vagy eltörik egy tolvajkulcs.</li>
+<li><strong>Fényforrások.</strong> A Fényforrásoknál megadott időszakonként satírozz be egy karikát, amíg a fény ég.</li>
+<li><strong>Fegyverek, páncélok és pajzsok.</strong> Minden csata után 6-ból 1 az esélye, hogy be kell satíroznod egy karikát. A kovács egy-egy besatírozott karikát a tárgy árának 10%-áért javít ki.</li>
+<li><strong>Dobófegyverek.</strong> Minden karika egy fegyver, egy tele rekeszben tehát három van. Satírozz be egy karikát, amikor eldobsz egyet. A csata után mindegyiknél 6-ból 5 az esélye, hogy visszaszerzed, és letörölheted a karikáját.</li>
+<li><strong>Lőszer.</strong> A nyílvesszőket, a számszeríjvesszőket és a parittyaköveket nem kell számon tartani. Vedd úgy, hogy mindig van elég.</li>
+<li><strong>Fogyóeszközök.</strong> A fogyóeszközök egyszer használatosak, hacsak másképp nem szerepel, és a használat pillanatában elfogynak. Egy adag méreg egyetlen fegyvercsapásra vagy egyetlen italra elég (lásd Méreg a Veszélyeknél). A fejadag a kivétel, abból három is elfér egy rekeszben.</li>
+<li><strong>Varázskönyvek és ereklyék.</strong> Satírozz be egy karikát, ha varázsigét mondasz vagy imádkozol, a sikeres pihenés pedig letörli az összes karikát. Az ereklyéken csak egy karika van.</li>
+</ul>
+</section>
+  </main>
+
+  <footer class="colophon">
+    <p><span>Tiny Raven Press</span><span>A szöveg CC BY 4.0 licenc alatt</span></p>
+    <p>
+      <a href="mailto:team@tinyravenpress.com">team@tinyravenpress.com</a>
+      <a href="https://discord.gg/WssHvFgUZ" rel="noopener">Discord</a>
+      <a href="https://tinyravenpress.itch.io/old-gold/" rel="noopener">itch.io</a>
+    </p>
+  </footer>
+</div>
+
+<button class="pill" type="button" data-toc-open>Tartalom</button>
+<dialog id="toc-dialog" aria-label="Tartalom">
+  <div class="dialog-in">
+    <div class="dialog-head">
+      <span class="dialog-title">Tartalom</span>
+      <button type="button" data-close>Bezárás</button>
+    </div>
+    <ol class="toc"><li class="ch"><a href="#introduction"><span class="n">1</span><span class="t">Bevezetés</span></a><ol><li><a href="#what-you-need"><span class="n">1.1</span><span class="t">Mire lesz szükséged</span></a></li><li><a href="#game-notations"><span class="n">1.2</span><span class="t">Jelölések</span></a></li><li><a href="#modes-of-play"><span class="n">1.3</span><span class="t">Játékmódok</span></a></li><li><a href="#rounding"><span class="n">1.4</span><span class="t">Kerekítés</span></a></li><li><a href="#credits"><span class="n">1.5</span><span class="t">Közreműködők</span></a></li></ol></li><li class="ch"><a href="#time"><span class="n">2</span><span class="t">Idő</span></a></li><li class="ch"><a href="#character-creation"><span class="n">3</span><span class="t">Karakteralkotás</span></a><ol><li><a href="#ancestry"><span class="n">3.1</span><span class="t">Nép</span></a></li><li><a href="#languages"><span class="n">3.2</span><span class="t">Nyelvek</span></a></li><li><a href="#attributes"><span class="n">3.3</span><span class="t">Tulajdonságok</span></a></li><li><a href="#inspiration"><span class="n">3.4</span><span class="t">Ihlet</span></a></li><li><a href="#health-points"><span class="n">3.5</span><span class="t">Életerő pontok</span></a></li><li><a href="#defense-points"><span class="n">3.6</span><span class="t">Védelmi pontok</span></a></li><li><a href="#inventory"><span class="n">3.7</span><span class="t">Felszerelés</span></a></li></ol></li></ol>
+  </div>
+</dialog>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

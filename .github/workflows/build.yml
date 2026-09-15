@@ -1,0 +1,38 @@
+name: Build the site
+
+# Rebuilds the pages when the rules change, so editing the Markdown on GitHub
+# is enough to update the site.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'build.js'
+      - 'config.js'
+      - 'vendor/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: node build.js
+
+      - name: Commit the rebuilt pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html hu/index.html rulebook.html 404.html sitemap.xml
+          git diff --staged --quiet && exit 0
+          git commit -m "Rebuild the site [skip ci]"
+          git push

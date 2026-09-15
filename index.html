@@ -3,113 +3,2261 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Old Gold</title>
-<meta name="description" content="Old Gold — a fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat, with OSR roots and modern design.">
-
+<title>Old Gold — a fantasy adventure game</title>
+<meta name="description" content="A fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat, with OSR roots and modern design. Read the full rulebook online, free.">
+<meta name="theme-color" content="#faf6ee">
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="canonical" href="https://oldgoldrpg.com/">
-<meta name="theme-color" content="#ffffff">
-
+<link rel="alternate" hreflang="en" href="https://oldgoldrpg.com/">
+<link rel="alternate" hreflang="hu" href="https://oldgoldrpg.com/hu/">
+<link rel="alternate" hreflang="x-default" href="https://oldgoldrpg.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://oldgoldrpg.com/">
 <meta property="og:site_name" content="Old Gold">
-<meta property="og:title" content="Old Gold">
-<meta property="og:description" content="A fantasy adventure game with OSR roots and modern design. Read the full rulebook online.">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Old Gold — a fantasy adventure game">
+<meta property="og:description" content="A fantasy adventure game with OSR roots and modern design. Read the full rulebook online, free.">
 <meta property="og:image" content="https://oldgoldrpg.com/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Old Gold — a dragon curled asleep atop a hoard of gold coins">
+<meta property="og:image:alt" content="A dragon curled asleep atop a hoard of gold coins">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://oldgoldrpg.com/assets/img/og-image.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+<link rel="preload" href="assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/familjen-grotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="page-plain home">
+<body>
+<a class="skip" href="#rules">Skip to the rules</a>
 
-  <a class="skip-link" href="#top" data-i18n="skip">Skip to content</a>
-
-  <header class="topbar">
-    <div class="topbar-side topbar-left"></div>
-
-    <nav class="tabs" aria-label="Primary" data-i18n-aria="primaryNav">
-      <button class="tabs-toggle" id="tabsToggle" type="button" aria-expanded="false" aria-controls="tabsMenu">
-        <span data-i18n="tabHome">Home</span>
-        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </button>
-      <div class="tabs-menu" id="tabsMenu">
-        <a class="tab tab-active" href="#top" aria-current="page" data-i18n="tabHome">Home</a>
-        <a class="tab" href="rulebook.html" data-i18n="tabRules">Rulebook</a>
-        <a class="tab" href="generators.html" data-i18n="tabGenerators">Generators</a>
-      </div>
-    </nav>
-
-    <div class="topbar-side topbar-right">
-      <div class="lang" role="group" aria-label="Language" data-i18n-aria="langGroup">
-        <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" type="button" data-lang="hu" aria-pressed="false" disabled title="Coming soon">HU</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="scrollarea" id="scrollarea">
-    <main class="home-page" id="top">
-
-      <section class="hero">
-        <div class="hero-text">
-          <h1 class="hero-title">Old Gold</h1>
-          <p class="hero-tagline" data-i18n="homeTagline">A fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat.</p>
-          <div class="hero-actions">
-            <a class="btn btn-solid" href="rulebook.html">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-              </svg>
-              <span data-i18n="homeRead">Read the rulebook</span>
-            </a>
-            <a class="btn btn-ghost" id="discordLink" href="#" target="_blank" rel="noopener">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path>
-              </svg>
-              <span data-i18n="homeDiscord">Join the Discord</span>
-            </a>
-            <a class="btn btn-ghost" id="itchLink" href="#" target="_blank" rel="noopener">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <span data-i18n="homeItch">Support on itch.io</span>
-            </a>
-          </div>
-          <p class="hero-note" data-i18n="homeModel">The full rulebook is free to read online. To support it, download the character sheet on itch.io and pay what you want.</p>
-          <p class="hero-meta">
-            <span class="hero-contact"><a class="home-email" id="emailLink" href="#">you@example.com</a></span>
-          </p>
-        </div>
-
-        <!-- cover plate: black panel + gold inner frame, with the cover art inside.
-             WebP twin with the PNG kept as the <picture> fallback. -->
-        <aside class="hero-cover">
-          <picture>
-            <source type="image/webp" srcset="assets/img/hero-cover-img.webp">
-            <img class="hero-cover-img" src="assets/img/hero-cover-img.png"
-                 alt="A dragon curled asleep atop a hoard of gold coins"
-                 width="1450" height="1450" fetchpriority="high">
-          </picture>
-        </aside>
-      </section>
-
-    </main>
+<header class="cover" id="top">
+  <div class="cover-top">
+    <span>Tiny Raven Press</span>
+    <a href="hu/" hreflang="hu" lang="hu" data-lang-switch>Magyar</a>
   </div>
+  <div class="cover-main">
+    <div class="cover-text">
+      <h1>Old Gold</h1>
+      <p class="deck">Old Gold is a tabletop roleplaying game of daring exploration, creative problem-solving, and fast-paced tactical combat. You play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you&#39;ll find as much joy with it as I have.</p>
+      <p class="actions">
+        <a class="primary" href="#rules">Read the rulebook</a>
+        <a href="https://discord.gg/WssHvFgUZ" rel="noopener">Discord</a>
+        <a href="https://tinyravenpress.itch.io/old-gold/" rel="noopener">itch.io</a>
+      </p>
+      <p class="note">The full rulebook is free to read online. To support it, download the character sheet on itch.io and pay what you want.</p>
+    </div>
+    <figure class="cover-art">
+      <picture>
+        <source type="image/webp" srcset="assets/img/hero-cover-img.webp">
+        <img src="assets/img/hero-cover-img.png" alt="A dragon curled asleep atop a hoard of gold coins" width="1450" height="1450" fetchpriority="high">
+      </picture>
+    </figure>
+  </div>
+  <div class="cover-bottom">
+    <a href="#rules">Rulebook ↓</a>
+    <a href="mailto:team@tinyravenpress.com">team@tinyravenpress.com</a>
+  </div>
+</header>
 
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/site.js"></script>
-  <script src="assets/js/home.js"></script>
+<div class="reading">
+  <nav class="index" aria-label="Contents"><ol class="toc"><li class="ch"><a href="#introduction"><span class="n">1</span><span class="t">Introduction</span></a><ol><li><a href="#what-you-need"><span class="n">1.1</span><span class="t">What You Need</span></a></li><li><a href="#game-notations"><span class="n">1.2</span><span class="t">Game Notations</span></a></li><li><a href="#modes-of-play"><span class="n">1.3</span><span class="t">Modes of Play</span></a></li><li><a href="#rounding"><span class="n">1.4</span><span class="t">Rounding</span></a></li><li><a href="#credits"><span class="n">1.5</span><span class="t">Credits</span></a></li></ol></li><li class="ch"><a href="#time"><span class="n">2</span><span class="t">Time</span></a></li><li class="ch"><a href="#character-creation"><span class="n">3</span><span class="t">Character Creation</span></a><ol><li><a href="#ancestry"><span class="n">3.1</span><span class="t">Ancestry</span></a></li><li><a href="#languages"><span class="n">3.2</span><span class="t">Languages</span></a></li><li><a href="#attributes"><span class="n">3.3</span><span class="t">Attributes</span></a></li><li><a href="#inspiration"><span class="n">3.4</span><span class="t">Inspiration</span></a></li><li><a href="#health-points"><span class="n">3.5</span><span class="t">Health Points</span></a></li><li><a href="#defense-points"><span class="n">3.6</span><span class="t">Defense Points</span></a></li><li><a href="#inventory"><span class="n">3.7</span><span class="t">Inventory</span></a></li><li><a href="#coinage"><span class="n">3.8</span><span class="t">Coinage</span></a></li><li><a href="#starting-equipment"><span class="n">3.9</span><span class="t">Starting Equipment</span></a></li><li><a href="#advancement"><span class="n">3.10</span><span class="t">Advancement</span></a></li><li><a href="#finishing-touches"><span class="n">3.11</span><span class="t">Finishing Touches</span></a></li><li><a href="#bonds"><span class="n">3.12</span><span class="t">Bonds</span></a></li></ol></li><li class="ch"><a href="#equipment"><span class="n">4</span><span class="t">Equipment</span></a><ol><li><a href="#light-sources"><span class="n">4.1</span><span class="t">Light Sources</span></a></li><li><a href="#weapons-armor"><span class="n">4.2</span><span class="t">Weapons &amp; Armor</span></a></li><li><a href="#consumables"><span class="n">4.3</span><span class="t">Consumables</span></a></li><li><a href="#adventuring-gear"><span class="n">4.4</span><span class="t">Adventuring Gear</span></a></li><li><a href="#valuables-trade-goods"><span class="n">4.5</span><span class="t">Valuables &amp; Trade Goods</span></a></li><li><a href="#spellbooks-relics"><span class="n">4.6</span><span class="t">Spellbooks &amp; Relics</span></a></li></ol></li><li class="ch"><a href="#challenges"><span class="n">5</span><span class="t">Challenges</span></a></li><li class="ch"><a href="#actions"><span class="n">6</span><span class="t">Actions</span></a><ol><li><a href="#initiative"><span class="n">6.1</span><span class="t">Initiative</span></a></li><li><a href="#movement"><span class="n">6.2</span><span class="t">Movement</span></a></li><li><a href="#main-actions"><span class="n">6.3</span><span class="t">Main Actions</span></a></li><li><a href="#free-actions"><span class="n">6.4</span><span class="t">Free Actions</span></a></li></ol></li><li class="ch"><a href="#combat"><span class="n">7</span><span class="t">Combat</span></a><ol><li><a href="#conditions"><span class="n">7.1</span><span class="t">Conditions</span></a></li><li><a href="#morale"><span class="n">7.2</span><span class="t">Morale</span></a></li></ol></li><li class="ch"><a href="#magic"><span class="n">8</span><span class="t">Magic</span></a><ol><li><a href="#casting"><span class="n">8.1</span><span class="t">Casting</span></a></li><li><a href="#example-spellbooks"><span class="n">8.2</span><span class="t">Example Spellbooks</span></a></li><li><a href="#example-relics"><span class="n">8.3</span><span class="t">Example Relics</span></a></li></ol></li><li class="ch"><a href="#hazards-weather-effects"><span class="n">9</span><span class="t">Hazards &amp; Weather Effects</span></a></li><li class="ch"><a href="#overland-travel"><span class="n">10</span><span class="t">Overland Travel</span></a></li><li class="ch"><a href="#dungeon-delving"><span class="n">11</span><span class="t">Dungeon Delving</span></a></li><li class="ch"><a href="#random-encounters"><span class="n">12</span><span class="t">Random Encounters</span></a></li><li class="ch"><a href="#treasure"><span class="n">13</span><span class="t">Treasure</span></a></li><li class="ch"><a href="#recruiting"><span class="n">14</span><span class="t">Recruiting</span></a><ol><li><a href="#hirelings"><span class="n">14.1</span><span class="t">Hirelings</span></a></li><li><a href="#mercenaries"><span class="n">14.2</span><span class="t">Mercenaries</span></a></li><li><a href="#availability"><span class="n">14.3</span><span class="t">Availability</span></a></li><li><a href="#companions"><span class="n">14.4</span><span class="t">Companions</span></a></li></ol></li><li class="ch"><a href="#warfare"><span class="n">15</span><span class="t">Warfare</span></a></li><li class="ch"><a href="#construction"><span class="n">16</span><span class="t">Construction</span></a></li><li class="ch"><a href="#room-board"><span class="n">17</span><span class="t">Room &amp; Board</span></a></li><li class="ch"><a href="#oracles"><span class="n">18</span><span class="t">Oracles</span></a><ol><li><a href="#yesno-oracle"><span class="n">18.1</span><span class="t">Yes/No Oracle</span></a></li><li><a href="#solo-d6-oracle"><span class="n">18.2</span><span class="t">Solo d6 Oracle</span></a></li><li><a href="#action-theme"><span class="n">18.3</span><span class="t">Action &amp; Theme</span></a></li><li><a href="#adventure-seeds"><span class="n">18.4</span><span class="t">Adventure Seeds</span></a></li><li><a href="#settlement-names"><span class="n">18.5</span><span class="t">Settlement Names</span></a></li><li><a href="#dungeon-names"><span class="n">18.6</span><span class="t">Dungeon Names</span></a></li></ol></li><li class="ch"><a href="#bestiary"><span class="n">19</span><span class="t">Bestiary</span></a></li></ol></nav>
+
+  <main class="rules" id="rules">
+    <section class="chapter" data-number="1"><h2 id="introduction"><span class="num">1</span><span class="t">Introduction</span></h2>
+<p>Tabletop roleplaying games, such as Old Gold, follow a simple game loop: the Referee (or yourself, if playing solo) sets a scene, players say or do what their characters would, and the dice settle whatever is uncertain.</p>
+<p class="rule"><strong>Being a good Referee.</strong> You are a neutral arbiter. When a situation isn&#39;t covered by the rules, you make common-sense rulings. You let the story emerge from what the players do, and let the dice fall where they may. You are the eyes, ears, and nose of the players. You telegraph danger, and you reward clever thinking.</p>
+<p class="rule"><strong>Being a good Player.</strong> You ask lots of questions, take notes, draw maps. You ask what you would do, not only what your character would. You plan and work with your party. You play to win, but you&#39;re ready to lose.</p>
+<h3 id="what-you-need"><span class="num">1.1</span><span class="t">What You Need</span></h3>
+<p>At least one polyhedral dice set (d4, d6, d8, d10, d12, d20), paper, pencil, and 50×15mm sticky notes to track your inventory. Download the character sheet on <a href="https://tinyravenpress.itch.io/old-gold/">itch.io</a> and join our <a href="https://discord.gg/WssHvFgUZ">Discord</a>.</p>
+<h3 id="game-notations"><span class="num">1.2</span><span class="t">Game Notations</span></h3>
+<p>A few shorthand terms are used throughout these rules:</p>
+<ul>
+<li><strong>XdY.</strong> Roll X dice with Y sides and sum the results.</li>
+<li><strong>PC.</strong> Player Character, an adventurer controlled by a player.</li>
+<li><strong>NPC.</strong> Non-Player Character, anyone else in the world.</li>
+<li><strong>Oracle.</strong> Random tables used to answer questions and generate unexpected outcomes.</li>
+</ul>
+<h3 id="modes-of-play"><span class="num">1.3</span><span class="t">Modes of Play</span></h3>
+<p>You can undertake this journey alone or with friends.</p>
+<ul>
+<li><strong>Solo play.</strong> You control the whole party and referee yourself, using oracles to answer questions and generate outcomes.</li>
+<li><strong>Group play.</strong> Players control the party together, with no Referee, adjudicating rules and consulting oracles collectively.</li>
+<li><strong>Guided play.</strong> One player serves as Referee, describing the world and NPCs and adjudicating the rules, while the others each control one or more PCs.</li>
+</ul>
+<h3 id="rounding"><span class="num">1.4</span><span class="t">Rounding</span></h3>
+<p>Always round up.</p>
+<h3 id="credits"><span class="num">1.5</span><span class="t">Credits</span></h3>
+<p>Old Gold was designed by Milán László.<br>Illustrations by [Illustrator&#39;s Name].<br>Inspired by The Black Hack, Knave 2e and Mausritter.<br>Licensed under Creative Commons Attribution 4.0.<br>Special thanks to our playtesters: [Playtester Names].</p>
+</section>
+<section class="chapter" data-number="2"><h2 id="time"><span class="num">2</span><span class="t">Time</span></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Duration</th>
+<th>Used For</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Round</td>
+<td>10 seconds</td>
+<td>Combat, quick actions</td>
+</tr>
+<tr>
+<td>Turn</td>
+<td>10 minutes</td>
+<td>Dungeon delving, longer actions</td>
+</tr>
+<tr>
+<td>Watch</td>
+<td>6 hours</td>
+<td>Travel, rest, downtime</td>
+</tr>
+</tbody></table></div>
+<p>6 rounds is a minute, 6 turns is an hour, 4 watches is a day. Weeks, months, years, and so on as needed. In combat, a round ends when every creature has acted.</p>
+</section>
+<section class="chapter" data-number="3"><h2 id="character-creation"><span class="num">3</span><span class="t">Character Creation</span></h2>
+<p>This chapter will walk you through creating an adventurer in just a few minutes.</p>
+<h3 id="ancestry"><span class="num">3.1</span><span class="t">Ancestry</span></h3>
+<p>Choose your ancestry or roll 1d4.</p>
+<p class="rule"><strong>1. Dwarf.</strong> Sturdy as the fortresses they carve, they are fiercely loyal and famous for their love of beer. Dwarves stand 120 cm tall and live 200 years, their bodies turning to stone, ore, and gems upon death. Advantage on checks to resist poison (including alcohol), and roll HP with advantage at character creation and when leveling up. Speed 8m. Speak Common and Dwarvish.</p>
+<p class="rule"><strong>2. Elf.</strong> Quiet and strong-willed, Elves are drawn to old knowledge and the wilderness. They stand 200 cm tall and live up to 500 years, their bodies becoming seeds and green growth upon death. Advantage on checks to resist mental effects (such as Charm). Speed 12m. Speak Common and Sylvan.</p>
+<p class="rule"><strong>3. Halfkin.</strong> Stubborn and warm-hearted, Halfkin prefer good food and a quiet life (though trouble finds them anyway). They stand 80 cm tall and live 100 years. They may reroll natural 1s on checks. Speed 8m. Speak Common.</p>
+<p class="rule"><strong>4. Human.</strong> Restless and adaptable, Humans outnumber all other folk and thrive in every corner of the world. They stand 170 cm tall and live 70 years. Upon character creation, humans can either distribute 7 points or roll 7d4 (see <a class="xref" href="#attributes">Attributes</a>). Speed 10m. Speak Common.</p>
+<figure class="plate plate-ancestries"><picture><source type="image/webp" srcset="assets/img/ancestries.webp"><img src="assets/img/ancestries.png" alt="Four adventurers stand together: a staff-bearing halfkin, a hooded human, a red-bearded dwarf, and a tall elf reading a book." loading="lazy" decoding="async" width="2133" height="1138"></picture></figure>
+<h3 id="languages"><span class="num">3.2</span><span class="t">Languages</span></h3>
+<p>You may start knowing one additional language if it fits your character. A new language can also be learned during downtime.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Common</td>
+<td>The shared tongue of most civilized folk.</td>
+</tr>
+<tr>
+<td>Dwarvish</td>
+<td>Deep and rhythmic, spoken by all who dwell beneath the mountains.</td>
+</tr>
+<tr>
+<td>Sylvan</td>
+<td>The oldest living language, whispered by elves, fey, and spirits.</td>
+</tr>
+<tr>
+<td>Crude</td>
+<td>Guttural and blunt, shared by orcs, goblins, giants, and trolls.</td>
+</tr>
+<tr>
+<td>Draconic</td>
+<td>The resonant tongue of dragons and lizardfolk.</td>
+</tr>
+<tr>
+<td>Abyssal</td>
+<td>Jagged and hissing, used by demons, undead, and dark rituals.</td>
+</tr>
+<tr>
+<td>Celestial</td>
+<td>Clear and ringing, spoken by angels and holy orders.</td>
+</tr>
+<tr>
+<td>Thieves&#39; Cant</td>
+<td>A silent system of gestures and signs, shared by the underworld.</td>
+</tr>
+</tbody></table></div>
+<h3 id="attributes"><span class="num">3.3</span><span class="t">Attributes</span></h3>
+<p>Four attributes ranging from 0 to 9 measure your PC&#39;s strengths and weaknesses. Each attribute has a score and a bonus (half the score). Scores are used for checks and to calculate maximum HP, while bonuses are used for everything else (such as damage, range or magical effects).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d4</th>
+<th>Attribute</th>
+<th>Governs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Might</td>
+<td>Strength, constitution, melee</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Grace</td>
+<td>Dexterity, initiative, ranged</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Mind</td>
+<td>Wits, knowledge, spellcasting</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Heart</td>
+<td>Charisma, perception, praying</td>
+</tr>
+</tbody></table></div>
+<p>Either distribute 6 points among your attributes, or roll 6d4 on the table above, each die adding +1 to the attribute it rolls. No attribute may exceed 4 at character creation (reroll any die that would push it higher).</p>
+<h3 id="inspiration"><span class="num">3.4</span><span class="t">Inspiration</span></h3>
+<p>When you do something exceptionally creative or courageous, something your character can be proud of, you become inspired. Spend your Inspiration to reroll any roll you make. Inspiration does not stack, and is lost after a rest.</p>
+<h3 id="health-points"><span class="num">3.5</span><span class="t">Health Points</span></h3>
+<p>HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 for each point of your Might score. At each level (including the first), roll 1d6 and add it to your maximum HP. Your HP cannot drop below 0.</p>
+<aside class="example">
+<p>Bramble the halfkin, Might 1, starts with 6 + (1 × 3) = 9 HP and rolls 2 at level 1: 11 maximum HP. Reaching level 2, he rolls 5 and raises his Might to 2, gaining 5 HP from the roll and 3 from Might for a new maximum of 19.</p>
+</aside>
+<p class="rule"><strong>Dying.</strong> While at 0 HP, you fall prone, unable to act, and must make a Death Roll each time you would act. NPCs usually die at 0 HP, and a creature that is unconscious or otherwise helpless can be slain instantly.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Death Roll Outcome</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>You die. Describe your final moments.</td>
+</tr>
+<tr>
+<td class="numeric">2–5</td>
+<td>Unconscious at 1 HP for 1d4 watches.</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>You recover to 1 HP and may act.</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Resting.</strong> To rest, spend a watch sleeping and consume a ration. A rest interrupted for more than an hour grants no benefit. A successful rest restores 1d6 HP, but you can only benefit from one rest per day. If you go a full day without resting, you have disadvantage on all rolls until you do.</p>
+<p class="rule"><strong>Deprivation.</strong> Extended lack of food or water eventually requires Death Rolls at the start of each day. Extended lack of sleep gives a 1-in-6 chance of falling asleep for 1d4 watches at the start of each watch.</p>
+<h3 id="defense-points"><span class="num">3.6</span><span class="t">Defense Points</span></h3>
+<p>DP represents armor, cover, and magical protection. Your base DP is 0. When you take damage from any source, subtract your DP. If any damage is left, apply it to your HP.</p>
+<p class="rule"><strong>Cover.</strong> Partial cover grants +2 DP, while full cover blocks attacks entirely.</p>
+<p class="rule"><strong>Direct damage.</strong> Some effects (freezing cold, mental damage, poison) ignore DP entirely.</p>
+<h3 id="inventory"><span class="num">3.7</span><span class="t">Inventory</span></h3>
+<p>PCs can carry equipment in 12 inventory slots, divided across three locations.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th class="numeric">Slots</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hands</td>
+<td class="numeric">2</td>
+<td>Ready to use.</td>
+</tr>
+<tr>
+<td>Body</td>
+<td class="numeric">4</td>
+<td>Swap to hands as a free action.</td>
+</tr>
+<tr>
+<td>Pack</td>
+<td class="numeric">6</td>
+<td>Retrieve with an action.</td>
+</tr>
+</tbody></table></div>
+<p>Most items take one slot, while bulky or heavy ones take two, and you cannot carry more than your slots hold. The character sheet&#39;s inventory slots are sized to fit sticky notes: write each item&#39;s name, dots, and effects on its own note, then move it between slots, hand it to another player, or set it aside as the fiction demands.</p>
+<p class="rule"><strong>Depletion.</strong> Most items carry three usage dots. Mark a dot whenever you use an item in a way that might spend, damage, or wear it out. When the last dot is filled, the item is spent: broken, empty, or gone. Some items refill rather than break, for example a lantern clears its dots with lantern oil. How a dot is spent depends on the item:</p>
+<ul>
+<li><strong>Gear &amp; tools.</strong> Mark a dot when the fiction damages or uses it up, such as a rope cut short or a snapped lockpick.</li>
+<li><strong>Light sources.</strong> Mark a dot for each period the light burns, as listed in Light Sources.</li>
+<li><strong>Weapons, armor &amp; shields.</strong> After each combat, there is a 1-in-6 chance to mark a dot. A blacksmith repairs each marked dot for 10% of the item&#39;s price.</li>
+<li><strong>Throwing weapons.</strong> Each dot is one weapon, so a full slot holds three. Mark a dot as you throw one, then after combat there is a 5-in-6 chance to recover each, clearing the dot.</li>
+<li><strong>Ammunition.</strong> Arrows, bolts, and sling stones are not tracked. Assume you carry enough.</li>
+<li><strong>Consumables.</strong> Consumables are single-use unless noted, spent the moment you use them. Applying a poison coats one weapon strike or one drink (see Poison under Hazards). Rations are the exception, stacking three to a slot.</li>
+<li><strong>Spellbooks &amp; relics.</strong> Mark a dot when you cast a spell or invoke a prayer, then clear all dots on a successful rest. A relic has only one dot.</li>
+</ul>
+<h3 id="coinage"><span class="num">3.8</span><span class="t">Coinage</span></h3>
+<p>Gold Pieces (gp) are the standard currency used throughout the realm, and a day&#39;s unskilled labor pays 10 gp. The first 250 gp you carry takes no slots, but beyond that, each 250 gp requires a pouch (1 slot).</p>
+<p class="rule"><strong>Selling.</strong> Merchants pay less for anything worn, damaged, or partly spent, roughly half for used goods and little or nothing for the badly worn. Valuables like gems or jewelry sell at full price in a city and half in a village, while bulky trade goods like silk or ore are the reverse.</p>
+<p class="rule"><strong>Banking.</strong> In larger settlements, you can safely store gold and items, but retrieving them costs 1% of the stored value.</p>
+<h3 id="starting-equipment"><span class="num">3.9</span><span class="t">Starting Equipment</span></h3>
+<p>Choose starting equipment: a weapon, plus a light or medium armor, spellbook, or relic. You also start with 20 + 2d20 gp, plus a waterskin, bedroll, flint &amp; steel, and basic clothing (these take no slots). A Referee may adjust starting gear and wealth to fit a character&#39;s background. See <a class="xref" href="#equipment">Equipment</a> for the full tables and prices.</p>
+<h3 id="advancement"><span class="num">3.10</span><span class="t">Advancement</span></h3>
+<p>You begin at level 1 with 0 XP and gain 1 XP for each gp spent on downtime activities, such as carousing at taverns, training with mentors, researching in libraries, donating to temples, or honoring dead party members. When you have enough XP, complete a successful rest to advance.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">Level</th>
+<th class="numeric">XP Required</th>
+<th class="numeric">Total XP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td class="numeric">0</td>
+<td class="numeric">0</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td class="numeric">1,000</td>
+<td class="numeric">1,000</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td class="numeric">2,000</td>
+<td class="numeric">3,000</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td class="numeric">4,000</td>
+<td class="numeric">7,000</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td class="numeric">8,000</td>
+<td class="numeric">15,000</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td class="numeric">16,000</td>
+<td class="numeric">31,000</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td class="numeric">32,000</td>
+<td class="numeric">63,000</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td class="numeric">64,000</td>
+<td class="numeric">127,000</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td class="numeric">128,000</td>
+<td class="numeric">255,000</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td class="numeric">256,000</td>
+<td class="numeric">511,000</td>
+</tr>
+</tbody></table></div>
+<p>Upon leveling up, increase an attribute of your choice by 1 (no attribute may exceed 9), and add a level&#39;s worth of HP as described in Health Points. If you raise Might, add 3 to your maximum HP as well.</p>
+<p class="rule"><strong>Beyond level 10.</strong> You stop advancing at level 10. Gold that would have gone toward advancement can instead be spent on ships, strongholds, soldiers, and other lasting investments.</p>
+<h3 id="finishing-touches"><span class="num">3.11</span><span class="t">Finishing Touches</span></h3>
+<p>Give your adventurer a fitting name or roll on the table below.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d12</th>
+<th>Dwarf</th>
+<th>Elf</th>
+<th>Halfkin</th>
+<th>Human</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Járnda</td>
+<td>Varenthas</td>
+<td>Bramble</td>
+<td>Garric</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Vrannik</td>
+<td>Celindyl</td>
+<td>Sedge</td>
+<td>Mara</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Grudnir</td>
+<td>Fendalus</td>
+<td>Poppy</td>
+<td>Eirik</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Kelvor</td>
+<td>Therylon</td>
+<td>Nettle</td>
+<td>Hegwin</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Stennig</td>
+<td>Nyveris</td>
+<td>Thistle</td>
+<td>Seren</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Ongdur</td>
+<td>Seralyn</td>
+<td>Flint</td>
+<td>Treven</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Feldar</td>
+<td>Maeraphon</td>
+<td>Tansy</td>
+<td>Connig</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Hegril</td>
+<td>Evrandir</td>
+<td>Moss</td>
+<td>Aldwen</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Dáli</td>
+<td>Aelinor</td>
+<td>Mallow</td>
+<td>Haldric</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Brúni</td>
+<td>Galrion</td>
+<td>Rue</td>
+<td>Brynn</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Midrik</td>
+<td>Yphera</td>
+<td>Sorrel</td>
+<td>Wynna</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Andveg</td>
+<td>Abrion</td>
+<td>Clover</td>
+<td>Drystan</td>
+</tr>
+</tbody></table></div>
+<p>Roll or choose an appearance and personality or invent your own.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d20</th>
+<th>Appearance</th>
+<th>Personality</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Built like an ox</td>
+<td>Never breaks a promise</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Shaved head</td>
+<td>Laughs at danger</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Crooked nose</td>
+<td>Suspicious of strangers</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Missing ear</td>
+<td>Speaks too loudly</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Wild hair</td>
+<td>Quietly generous</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Mismatched eyes</td>
+<td>Holds grudges forever</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Burn-scarred face</td>
+<td>Has to win every argument</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Gold tooth</td>
+<td>Superstitiously cautious</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Weather-beaten</td>
+<td>Relentlessly cheerful</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Lean as a whip</td>
+<td>Cold and calculating</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Faded tattoo</td>
+<td>Fiercely loyal</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Heavily scarred</td>
+<td>Compulsive liar</td>
+</tr>
+<tr>
+<td class="numeric">13</td>
+<td>Hoarse voice</td>
+<td>Talks to themselves</td>
+</tr>
+<tr>
+<td class="numeric">14</td>
+<td>Freckled</td>
+<td>Burns hot, cools fast</td>
+</tr>
+<tr>
+<td class="numeric">15</td>
+<td>Pale as candle wax</td>
+<td>Overly polite</td>
+</tr>
+<tr>
+<td class="numeric">16</td>
+<td>Tall and stooped</td>
+<td>Painfully honest</td>
+</tr>
+<tr>
+<td class="numeric">17</td>
+<td>Smells of smoke</td>
+<td>Flamboyant</td>
+</tr>
+<tr>
+<td class="numeric">18</td>
+<td>Unworked hands</td>
+<td>Ambitious</td>
+</tr>
+<tr>
+<td class="numeric">19</td>
+<td>Easily overlooked</td>
+<td>Says very little</td>
+</tr>
+<tr>
+<td class="numeric">20</td>
+<td>Strikingly beautiful</td>
+<td>Cowardly but clever</td>
+</tr>
+</tbody></table></div>
+<p>Roll or choose a background and motivation or invent your own.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d20</th>
+<th>Background</th>
+<th>Motivation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Soldier</td>
+<td>Pay off debt</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Herbalist</td>
+<td>Find someone</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Pickpocket</td>
+<td>Avenge something</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Sailor</td>
+<td>Prove a doubter wrong</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Merchant</td>
+<td>Earn enough to retire</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Blacksmith</td>
+<td>Outrun a curse</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Charlatan</td>
+<td>Learn what others fear to know</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Hunter</td>
+<td>Fulfill a vow</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Tax collector</td>
+<td>Recover something</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Scribe</td>
+<td>Wander for its own sake</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Deserter</td>
+<td>Greed, pure and simple</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Spy</td>
+<td>Nothing waits for you at home</td>
+</tr>
+<tr>
+<td class="numeric">13</td>
+<td>Barber-surgeon</td>
+<td>Test your faith</td>
+</tr>
+<tr>
+<td class="numeric">14</td>
+<td>Pit fighter</td>
+<td>Find a place worth staying</td>
+</tr>
+<tr>
+<td class="numeric">15</td>
+<td>Smuggler</td>
+<td>Look for a worthy death</td>
+</tr>
+<tr>
+<td class="numeric">16</td>
+<td>Cultist</td>
+<td>Discover the truth</td>
+</tr>
+<tr>
+<td class="numeric">17</td>
+<td>Troubadour</td>
+<td>Earn back your honor</td>
+</tr>
+<tr>
+<td class="numeric">18</td>
+<td>Grave robber</td>
+<td>Map the unmapped</td>
+</tr>
+<tr>
+<td class="numeric">19</td>
+<td>Hedge witch</td>
+<td>Protect what others won&#39;t</td>
+</tr>
+<tr>
+<td class="numeric">20</td>
+<td>Disgraced noble</td>
+<td>Stop running from yourself</td>
+</tr>
+</tbody></table></div>
+<h3 id="bonds"><span class="num">3.12</span><span class="t">Bonds</span></h3>
+<p>You share a bond with each player sitting next to you (or pair characters in solo play). Together, invent a bond that fits, or both players roll 1d6 and add the results to consult the table below.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">2d6</th>
+<th>Bond</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">2</td>
+<td>Family by blood</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Former lovers, or a romance that never resolved</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Mentor and student, or old friends who grew up together</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>One owes the other a debt</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Rivals who respect each other more than either will admit</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Traveling companions who simply kept moving together</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Bonded over drink, game, or a shared habit</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Bound to the same third person</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Both survived something that should have killed them</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Distrust each other, but circumstances made them allies</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Bound by a secret neither can afford to have revealed</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter" data-number="4"><h2 id="equipment"><span class="num">4</span><span class="t">Equipment</span></h2>
+<h3 id="light-sources"><span class="num">4.1</span><span class="t">Light Sources</span></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+<th class="numeric">gp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Candle</td>
+<td>1 slot, 6m light. Mark every hour.</td>
+<td class="numeric">1</td>
+</tr>
+<tr>
+<td>Torch</td>
+<td>1 slot, 10m light. Mark every hour.</td>
+<td class="numeric">5</td>
+</tr>
+<tr>
+<td>Lantern</td>
+<td>1 slot, 10m light. Mark every watch. Refill with Lantern Oil.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Lantern Oil</td>
+<td>1 slot. Throw to ignite (3 rounds, 2m).</td>
+<td class="numeric">5</td>
+</tr>
+<tr>
+<td>Sunstone</td>
+<td>1 slot, 6m light. Mark every hour. Refill with sunlight.</td>
+<td class="numeric">100</td>
+</tr>
+</tbody></table></div>
+<h3 id="weapons-armor"><span class="num">4.2</span><span class="t">Weapons &amp; Armor</span></h3>
+<p>When used, weapons and shields occupy hand slots and armor occupies body slots.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Description</th>
+<th class="numeric">gp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Melee</td>
+<td>1 slot, 1d6 + Might Bonus, 2m.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Finesse</td>
+<td>1 slot, 1d6 + Grace Bonus, 2m.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Versatile</td>
+<td>1 slot, 1d6 + Might Bonus, or 2 slots, 1d8 + Might Bonus, 2m.</td>
+<td class="numeric">100</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>2 slots, 1d10 + Might Bonus, 2m.</td>
+<td class="numeric">200</td>
+</tr>
+<tr>
+<td>Reach</td>
+<td>1 slot, 1d4 + Might Bonus, 4m.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Heavy Reach</td>
+<td>2 slots, 1d6 + Might Bonus, 4m.</td>
+<td class="numeric">100</td>
+</tr>
+<tr>
+<td>Throwing</td>
+<td>1 slot, 1d4 + Might Bonus, Might Bonus × 6m (min 2m).</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Ranged</td>
+<td>1 slot, 1d4 + Grace Bonus, 20m.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Heavy Ranged</td>
+<td>2 slots, 1d6 + Grace Bonus, 60m.</td>
+<td class="numeric">100</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Armor</th>
+<th>Description</th>
+<th class="numeric">gp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shield</td>
+<td>1 slot, +1 DP.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Light</td>
+<td>1 slot, +1 DP.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>2 slots, +2 DP.</td>
+<td class="numeric">200</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>3 slots, +3 DP.</td>
+<td class="numeric">500</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Silvered equipment.</strong> Costs double the base price and deals 1 less damage. A silvered weapon counts as non-mundane, letting it harm creatures that shrug off ordinary steel.</p>
+<p class="rule"><strong>Masterwork equipment.</strong> Costs 10 times the base price. A masterwork weapon deals +1 damage, and masterwork armor grants +1 DP.</p>
+<p class="rule"><strong>Magic items.</strong> Rarer still, some gear has a spell or prayer bound into it. The effect is always active in some and invoked in others (spends usage dots like the spellbook or relic it draws on, refilling on a rest). A magic item cannot be crafted, only found, taken, or bargained for, and since it cannot be damaged or destroyed by mundane means, it never suffers wear.</p>
+<ul>
+<li><strong>Flaming blade.</strong> A melee weapon that, on command, wreathes itself in fire for an hour, shedding light in a 4m radius and adding 1d4 damage to every strike. It marks one of its three dots each time it is lit.</li>
+<li><strong>Sharkskin mail.</strong> Medium armor whose scaled links let you swim at your full Speed and breathe water as freely as air. The gift is always active and spends no dots.</li>
+<li><strong>Shadow lantern.</strong> A lantern with a single dot. Once lit, it burns for an hour, and within its glow shadows replay the events of the past day as silent silhouettes.</li>
+</ul>
+<h3 id="consumables"><span class="num">4.3</span><span class="t">Consumables</span></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+<th class="numeric">gp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rations</td>
+<td>1 slot. Required to rest.</td>
+<td class="numeric">5</td>
+</tr>
+<tr>
+<td>Holy water</td>
+<td>1 slot. Throw at undead or fiends to deal 1d6 direct damage.</td>
+<td class="numeric">25</td>
+</tr>
+<tr>
+<td>Antitoxin</td>
+<td>1 slot. Retry a failed check against an active poison, or gain advantage on the next poison check.</td>
+<td class="numeric">30</td>
+</tr>
+<tr>
+<td>Healing potion</td>
+<td>1 slot. Restores 1d6+1 HP.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Greater healing potion</td>
+<td>1 slot. Restores 2d6+2 HP.</td>
+<td class="numeric">200</td>
+</tr>
+<tr>
+<td>Weakening poison</td>
+<td>1 slot. Disadvantage on Might and Grace rolls for 1d4 watches or until cured.</td>
+<td class="numeric">200</td>
+</tr>
+<tr>
+<td>Sleep poison</td>
+<td>1 slot. Asleep for 1d4 watches. Damage or shaking may wake the victim.</td>
+<td class="numeric">300</td>
+</tr>
+<tr>
+<td>Paralytic poison</td>
+<td>1 slot. Paralyzed for 1d6 hours.</td>
+<td class="numeric">400</td>
+</tr>
+<tr>
+<td>Lethal poison</td>
+<td>1 slot. 1d6 direct damage now and each time the victim would act for the next 6 rounds.</td>
+<td class="numeric">500</td>
+</tr>
+</tbody></table></div>
+<h3 id="adventuring-gear"><span class="num">4.4</span><span class="t">Adventuring Gear</span></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+<th class="numeric">gp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rope</td>
+<td>1 slot, 20m.</td>
+<td class="numeric">10</td>
+</tr>
+<tr>
+<td>Grappling hook</td>
+<td>1 slot.</td>
+<td class="numeric">25</td>
+</tr>
+<tr>
+<td>Lockpicks</td>
+<td>1 slot, 3 dots. Pick a lock with a Grace check, marking a dot each time you fail.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Collapsible pole</td>
+<td>1 slot, 4m.</td>
+<td class="numeric">5</td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td>1 slot.</td>
+<td class="numeric">10</td>
+</tr>
+<tr>
+<td>Caltrops</td>
+<td>1 slot, 2m radius. Creatures crossing take 1d4 damage and halve Speed.</td>
+<td class="numeric">15</td>
+</tr>
+<tr>
+<td>Hunting trap</td>
+<td>1 slot. 1d6 damage and restrains the target. Advantage when foraging.</td>
+<td class="numeric">30</td>
+</tr>
+<tr>
+<td>Manacles</td>
+<td>1 slot.</td>
+<td class="numeric">20</td>
+</tr>
+<tr>
+<td>Net</td>
+<td>1 slot. Throw to restrain the target.</td>
+<td class="numeric">20</td>
+</tr>
+<tr>
+<td>Spyglass</td>
+<td>1 slot. See clearly at a long distance.</td>
+<td class="numeric">100</td>
+</tr>
+<tr>
+<td>Hourglass</td>
+<td>1 slot. Measures time.</td>
+<td class="numeric">25</td>
+</tr>
+<tr>
+<td>Healer&#39;s kit</td>
+<td>1 slot, 3 dots. Restores 1d3 + Heart Bonus HP. Advantage on your next rest&#39;s HP roll.</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Disguise kit</td>
+<td>1 slot, 3 dots. Heart check to pass as another person.</td>
+<td class="numeric">100</td>
+</tr>
+<tr>
+<td>Sack</td>
+<td>1 slot. Carries small items together.</td>
+<td class="numeric">1</td>
+</tr>
+<tr>
+<td>Pouch</td>
+<td>1 slot. Holds 250 gp.</td>
+<td class="numeric">1</td>
+</tr>
+</tbody></table></div>
+<h3 id="valuables-trade-goods"><span class="num">4.5</span><span class="t">Valuables &amp; Trade Goods</span></h3>
+<p>Example worths for treasure a party finds and sells. A sackful of valuables fills one slot, while trade goods are bulky, taking two slots each.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">gp</th>
+<th>Valuables</th>
+<th>Trade goods</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">50</td>
+<td>Silver goblet, ivory comb, illuminated page</td>
+<td>Bolt of fine cloth, keg of dye</td>
+</tr>
+<tr>
+<td class="numeric">100</td>
+<td>Pearl, gold bracelet, silver-inlaid dagger</td>
+<td>Cask of aged wine, crate of tea bricks</td>
+</tr>
+<tr>
+<td class="numeric">250</td>
+<td>Gold necklace, garnet, master&#39;s small painting</td>
+<td>Bale of furs, barrel of whale oil</td>
+</tr>
+<tr>
+<td class="numeric">500</td>
+<td>Emerald, golden chalice, ancient funeral mask</td>
+<td>Chest of spices, roll of silk</td>
+</tr>
+<tr>
+<td class="numeric">1,000</td>
+<td>Jeweled crown, diamond, solid-gold idol</td>
+<td>Silver ingots, chest of rare incense</td>
+</tr>
+</tbody></table></div>
+<h3 id="spellbooks-relics"><span class="num">4.6</span><span class="t">Spellbooks &amp; Relics</span></h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+<th class="numeric">gp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spellbook</td>
+<td>1 slot, 3 dots. Contains a single spell.</td>
+<td class="numeric">50–5,000</td>
+</tr>
+<tr>
+<td>Relic</td>
+<td>1 slot, 1 dot. Holy object granting access to a deity&#39;s prayers.</td>
+<td class="numeric">50–5,000</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter" data-number="5"><h2 id="challenges"><span class="num">5</span><span class="t">Challenges</span></h2>
+<p>When the outcome of an action is uncertain, make a check: roll 1d20 and add your relevant attribute score. You succeed if the total exceeds the difficulty and you fail on equal or lower. Only call for a check when the result is genuinely uncertain and failure or success has meaningful or interesting consequences.</p>
+<p class="rule"><strong>Difficulty.</strong> When acting against another creature, difficulty equals 10 plus their relevant attribute score. Otherwise, set difficulty by the task itself.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Task</th>
+<th class="numeric">Difficulty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Easy</td>
+<td class="numeric">7</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td class="numeric">10</td>
+</tr>
+<tr>
+<td>Troublesome</td>
+<td class="numeric">13</td>
+</tr>
+<tr>
+<td>Difficult</td>
+<td class="numeric">16</td>
+</tr>
+<tr>
+<td>Brutal</td>
+<td class="numeric">19</td>
+</tr>
+</tbody></table></div>
+<aside class="example">
+<p>Bramble (Grace 2) picks a sturdy lock, rolling 1d20 + 2 against difficulty 10 (Normal). His d20 comes up 8, for a total of 10. Equal to the difficulty, so the lock holds.</p>
+</aside>
+<p class="rule"><strong>Player-facing rolls.</strong> Whenever a PC is involved, the player should make the check from their character&#39;s point of view.</p>
+<aside class="example">
+<p>Aldric (Might 5) faces an Orc Warrior (Might 3). When the orc tries to grapple him, instead of the Referee rolling for the orc, Aldric rolls 1d20 + 5 against difficulty 13 (10 + the orc&#39;s Might). Perspective changes, but the odds remain identical.</p>
+</aside>
+<p class="rule"><strong>Critical rolls.</strong> A natural 20 always produces the best possible outcome given the circumstances. A natural 1 always fails, and badly.</p>
+<p class="rule"><strong>Advantage &amp; disadvantage.</strong> When you have advantage, roll twice and take the higher result. Conversely, when you have disadvantage, roll twice and take the lower one. These effects can apply to any roll (a check, a damage roll, even a death roll). They do not stack and cancel each other out.</p>
+<p class="rule"><strong>Helping.</strong> When an ally can meaningfully contribute to your task, you make the check with advantage.</p>
+<p class="rule"><strong>Group challenges.</strong> When multiple adventurers face the same challenge (sneaking past guards, crossing a river), each rolls individually and the group succeeds if at least half succeed.</p>
+<p class="rule"><strong>Retrying.</strong> You cannot retry a failed check unless circumstances change (new tools, new information, a different approach, or enough time) or you&#39;re willing to pay the price (mark usage, raise the difficulty, take damage, or accept a narrative consequence).</p>
+</section>
+<section class="chapter" data-number="6"><h2 id="actions"><span class="num">6</span><span class="t">Actions</span></h2>
+<p>When the sequence of actions matters, the game shifts into rounds. Each round, every creature may move, take a main action, and perform a reasonable number of free actions. Rounds are used for combat, but also for chases, collapsing tunnels, tense negotiations, or any other situation where seconds count.</p>
+<h3 id="initiative"><span class="num">6.1</span><span class="t">Initiative</span></h3>
+<p>Creatures act in order of their Grace, highest first. PCs act before NPCs when tied. If multiple PCs share the same Grace, they decide among themselves.</p>
+<p class="rule"><strong>Surprise.</strong> A successful ambush requires preparation and an appropriate check (for example, Grace to spring a trap unseen, or Heart to notice one coming). As always, the player rolls whenever a PC is involved. Surprised creatures cannot act during the first round.</p>
+<h3 id="movement"><span class="num">6.2</span><span class="t">Movement</span></h3>
+<p>You may move up to your Speed per round. Difficult terrain (dense brush, rubble, water) halves your Speed. Jumping, climbing, swimming, and similar feats are part of your move action, but may require a check.</p>
+<h3 id="main-actions"><span class="num">6.3</span><span class="t">Main Actions</span></h3>
+<p>Your main action is one complex interaction, such as attacking, casting a spell, praying, or making an ability check. You can also:</p>
+<ul>
+<li><strong>Sprint.</strong> Move up to your Speed again.</li>
+<li><strong>Defend.</strong> Roll 1d4 and gain that much DP until you would act again.</li>
+<li><strong>Disengage.</strong> Move without provoking opportunity attacks.</li>
+</ul>
+<h3 id="free-actions"><span class="num">6.4</span><span class="t">Free Actions</span></h3>
+<p>Drawing a weapon, drinking a potion, flipping a lever, shouting a warning. Anything brief and simple within the bounds of what&#39;s realistically possible in a single moment.</p>
+</section>
+<section class="chapter" data-number="7"><h2 id="combat"><span class="num">7</span><span class="t">Combat</span></h2>
+<p>In Old Gold you only need to roll for damage. Use your weapon&#39;s damage die, add the attribute bonus your weapon uses (usually Might for melee, Grace for ranged), and subtract the target&#39;s DP (which is higher if they used the defend action).</p>
+<figure class="plate plate-knight-kneeling"><picture><source type="image/webp" srcset="assets/img/knight-kneeling.webp"><img src="assets/img/knight-kneeling.png" alt="A knight kneels with bowed head, both hands resting on a sword planted point-down." loading="lazy" decoding="async" width="1216" height="811"></picture></figure>
+<aside class="example">
+<p>Aldric (Might 5, so a +3 melee bonus) swings a sword (1d6) at an Orc Warrior (DP 2). He rolls a 4: 4 + 3 = 7 damage, minus the orc&#39;s 2 DP, for 5 to its HP. Had the orc defended instead of attacking when it acted, it would have rolled 1d4 for extra DP to soften the blow.</p>
+</aside>
+<p class="rule"><strong>Combat maneuvers.</strong> Instead of attacking, you can attempt to disarm, shove, trip, grapple, blind, or otherwise hinder an opponent. Resolve these with an appropriate check.</p>
+<p class="rule"><strong>Opportunity attacks.</strong> When a creature leaves your melee reach, you may immediately attack them as a free action. You can only make one opportunity attack per round.</p>
+<p class="rule"><strong>Unarmed &amp; improvised.</strong> Fists deal 1d2 + Might Bonus damage. Bottles, chair legs, rocks: 1d4 + Might Bonus damage.</p>
+<p class="rule"><strong>Ranged attacks.</strong> Ranged and throwing weapons cannot target creatures beyond their listed range, or creatures within melee reach. When shooting into melee, there is a 1-in-6 chance your shot strikes a random ally in the melee instead of your intended target.</p>
+<p class="rule"><strong>Dual-wielding.</strong> Roll with both weapons then keep the higher result.</p>
+<h3 id="conditions"><span class="num">7.1</span><span class="t">Conditions</span></h3>
+<p>Effects and maneuvers can impose the conditions below. A condition lasts until the encounter ends, the effect&#39;s stated duration runs out, or a reasonable action clears it. Beyond their mechanics, conditions should shape the fiction.</p>
+<ul>
+<li><strong>Blinded.</strong> Roll damage and any sight-based check with disadvantage.</li>
+<li><strong>Prone.</strong> You move only by crawling at half Speed, and standing up uses your move. Attackers in melee roll damage against you with advantage, while attackers at range roll with disadvantage.</li>
+<li><strong>Grappled.</strong> Your Speed is 0. You may still act, and may break free by spending an action on a check.</li>
+<li><strong>Restrained.</strong> Your Speed is 0, and you roll damage and Grace checks with disadvantage. Escaping takes an action and a check.</li>
+<li><strong>Paralyzed / Stunned.</strong> You cannot move, act, or speak.</li>
+<li><strong>Petrified.</strong> As paralyzed, but turned to stone and unaware, lasting until cured.</li>
+<li><strong>Unconscious.</strong> You fall prone and cannot act. Unlike sleep, a shout or shake will not rouse you.</li>
+<li><strong>Charmed.</strong> You treat the source as a trusted friend and will not knowingly harm them.</li>
+<li><strong>Frightened.</strong> While the source of your fear remains in sight, you cannot willingly move toward it, and you roll damage against it with disadvantage.</li>
+</ul>
+<h3 id="morale"><span class="num">7.2</span><span class="t">Morale</span></h3>
+<p>At a breaking point (first casualty, half their number dead, leader slain, facing something terrifying) NPCs must check morale. Roll 2d6, and if the result exceeds their morale score, they flee, surrender, or retreat.</p>
+</section>
+<section class="chapter" data-number="8"><h2 id="magic"><span class="num">8</span><span class="t">Magic</span></h2>
+<p>PCs can wield magic through arcane spellbooks or divine relics, rare items that cannot be copied or created, only purchased, discovered, or taken. Their price is always bargained for, depending on the power and rarity of the spell or prayer.</p>
+<h3 id="casting"><span class="num">8.1</span><span class="t">Casting</span></h3>
+<p>Both spells and prayers require a main action, the spellbook or relic in hand, and the ability to speak. Mark a usage dot when you cast, and clear all dots after a successful rest.</p>
+<p class="rule"><strong>Defaults.</strong> Unless stated otherwise, spells and prayers last 1 round and have a range of 60 meters. An item is anything that fits in one hand. An object is anything up to human-sized.</p>
+<p class="rule"><strong>Innate abilities.</strong> Some creatures produce magical effects naturally. These follow the same rules as spells or prayers but use no usage dots. Instead, once used, there is a 2-in-6 chance the creature recharges the ability the next time it would act.</p>
+<p class="rule"><strong>Your table, your magic.</strong> The spells and prayers below are starting points. Modify them, write your own, or adapt from other systems. Just remember: any spell or prayer you introduce, your enemies can use too.</p>
+<h3 id="example-spellbooks"><span class="num">8.2</span><span class="t">Example Spellbooks</span></h3>
+<p>A spellbook contains a single specific spell. It occupies 1 inventory slot and has 3 usage dots that refill on a rest.</p>
+<ul>
+<li><strong>Charm.</strong> Make a Mind check against each of up to Mind Bonus humanoids within range. Each you beat is charmed for 1 hour, and may realize they were influenced when it ends.</li>
+<li><strong>Sleep.</strong> Make a Mind check against each of up to Mind Bonus creatures within range. Each target you beat falls asleep for 1 hour. Loud noise or a shake wakes them.</li>
+<li><strong>Petrify.</strong> Make a Mind check against a creature within range that can see you. It resists with Grace, averting its eyes. If you beat it, the creature is petrified.</li>
+<li><strong>Counterspell.</strong> When a creature you can see casts a spell within range, you may cast this immediately as a free action. Make a Mind check to end their spell.</li>
+<li><strong>Detect magic.</strong> You sense magical auras within range by focusing for a few minutes. With a Mind check, you can also learn an aura&#39;s nature and function.</li>
+<li><strong>Fly.</strong> A willing creature can fly at their Speed for Mind Bonus minutes.</li>
+<li><strong>Invisibility.</strong> A willing creature becomes invisible for Mind Bonus turns, or until they take a main action or suffer damage. While invisible, attackers who cannot locate them roll damage against them with disadvantage, and their own attacks roll damage with advantage.</li>
+<li><strong>Mirror image.</strong> Two illusory duplicates of yourself shimmer into being, which you control telepathically. Each vanishes when it takes any damage, leaves your line of sight, or after 1 watch.</li>
+<li><strong>Magic missile.</strong> Bolts of pale fire streak from your hand, striking up to Mind Bonus targets (or the same target multiple times) for 1d4 direct damage each.</li>
+<li><strong>Fireball.</strong> A roaring sphere of flame erupts at a point you can see within range. All creatures within 8 meters take 2d6 + Mind Bonus damage.</li>
+<li><strong>Elemental wall.</strong> Conjure a wall of fire or ice up to 30 meters long, 2 meters wide, and 4 meters tall, lasting Mind Bonus rounds. Creatures passing through a fire wall take 1d8 damage. An ice wall blocks line of sight and has 10 HP.</li>
+<li><strong>Web.</strong> Sticky, flammable strands fill a 6-meter cube, lasting until burned or destroyed. Creatures inside are restrained.</li>
+<li><strong>Telekinesis.</strong> You grip one object with your mind and move it up to 6 meters per round for Mind Bonus rounds. Manipulating something held or worn by an unwilling creature requires a Mind check.</li>
+<li><strong>Mirrorwalk.</strong> A mirror you touch becomes a two-way gate to another mirror you have touched today. The gate lasts a day.</li>
+<li><strong>Message.</strong> Send a message of up to Mind Bonus × 10 words to a creature you have met. The message arrives instantly regardless of distance.</li>
+<li><strong>Golem.</strong> A Stone Golem rises from the ground and obeys your commands for Mind Bonus hours, then stands inert.</li>
+</ul>
+<h3 id="example-relics"><span class="num">8.3</span><span class="t">Example Relics</span></h3>
+<p>Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has 1 usage dot that refills on a rest, but grants access to all prayers your deity permits. Acting against that nature, such as a priest of light wielding dark magic, risks the deity&#39;s displeasure.</p>
+<ul>
+<li><strong>Commune.</strong> Ask your deity a question. The answer, if there is one, comes in Heart Bonus × 2 words or fewer.</li>
+<li><strong>Aura of courage.</strong> Allies who can see or hear you add your Heart Bonus to their morale scores and have advantage on checks to resist fear for a day.</li>
+<li><strong>Smite.</strong> Declared as part of a melee attack. Add 1d8 + Heart Bonus damage to your strike, or 2d8 + Heart Bonus against undead and fiends.</li>
+<li><strong>Lay on hands.</strong> A creature you touch regains 1d6 + Heart Bonus HP.</li>
+<li><strong>Purify.</strong> Cure one creature of poison, disease, or mundane affliction. Curing a magical affliction requires a Heart check.</li>
+<li><strong>Light.</strong> Holy light radiates from you in a Heart Bonus × 4 meter radius for an hour. Undead and fiends within the light must check morale.</li>
+<li><strong>Truth sense.</strong> For Heart Bonus hours, you instinctively know when a creature speaks a deliberate lie.</li>
+<li><strong>Ward.</strong> A silver circle 8 meters across appears on the ground around you. Until you leave the circle, Heart Bonus things you name at casting cannot cross it.</li>
+<li><strong>Bless.</strong> Up to Heart Bonus allies who can hear you each gain advantage on one roll of their choice before the encounter ends.</li>
+<li><strong>Speak with animals.</strong> You may speak with and understand beasts for 1 watch. They react as NPCs and are not compelled to cooperate.</li>
+<li><strong>Wild shape.</strong> You transform into a beast you have seen for Heart Bonus hours. You use the beast&#39;s HP, Might, Grace, and Speed, but keep your Mind and Heart. You cannot cast or use equipment in this form. Reduced to 0 HP, you return to your true form, unconscious, at 1 HP.</li>
+<li><strong>Lightning.</strong> A bolt of lightning cuts a line 10 meters long and 2 meters wide. All creatures in its path take 2d8 + Heart Bonus damage.</li>
+<li><strong>Drain.</strong> Touch a creature to deal 1d6 + Heart Bonus direct damage. You regain HP equal to the damage dealt.</li>
+<li><strong>Hex.</strong> Make a Heart check against a creature within range. If you beat it, for Heart Bonus minutes they have disadvantage on checks involving an attribute you name.</li>
+<li><strong>Speak with dead.</strong> The spirit of a corpse you touch manifests and answers Heart Bonus questions honestly.</li>
+</ul>
+</section>
+<section class="chapter" data-number="9"><h2 id="hazards-weather-effects"><span class="num">9</span><span class="t">Hazards &amp; Weather Effects</span></h2>
+<p>Not every danger swings a sword.</p>
+<ul>
+<li><strong>Rain.</strong> Heavy rain reduces visibility, drowns out sound, slows movement, and turns ground to mud. Prolonged rain may cause flooding.</li>
+<li><strong>Lightning.</strong> 2d10 damage. Nearby animals become Frightened and flammable materials ignite.</li>
+<li><strong>Snow.</strong> Reduces visibility and slows movement. Heavy snow disorients and counts as difficult terrain.</li>
+<li><strong>Extreme cold.</strong> Without proper gear, suffer 1d6 direct damage every watch. Resting gives no benefit without fire and shelter.</li>
+<li><strong>Fog.</strong> Reduces visibility and disorients. Navigation checks are required even in familiar terrain.</li>
+<li><strong>Wind.</strong> Halves the range of ranged and thrown weapons. Strong wind drowns out sound, slows movement, and may blow over unsecured objects. Carries scents.</li>
+<li><strong>Storm.</strong> Combines rain, wind, and lightning at their worst.</li>
+<li><strong>Extreme heat.</strong> Without water and shade, suffer 1d3 direct damage each watch, and resting consumes an extra ration.</li>
+<li><strong>Burning.</strong> Fire deals 2d6 damage. A creature that is on fire takes this damage each time it would act until the flames are extinguished. Drop and roll (main action) to extinguish.</li>
+<li><strong>Falling.</strong> 1d4 damage every 2m fallen beyond the first 2. If three or more dice show their max value, you die on impact.</li>
+<li><strong>Suffocating.</strong> Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage each time you would act.</li>
+<li><strong>Intoxication.</strong> Might check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.</li>
+<li><strong>Poison.</strong> When exposed, make a Might check to resist, or suffer its effects. Mark usage to coat one weapon strike or one drink.</li>
+</ul>
+</section>
+<section class="chapter" data-number="10"><h2 id="overland-travel"><span class="num">10</span><span class="t">Overland Travel</span></h2>
+<p>Old Gold&#39;s overland play happens on a hex map where each hex is 10 km across. The map can be the Referee&#39;s, drawn from a published setting, or generated however your table prefers.</p>
+<p>Crossing a hex takes a watch and reveals what&#39;s on the surface: terrain, roads, landmarks, settlements, and anything that isn&#39;t trying to hide. Roads let you cross 2 hexes per watch, or 1 hex per watch through difficult terrain. Difficult terrain (mountains, swamps, dense forest) otherwise takes 2 watches to cross. Some terrain features (rivers, cliffs, mountain spines) are dangerous to cross and might require appropriate checks.</p>
+<p>When traveling through untamed lands, consult the Travel Oracle once per watch.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">2d6</th>
+<th>Travel Oracle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">2–3</td>
+<td>Danger reveals itself: an encounter, hazard, or event.</td>
+</tr>
+<tr>
+<td class="numeric">4–10</td>
+<td>Nothing eventful.</td>
+</tr>
+<tr>
+<td class="numeric">11–12</td>
+<td>Opportunity reveals itself: an encounter, landmark, or event.</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Weather.</strong> Roll 2d6 when you set out, then envision the weather fitting the climate and season, and apply the fitting Hazard if needed. It holds for a couple of days, then roll again (extreme weather passes sooner). Roll with disadvantage in a harsh climate or season.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">2d6</th>
+<th>Weather</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">2–3</td>
+<td>Extreme (blizzard, thunderstorm, heat wave)</td>
+</tr>
+<tr>
+<td class="numeric">4–5</td>
+<td>Foul (cold rain, heavy snow, dense fog)</td>
+</tr>
+<tr>
+<td class="numeric">6–10</td>
+<td>Fair (overcast, light breeze, drizzle)</td>
+</tr>
+<tr>
+<td class="numeric">11–12</td>
+<td>Favorable (clear skies, gentle sun, crisp air)</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Favorable weather.</strong> Clear skies are their own reward, let players bask in it narratively. If you want it to matter mechanically, foraging, navigation, or exploration can be rolled with advantage, or danger and landmarks can be spotted from farther off.</p>
+<p class="rule"><strong>Exploring.</strong> Spending a watch exploring a hex may reveal hidden ruins, lairs, overgrown paths, and buried things. Some secrets require a check.</p>
+<p class="rule"><strong>Navigation.</strong> In bad weather (storms, fog, blizzards) or featureless terrain (open sea, deep desert, forest at night), make a Heart check. On a failure, you arrive at a random adjacent hex instead of your intended destination.</p>
+<p class="rule"><strong>Foraging.</strong> Spend a watch and make a group check to gather 1d4 rations on a success. Difficulty varies by terrain and conditions.</p>
+<p class="rule"><strong>Mounts &amp; vehicles.</strong> On land, mounts and vehicles don&#39;t increase your travel speed, but they expand what you can carry (inventory slots equal HP). By water, ships travel 3 hexes per watch. Airships are rare and wondrous, traveling 3 hexes per watch in a straight line, ignoring the terrain below.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th class="numeric">HP / Slt</th>
+<th>Crew</th>
+<th class="numeric">Price</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mule</td>
+<td class="numeric">10</td>
+<td>—</td>
+<td class="numeric">50</td>
+</tr>
+<tr>
+<td>Horse</td>
+<td class="numeric">15</td>
+<td>—</td>
+<td class="numeric">250</td>
+</tr>
+<tr>
+<td>Cart</td>
+<td class="numeric">25</td>
+<td>2 mules or horses</td>
+<td class="numeric">100</td>
+</tr>
+<tr>
+<td>Wagon</td>
+<td class="numeric">50</td>
+<td>4 mules or horses</td>
+<td class="numeric">500</td>
+</tr>
+<tr>
+<td>Boat</td>
+<td class="numeric">50</td>
+<td>1 skilled hireling</td>
+<td class="numeric">500</td>
+</tr>
+<tr>
+<td>Sloop</td>
+<td class="numeric">100</td>
+<td>3 skilled hirelings</td>
+<td class="numeric">10,000</td>
+</tr>
+<tr>
+<td>Caravel</td>
+<td class="numeric">250</td>
+<td>10 skilled hirelings</td>
+<td class="numeric">100,000</td>
+</tr>
+<tr>
+<td>Galleon</td>
+<td class="numeric">500</td>
+<td>50 skilled hirelings</td>
+<td class="numeric">500,000</td>
+</tr>
+<tr>
+<td>Air Boat</td>
+<td class="numeric">25</td>
+<td>1 expert hireling</td>
+<td class="numeric">50,000</td>
+</tr>
+<tr>
+<td>Air Sloop</td>
+<td class="numeric">50</td>
+<td>3 expert hirelings</td>
+<td class="numeric">250,000</td>
+</tr>
+<tr>
+<td>Air Caravel</td>
+<td class="numeric">100</td>
+<td>10 expert hirelings</td>
+<td class="numeric">1,000,000</td>
+</tr>
+<tr>
+<td>Air Galleon</td>
+<td class="numeric">250</td>
+<td>50 expert hirelings</td>
+<td class="numeric">5,000,000</td>
+</tr>
+</tbody></table></div>
+<p>Hirelings cost their daily wages on top of the purchase price. Vehicles requiring crew won&#39;t move without them.</p>
+</section>
+<section class="chapter" data-number="11"><h2 id="dungeon-delving"><span class="num">11</span><span class="t">Dungeon Delving</span></h2>
+<p>A dungeon is any dangerous, contained place worth exploring: ancient ruins, monster lairs, forgotten tombs, cursed manors, deep caves. The rules below assume someone has prepared a map, marked the rooms, and decided what lives, lurks, and waits inside, whether that&#39;s the Referee, a published adventure, or your own imagination.</p>
+<p>PCs usually move through dungeons one room per turn. Most of this time is spent testing surfaces, listening, and mapping, so visible features and clues are revealed automatically. Searching a room can reveal hidden details but may require a check and spending an extra turn, depending on what you seek.</p>
+<p>When lingering in a place of danger, or backtracking, consult the Delving Oracle once per turn.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Delving Oracle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Danger reveals itself: an encounter, hazard, or trap.</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Signs of approaching danger. Consult this oracle with disadvantage until it reveals itself.</td>
+</tr>
+<tr>
+<td class="numeric">3–6</td>
+<td>All quiet… for now.</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Running.</strong> Characters who run can cover up to 6 rooms per turn. They cannot map, automatically trigger traps, and are surprised by all encounters.</p>
+<p class="rule"><strong>Light.</strong> Creatures without a light source or the ability to see in darkness halve their Speed, are surprised by all encounters, trigger all traps, cannot map, and make all checks with disadvantage. Light sources mark usage while lit and may be extinguished by wind, water, or other hazards.</p>
+<figure class="plate plate-thief-at-door"><picture><source type="image/webp" srcset="assets/img/thief-at-door.webp"><img src="assets/img/thief-at-door.png" alt="A cloaked thief crouches on a stairway, working a tool into the lock of a door set in a stone arch." loading="lazy" decoding="async" width="1200" height="1200"></picture></figure>
+<p class="rule"><strong>Doors.</strong> Most doors open freely. Stuck or barred doors require a Might check to force, and locked doors a Grace check with lockpicks or improvised tools (the latter with disadvantage). Listening at a door requires a Heart check.</p>
+</section>
+<section class="chapter" data-number="12"><h2 id="random-encounters"><span class="num">12</span><span class="t">Random Encounters</span></h2>
+<p>When the party meets a creature unexpectedly, settle how many, how far, and how they react.</p>
+<ul>
+<li><strong>Number.</strong> Roll the creature&#39;s number appearing (NA) from its bestiary entry, adjusting to the situation.</li>
+<li><strong>Distance.</strong> 2d6 × 2m in a dungeon, or 2d6 × 20m in the wilderness.</li>
+<li><strong>Reaction.</strong> If it isn&#39;t obvious from the fiction, roll on the Reaction Oracle below.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">2d6</th>
+<th>Reaction Oracle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">2–3</td>
+<td>Hostile. Attacks immediately.</td>
+</tr>
+<tr>
+<td class="numeric">4–5</td>
+<td>Aggressive. Threatens, demands, postures.</td>
+</tr>
+<tr>
+<td class="numeric">6–8</td>
+<td>Cautious. Watches, questions, follows.</td>
+</tr>
+<tr>
+<td class="numeric">9–10</td>
+<td>Neutral. Goes about its business.</td>
+</tr>
+<tr>
+<td class="numeric">11–12</td>
+<td>Friendly. Willing to help, trade, or parley.</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter" data-number="13"><h2 id="treasure"><span class="num">13</span><span class="t">Treasure</span></h2>
+<p>Treasure is everything the party might recover from a dungeon or earn from a patron: coin, valuables, trade goods, gear, or magic items. Split it between loot and pay however the fiction suggests (a patron might offer half up front and let the party keep what they find). The amount depends on how dangerous the adventure is and how long it runs, both relative to the party attempting it (a Brutal challenge for novices might be a Normal task for veterans).</p>
+<p>Add together the XP each adventurer needs for their next level (the XP Required column under Advancement), then take the share of that total shown below. That share is the treasure&#39;s worth in gold, not experience. The party splits it, and it advances them only as they spend it during downtime (see <a class="xref" href="#advancement">Advancement</a>). Level 10 characters use the level 10 XP Required number as well.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Danger</th>
+<th>Half a session</th>
+<th>About a session</th>
+<th>Several sessions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Normal</strong></td>
+<td>10%</td>
+<td>20%</td>
+<td>40%</td>
+</tr>
+<tr>
+<td><strong>Difficult</strong></td>
+<td>20%</td>
+<td>40%</td>
+<td>80%</td>
+</tr>
+<tr>
+<td><strong>Brutal</strong></td>
+<td>30%</td>
+<td>60%</td>
+<td>120%</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><strong>Normal.</strong> Dangerous enough. Carelessness or bad luck can still get someone killed.</li>
+<li><strong>Difficult.</strong> The party is tested. Success costs resources, and mistakes cost lives.</li>
+<li><strong>Brutal.</strong> The party is outmatched. Survival demands creativity, sacrifice, or retreat.</li>
+</ul>
+<aside class="example">
+<p>Four companions at level 5 each need 16,000 XP for level 6, 64,000 in total. Recovering a noble&#39;s stolen signet from a bandit camp (Normal, half a session) is worth about 6,400 gp. A haunted barrow that truly tests them (Difficult, about a session) holds some 25,600. A megadungeon that will take weeks and likely a life (Brutal, several sessions) holds some 76,800, more than enough to lift the whole party a level in theory, though in practice not all of it will be spent on advancement.</p>
+</aside>
+<p>This is a guideline for stocking dungeons and setting payments, not a promise that every dangerous encounter pays out (a quick ambush by something far beyond the party may be Brutal on paper, but it shouldn&#39;t automatically yield treasure). Treat these numbers as estimates, not targets, and stray from them whenever the story is better for it.</p>
+<p class="rule"><strong>Slowing advancement (optional).</strong> Because XP costs double each level, every level takes about the same number of adventures. If you&#39;d rather the highest levels be harder-won, use Adjusted Reward instead of XP Required when calculating treasure (leveling still costs the full XP Required).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">Level</th>
+<th class="numeric">Adjusted Reward</th>
+<th class="numeric">≈ Sessions to buy a level</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">2</td>
+<td class="numeric">1,000</td>
+<td class="numeric">3</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td class="numeric">2,000</td>
+<td class="numeric">3</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td class="numeric">3,000</td>
+<td class="numeric">3</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td class="numeric">5,000</td>
+<td class="numeric">4</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td class="numeric">8,000</td>
+<td class="numeric">5</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td class="numeric">14,000</td>
+<td class="numeric">6</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td class="numeric">25,000</td>
+<td class="numeric">6</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td class="numeric">45,000</td>
+<td class="numeric">7</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td class="numeric">80,000</td>
+<td class="numeric">8</td>
+</tr>
+</tbody></table></div>
+<p><em>Assumes Difficult, session-length adventures.</em></p>
+</section>
+<section class="chapter" data-number="14"><h2 id="recruiting"><span class="num">14</span><span class="t">Recruiting</span></h2>
+<p>You can recruit followers to aid your adventures.</p>
+<h3 id="hirelings"><span class="num">14.1</span><span class="t">Hirelings</span></h3>
+<p>Common folk hired for various tasks. They might follow you into dungeons but won&#39;t fight or risk themselves.</p>
+<ul>
+<li><strong>Common hirelings (10 gp/day).</strong> Torch-bearers, cooks, laborers.</li>
+<li><strong>Skilled hirelings (20 gp/day).</strong> Hunters, blacksmiths, herbalists.</li>
+<li><strong>Expert hirelings (40 gp/day).</strong> Alchemists, translators, spies.</li>
+</ul>
+<p class="statblock"><strong>Hireling.</strong> HP 6, DP 0, Might 1, Grace 1, Mind 1, Heart 1, Speed 10m, Morale 5, ATK punch (1d2+1, 2m), NA 2d4. Working folk, won&#39;t fight or risk themselves.</p>
+<h3 id="mercenaries"><span class="num">14.2</span><span class="t">Mercenaries</span></h3>
+<p>Trained combatants who are willing to fight for you but refuse to enter dungeons. Daily wage is 30 gp.</p>
+<p class="statblock"><strong>Swordsman.</strong> HP 12, DP 2, Might 3, Grace 1, Mind 1, Heart 1, Speed 10m, Morale 8, ATK sword (1d6+2, 2m), NA 1d4. Blade for hire, won&#39;t enter dungeons.</p>
+<p class="statblock"><strong>Archer.</strong> HP 8, DP 1, Might 1, Grace 3, Mind 1, Heart 1, Speed 10m, Morale 8, ATK longbow (1d6+2, 60m), NA 1d4. Steady-handed bowman, won&#39;t enter dungeons.</p>
+<h3 id="availability"><span class="num">14.3</span><span class="t">Availability</span></h3>
+<p>The number of potential recruits present and willing to work in a given settlement. Refresh monthly.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Settlement</th>
+<th class="numeric">Common</th>
+<th class="numeric">Skilled</th>
+<th class="numeric">Mercenary</th>
+<th class="numeric">Expert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Village</td>
+<td class="numeric">1d8</td>
+<td class="numeric">1d6</td>
+<td class="numeric">1d6</td>
+<td class="numeric">0</td>
+</tr>
+<tr>
+<td>Town</td>
+<td class="numeric">5d8</td>
+<td class="numeric">5d6</td>
+<td class="numeric">5d6</td>
+<td class="numeric">1d4</td>
+</tr>
+<tr>
+<td>City</td>
+<td class="numeric">10d8</td>
+<td class="numeric">10d6</td>
+<td class="numeric">10d6</td>
+<td class="numeric">5d4</td>
+</tr>
+</tbody></table></div>
+<h3 id="companions"><span class="num">14.4</span><span class="t">Companions</span></h3>
+<p>Followers generated like PCs. They take equal shares of treasure, gain levels over time, and only follow higher-level PCs. Companions don&#39;t check morale.</p>
+</section>
+<section class="chapter" data-number="15"><h2 id="warfare"><span class="num">15</span><span class="t">Warfare</span></h2>
+<p>Use these procedures to resolve large-scale battles without tracking individual actions.</p>
+<p class="rule"><strong>Preparation.</strong> Both sides declare their objective (rout the enemy, seize territory, rescue prisoners) and calculate their combat power. Each unit equals 1 power and costs 100,000 gp/month to field. Some examples include: 1 archmage, 5 battle clerics, 25 cavalry, 100 archers, or 200 untrained foot soldiers.</p>
+<p class="rule"><strong>Battle.</strong> Each round, one side makes a check, adding their total power as a bonus against a difficulty of 10 plus the opponent&#39;s power. Roll with advantage for a clear edge (defending a castle, ambush, high ground), or disadvantage when badly outmatched. The losing side loses 10% of its original strength, or 20% if it lost the round by 10 or more, then makes a morale check against 10 minus the number of rounds it has lost.</p>
+<p class="rule"><strong>Resolution.</strong> The battle ends when a side fails a morale check, is destroyed, or withdraws, and the victor achieves their stated objective. Once per battle, a commander may make a Heart check to negate their side&#39;s first failed morale check with an inspiring speech.</p>
+</section>
+<section class="chapter" data-number="16"><h2 id="construction"><span class="num">16</span><span class="t">Construction</span></h2>
+<p>The following costs are estimates, actual construction times and prices may vary with quality, location or special features. Use these examples to estimate the cost of a structure not listed.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th class="numeric">Price</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Humble</td>
+<td>Hovel, makeshift camp.</td>
+<td class="numeric">250</td>
+<td>Weeks</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>A timber house or small workshop.</td>
+<td class="numeric">5,000</td>
+<td>Months</td>
+</tr>
+<tr>
+<td>Respectable</td>
+<td>Large residence, guildhall, tavern.</td>
+<td class="numeric">100,000</td>
+<td>Years</td>
+</tr>
+<tr>
+<td>Wealthy</td>
+<td>Fortified keep, temple, mansion.</td>
+<td class="numeric">1,000,000</td>
+<td>Years</td>
+</tr>
+<tr>
+<td>Grand</td>
+<td>Palace, cathedral, great fortress.</td>
+<td class="numeric">5,000,000</td>
+<td>Decades</td>
+</tr>
+</tbody></table></div>
+<p class="rule"><strong>Renting.</strong> You can rent an entire building for 1% of its total cost per month.</p>
+<p class="rule"><strong>New construction.</strong> Constructing a new building costs 150% of its listed cost. This price represents the total cost of materials and labor, but does not include the acquisition of the land itself. After paying the cost, the project requires the listed build time to complete.</p>
+<p class="rule"><strong>Owning land.</strong> In the wild, you may build freely, but the land is yours only as long as you can hold it. To build within or near a settlement, you need permission from a landlord, noble, guild, faction, or other authority, or purchase it for 20% of the planned building&#39;s cost.</p>
+<p class="rule"><strong>Running a business.</strong> A business or investment, when operations run smoothly, generates an annual profit equal to 2d6% of its initial investment.</p>
+</section>
+<section class="chapter" data-number="17"><h2 id="room-board"><span class="num">17</span><span class="t">Room &amp; Board</span></h2>
+<p>A roof over your head costs coin, and without a home of your own, you pay for the privilege nightly.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th class="numeric">Price (per day)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Humble</td>
+<td>A spot on the floor of a shared hall.</td>
+<td class="numeric">2 gp</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>A shared room, a cot, a peg for your gear.</td>
+<td class="numeric">5 gp</td>
+</tr>
+<tr>
+<td>Respectable</td>
+<td>A private room with a lockable chest.</td>
+<td class="numeric">15 gp</td>
+</tr>
+<tr>
+<td>Wealthy</td>
+<td>A feather bed and a servant at your door.</td>
+<td class="numeric">50 gp</td>
+</tr>
+</tbody></table></div>
+<p>These costs cover a full day of meals and drinks.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th class="numeric">Price (per day)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Humble</td>
+<td>Thin gruel, stale bread, watered ale.</td>
+<td class="numeric">2 gp</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>Filling meals, simple fare, decent ale.</td>
+<td class="numeric">5 gp</td>
+</tr>
+<tr>
+<td>Respectable</td>
+<td>Good cuts, fresh bread, wine.</td>
+<td class="numeric">15 gp</td>
+</tr>
+<tr>
+<td>Wealthy</td>
+<td>Fine food, rich wine, whatever you desire.</td>
+<td class="numeric">50 gp</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter" data-number="18"><h2 id="oracles"><span class="num">18</span><span class="t">Oracles</span></h2>
+<p>When you need inspiration, an answer, or a sense of what lurks ahead, consult an oracle.</p>
+<h3 id="yesno-oracle"><span class="num">18.1</span><span class="t">Yes/No Oracle</span></h3>
+<p>When a question about the world has no clear answer (Will the bridge hold? Am I alone here?), frame it as a yes or no question and roll 1d6. Roll with advantage if a yes is likely, or disadvantage if unlikely.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>No, and something goes wrong.</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>No.</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>No, but there&#39;s a silver lining.</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Yes, but at a cost or complication.</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Yes.</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Yes, and something else goes right.</td>
+</tr>
+</tbody></table></div>
+<h3 id="solo-d6-oracle"><span class="num">18.2</span><span class="t">Solo d6 Oracle</span></h3>
+<p>When the fiction hasn&#39;t settled a detail, roll 1d6 and read the column that fits your question. Roll with advantage to lean toward the higher end (more, bigger, harder, better), or with disadvantage toward the lower.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Direction</th>
+<th>Distance</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Forward / North</td>
+<td>Right here</td>
+<td>None / almost none</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Right / East</td>
+<td>Within reach</td>
+<td>One</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Behind / South</td>
+<td>Nearby</td>
+<td>A few</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Left / West</td>
+<td>A short walk</td>
+<td>Several</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Up / Above</td>
+<td>Far</td>
+<td>Many</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Down / Below</td>
+<td>Days away</td>
+<td>Countless</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Size</th>
+<th>Difficulty</th>
+<th>Quality</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Tiny</td>
+<td>Trivial (no roll)</td>
+<td>Ruined</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Small</td>
+<td>Easy</td>
+<td>Poor</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Average</td>
+<td>Normal</td>
+<td>Plain</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Large</td>
+<td>Troublesome</td>
+<td>Decent</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Huge</td>
+<td>Difficult</td>
+<td>Fine</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Massive</td>
+<td>Brutal</td>
+<td>Pristine</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>When</th>
+<th>Age</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Now</td>
+<td>Brand new</td>
+<td>Never</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Very soon</td>
+<td>Recent</td>
+<td>Rarely</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>This hour</td>
+<td>A few years</td>
+<td>Sometimes</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Today</td>
+<td>Old</td>
+<td>Often</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Within days</td>
+<td>Very old</td>
+<td>Usually</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Someday</td>
+<td>Ancient</td>
+<td>Always</td>
+</tr>
+</tbody></table></div>
+<h3 id="action-theme"><span class="num">18.3</span><span class="t">Action &amp; Theme</span></h3>
+<p>When you need to know what happens, an NPC&#39;s next move, or the meaning behind a vague result, roll 1d12 twice, once for an Action and once for a Theme, then read the pair together.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d12</th>
+<th>Action</th>
+<th>Theme</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Attack</td>
+<td>An enemy</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Defend</td>
+<td>An ally</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Take</td>
+<td>A stranger</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Give</td>
+<td>Treasure</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Reveal</td>
+<td>A relic</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Conceal</td>
+<td>A secret</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Pursue</td>
+<td>A path</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Flee</td>
+<td>A trap</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Betray</td>
+<td>A lair</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Aid</td>
+<td>A bargain</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Bind</td>
+<td>The past</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Transform</td>
+<td>Death</td>
+</tr>
+</tbody></table></div>
+<h3 id="adventure-seeds"><span class="num">18.4</span><span class="t">Adventure Seeds</span></h3>
+<p>Roll 1d20 on each column and combine the results for a quest hook.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d20</th>
+<th>NPC</th>
+<th>Problem</th>
+<th>Complication</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Retired soldier</td>
+<td>Missing person</td>
+<td>A PC is responsible</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Oddities merchant</td>
+<td>Stolen something</td>
+<td>They have amnesia</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Disguised noble</td>
+<td>Retrieve heirloom</td>
+<td>They&#39;ve been framed</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Hedge witch</td>
+<td>Home is in danger</td>
+<td>It&#39;s very urgent</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Mute child</td>
+<td>Pursued by soldiers</td>
+<td>They are lying</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Traveling priest</td>
+<td>A debt they cannot pay</td>
+<td>A rival group wants it too</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Fugitive</td>
+<td>Monster stalks the road</td>
+<td>It must remain a secret</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Elderly recluse</td>
+<td>A curse must be broken</td>
+<td>The client is the real villain</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Cartographer</td>
+<td>Prisoner needs freeing</td>
+<td>The reward is cursed</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Former friend or lover</td>
+<td>A body must vanish</td>
+<td>The target is innocent</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Wounded stranger</td>
+<td>A place must be mapped</td>
+<td>A traitor hides among allies</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Local magistrate</td>
+<td>A rival must be undone</td>
+<td>The pay is counterfeit</td>
+</tr>
+<tr>
+<td class="numeric">13</td>
+<td>Grieving parent</td>
+<td>A murder to solve</td>
+<td>It is plainly a trap</td>
+</tr>
+<tr>
+<td class="numeric">14</td>
+<td>Masked informant</td>
+<td>A relic must be destroyed</td>
+<td>The truth is worse than the rumor</td>
+</tr>
+<tr>
+<td class="numeric">15</td>
+<td>Guild master</td>
+<td>A truth must surface</td>
+<td>Someone powerful wants it stopped</td>
+</tr>
+<tr>
+<td class="numeric">16</td>
+<td>Repentant criminal</td>
+<td>Safe escort through danger</td>
+<td>The deadline is impossible</td>
+</tr>
+<tr>
+<td class="numeric">17</td>
+<td>Desperate innkeeper</td>
+<td>A ransom to deliver</td>
+<td>The job is a crime</td>
+</tr>
+<tr>
+<td class="numeric">18</td>
+<td>Exiled scholar</td>
+<td>A bargain to broker</td>
+<td>A loved one is involved</td>
+</tr>
+<tr>
+<td class="numeric">19</td>
+<td>Frightened farmer</td>
+<td>A haunting to end</td>
+<td>The only witness is dead</td>
+</tr>
+<tr>
+<td class="numeric">20</td>
+<td>Rival adventurer</td>
+<td>A name to clear</td>
+<td>Nothing is as it seems</td>
+</tr>
+</tbody></table></div>
+<h3 id="settlement-names"><span class="num">18.5</span><span class="t">Settlement Names</span></h3>
+<p>A settlement&#39;s name usually joins a describing word to a place, a feature, a creature, a color, or a founder. Roll 1d12 twice, join a prefix to a suffix, and adjust to taste (Greyfell, Redbridge, Stagmoor).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d12</th>
+<th>Prefix</th>
+<th>Suffix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Ash</td>
+<td>ford</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Bram</td>
+<td>bridge</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Cold</td>
+<td>moor</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Elk</td>
+<td>barrow</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Fen</td>
+<td>fell</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Frost</td>
+<td>gate</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Grey</td>
+<td>mire</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Oak</td>
+<td>wick</td>
+</tr>
+<tr>
+<td class="numeric">9</td>
+<td>Red</td>
+<td>stead</td>
+</tr>
+<tr>
+<td class="numeric">10</td>
+<td>Stag</td>
+<td>crook</td>
+</tr>
+<tr>
+<td class="numeric">11</td>
+<td>Thorn</td>
+<td>reach</td>
+</tr>
+<tr>
+<td class="numeric">12</td>
+<td>Weir</td>
+<td>hollow</td>
+</tr>
+</tbody></table></div>
+<p>Dwarven and elven settlements take names of their own.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d6</th>
+<th>Dwarven</th>
+<th>Elven</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Durngard</td>
+<td>Silvael</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Khazvûr</td>
+<td>Elytheris</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Baradûn</td>
+<td>Aenwyn</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Grumhold</td>
+<td>Corvaleth</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Kraghelm</td>
+<td>Ysandriel</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Dolmar</td>
+<td>Faelourn</td>
+</tr>
+</tbody></table></div>
+<h3 id="dungeon-names"><span class="num">18.6</span><span class="t">Dungeon Names</span></h3>
+<p>A dungeon takes its name from what it looks like, what it is, and what haunts it. Roll 1d8 three times and read the result as &quot;the [Descriptor] [Site] of the [Namesake],&quot; adjusting to taste (the Sunken Vault of the Dead King, the Whispering Mine of the Worm, the Gilded Sanctum of the Old Gods).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th class="numeric">1d8</th>
+<th>Descriptor</th>
+<th>Site</th>
+<th>Namesake</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="numeric">1</td>
+<td>Sunken</td>
+<td>Vault</td>
+<td>Dead King</td>
+</tr>
+<tr>
+<td class="numeric">2</td>
+<td>Hollow</td>
+<td>Barrow</td>
+<td>Automatons</td>
+</tr>
+<tr>
+<td class="numeric">3</td>
+<td>Weeping</td>
+<td>Keep</td>
+<td>Worm</td>
+</tr>
+<tr>
+<td class="numeric">4</td>
+<td>Ashen</td>
+<td>Warren</td>
+<td>Mad Wizard</td>
+</tr>
+<tr>
+<td class="numeric">5</td>
+<td>Whispering</td>
+<td>Mine</td>
+<td>Horde</td>
+</tr>
+<tr>
+<td class="numeric">6</td>
+<td>Shattered</td>
+<td>Deep</td>
+<td>Spider Queen</td>
+</tr>
+<tr>
+<td class="numeric">7</td>
+<td>Gilded</td>
+<td>Sanctum</td>
+<td>Drowned</td>
+</tr>
+<tr>
+<td class="numeric">8</td>
+<td>Blackened</td>
+<td>Halls</td>
+<td>Old Gods</td>
+</tr>
+</tbody></table></div>
+</section>
+<section class="chapter" data-number="19"><h2 id="bestiary"><span class="num">19</span><span class="t">Bestiary</span></h2>
+<p class="statblock"><strong>Rat Swarm.</strong> HP 9, DP 0, Might 1, Grace 3, Mind 0, Heart 0, Speed 10m, Morale 4, ATK bites (1d4+1, 2m), NA 1d3. Dozens of rats moving as one (half damage from single-target attacks). Sees in darkness.</p>
+<p class="statblock"><strong>Goblin.</strong> HP 7, DP 0, Might 1, Grace 3, Mind 1, Heart 1, Speed 10m, Morale 4, ATK dagger (1d6+1, 2m) or sling (1d4+2, 20m), NA 2d6. Sneaky and cowardly. Sees in darkness.</p>
+<p class="statblock"><strong>Skeleton.</strong> HP 7, DP 1, Might 1, Grace 1, Mind 0, Heart 0, Speed 10m, Morale 11, ATK claws (1d4+1, 2m), NA 2d6. Mindless undead. Immune to poison and mental effects. Sees in darkness.</p>
+<p class="statblock"><strong>Wolf.</strong> HP 10, DP 0, Might 3, Grace 3, Mind 0, Heart 0, Speed 14m, Morale 6, ATK bite (1d6+2, 2m), NA 2d4. Hunts in packs. Roll damage with advantage when another wolf is within 2m of the target.</p>
+<p class="statblock"><strong>Zombie.</strong> HP 12, DP 0, Might 2, Grace 0, Mind 0, Heart 0, Speed 6m, Morale 12, ATK slam (1d6+1, 2m), NA 2d6. Relentless undead. 3-in-6 chance it rises again with 1 HP when killed. Fire prevents this. Sees in darkness.</p>
+<p class="statblock"><strong>Bandit.</strong> HP 8, DP 1, Might 2, Grace 2, Mind 1, Heart 1, Speed 10m, Morale 5, ATK sword (1d6+1, 2m) or bow (1d6+1, 60m), NA 2d6. Likes to ambush.</p>
+<p class="statblock"><strong>Giant Spider.</strong> HP 10, DP 0, Might 2, Grace 5, Mind 1, Heart 1, Speed 12m, Morale 6, ATK bite (1d6+1, 2m), NA 1d4. A bitten target must resist paralytic poison. Innate magic: Web.</p>
+<p class="statblock"><strong>Harpy.</strong> HP 8, DP 0, Might 1, Grace 3, Mind 3, Heart 3, Speed 8m (16m flying), Morale 6, ATK claws (1d6+1, 2m), NA 1d4. Winged predator whose song lures those who hear it. Innate magic: Charm.</p>
+<p class="statblock"><strong>Blink Dog.</strong> HP 12, DP 0, Might 2, Grace 4, Mind 2, Heart 2, Speed 12m, Morale 7, ATK bite (1d6+1, 2m), NA 1d4. Feytouched hound. Blinks up to 10m before or after it attacks.</p>
+<p class="statblock"><strong>Bandit Leader.</strong> HP 12, DP 2, Might 3, Grace 2, Mind 2, Heart 2, Speed 10m, Morale 9, ATK greatsword (1d10+2, 2m), NA 1. Nearby bandits use the leader&#39;s Morale. Commands from the back line.</p>
+<p class="statblock"><strong>Orc Warrior.</strong> HP 12, DP 2, Might 3, Grace 1, Mind 1, Heart 1, Speed 10m, Morale 8, ATK axe (1d8+2, 2m) or javelin (1d4+2, 25m), NA 2d4. Aggressive and territorial.</p>
+<p class="statblock"><strong>Stone Golem.</strong> HP 16, DP 3, Might 5, Grace 0, Mind 0, Heart 0, Speed 8m, Morale 12, ATK slam (1d8+3, 2m), NA 1. Immune to poison and mental effects.</p>
+<p class="statblock"><strong>Mimic.</strong> HP 14, DP 2, Might 3, Grace 1, Mind 1, Heart 1, Speed 4m, Morale 8, ATK bite (1d8+2, 2m), NA 1. Disguises itself as a chest, door, or piece of furniture. Attacks with surprise if unnoticed.</p>
+<p class="statblock"><strong>Ogre.</strong> HP 20, DP 1, Might 5, Grace 1, Mind 0, Heart 0, Speed 10m, Morale 7, ATK greatclub (1d10+3, 2m) or boulder (1d8+3, 30m), NA 1d3. Dim-witted and brutal.</p>
+<p class="statblock"><strong>Werewolf.</strong> HP 18, DP 1, Might 4, Grace 3, Mind 2, Heart 2, Speed 12m, Morale 9, ATK claws (1d8+2, 2m), NA 1d3. Immune to mundane weapons in beast form. Reverts to human form at 0 HP, unconscious.</p>
+<p class="statblock"><strong>Ghost.</strong> HP 8, DP 0, Might 1, Grace 1, Mind 3, Heart 4, Speed 10m, Morale 10, ATK touch (1d6 direct, 2m), NA 1. Immune to mundane weapons. Passes through walls. Sees in darkness.</p>
+<p class="statblock"><strong>Living Armor.</strong> HP 16, DP 3, Might 4, Grace 1, Mind 1, Heart 1, Speed 6m, Morale 12, ATK halberd (1d6+2, 4m), NA 1d4. Held together by magic. Loud when moving. Immune to mental effects.</p>
+<p class="statblock"><strong>Gelatinous Cube.</strong> HP 22, DP 0, Might 3, Grace 0, Mind 0, Heart 0, Speed 4m, Morale 12, ATK engulf (1d6, 2m), NA 1. Immune to piercing weapons like spears and arrows. Engulfed targets are restrained and take 1d6 damage each time they would act until they escape.</p>
+<p class="statblock"><strong>Brain Flayer.</strong> HP 16, DP 1, Might 3, Grace 2, Mind 7, Heart 3, Speed 10m, Morale 8, ATK tentacles (1d6+2, 2m, grapples on hit), NA 1d3. Psionic horror from the deep. Psychic blast (innate): each creature within 6m makes a Mind check or is stunned for 1 round. Each time it acts, if a creature it has grappled is also stunned, it begins extracting the brain. The victim dies in 2 rounds unless freed.</p>
+<p class="statblock"><strong>Basilisk.</strong> HP 14, DP 2, Might 3, Grace 1, Mind 4, Heart 1, Speed 8m, Morale 7, ATK bite (1d6+2, 2m), NA 1d2. A many-legged reptile whose gaze turns the living to stone. Innate magic: Petrify.</p>
+<p class="statblock"><strong>Troll.</strong> HP 24, DP 1, Might 5, Grace 2, Mind 1, Heart 1, Speed 12m, Morale 9, ATK claws (1d8+3, 2m), NA 1d2. Regenerates 1d6 HP each time it would act. Sunlight prevents regeneration. Sees in darkness.</p>
+<p class="statblock"><strong>Demon.</strong> HP 22, DP 2, Might 5, Grace 3, Mind 3, Heart 2, Speed 10m (20m flying), Morale 10, ATK claws (1d8+3, 2m), NA 1d2. A fiend of the lower planes, wreathed in fire. Immune to fire. Sees in darkness. Innate magic: Fireball. Speaks Abyssal.</p>
+<p class="statblock"><strong>Vampire.</strong> HP 40, DP 2, Might 5, Grace 5, Mind 5, Heart 6, Speed 12m, Morale 11, ATK claws (1d8+3, 2m), NA 1. Undead lord. Reforms in its coffin after 1d4 days unless destroyed in sunlight or with a stake through the heart. Sees in darkness. Innate magic: Charm, Drain.</p>
+<p class="statblock"><strong>Lich.</strong> HP 30, DP 2, Might 2, Grace 2, Mind 8, Heart 6, Speed 10m, Morale 12, ATK touch (1d8 direct, 2m) or spells, NA 1. Undead sorcerer of immense power. Sees in darkness. Carries 3 spellbooks. Cannot be permanently killed until its phylactery is destroyed.</p>
+<p class="statblock"><strong>Red Dragon.</strong> HP 100, DP 3, Might 8, Grace 5, Mind 6, Heart 5, Speed 12m (24m flying), Morale 11, ATK claws (2d6+4, 2m) or fire breath (innate) (2d10 to all targets in a 10m cone), NA 1. Immune to fire. Hoards gold obsessively. Likes to be flattered.</p>
+</section>
+  </main>
+
+  <footer class="colophon">
+    <p><span>Tiny Raven Press</span><span>Text licensed under CC BY 4.0</span></p>
+    <p>
+      <a href="mailto:team@tinyravenpress.com">team@tinyravenpress.com</a>
+      <a href="https://discord.gg/WssHvFgUZ" rel="noopener">Discord</a>
+      <a href="https://tinyravenpress.itch.io/old-gold/" rel="noopener">itch.io</a>
+    </p>
+  </footer>
+</div>
+
+<button class="pill" type="button" data-toc-open>Contents</button>
+<dialog id="toc-dialog" aria-label="Contents">
+  <div class="dialog-in">
+    <div class="dialog-head">
+      <span class="dialog-title">Contents</span>
+      <button type="button" data-close>Close</button>
+    </div>
+    <ol class="toc"><li class="ch"><a href="#introduction"><span class="n">1</span><span class="t">Introduction</span></a><ol><li><a href="#what-you-need"><span class="n">1.1</span><span class="t">What You Need</span></a></li><li><a href="#game-notations"><span class="n">1.2</span><span class="t">Game Notations</span></a></li><li><a href="#modes-of-play"><span class="n">1.3</span><span class="t">Modes of Play</span></a></li><li><a href="#rounding"><span class="n">1.4</span><span class="t">Rounding</span></a></li><li><a href="#credits"><span class="n">1.5</span><span class="t">Credits</span></a></li></ol></li><li class="ch"><a href="#time"><span class="n">2</span><span class="t">Time</span></a></li><li class="ch"><a href="#character-creation"><span class="n">3</span><span class="t">Character Creation</span></a><ol><li><a href="#ancestry"><span class="n">3.1</span><span class="t">Ancestry</span></a></li><li><a href="#languages"><span class="n">3.2</span><span class="t">Languages</span></a></li><li><a href="#attributes"><span class="n">3.3</span><span class="t">Attributes</span></a></li><li><a href="#inspiration"><span class="n">3.4</span><span class="t">Inspiration</span></a></li><li><a href="#health-points"><span class="n">3.5</span><span class="t">Health Points</span></a></li><li><a href="#defense-points"><span class="n">3.6</span><span class="t">Defense Points</span></a></li><li><a href="#inventory"><span class="n">3.7</span><span class="t">Inventory</span></a></li><li><a href="#coinage"><span class="n">3.8</span><span class="t">Coinage</span></a></li><li><a href="#starting-equipment"><span class="n">3.9</span><span class="t">Starting Equipment</span></a></li><li><a href="#advancement"><span class="n">3.10</span><span class="t">Advancement</span></a></li><li><a href="#finishing-touches"><span class="n">3.11</span><span class="t">Finishing Touches</span></a></li><li><a href="#bonds"><span class="n">3.12</span><span class="t">Bonds</span></a></li></ol></li><li class="ch"><a href="#equipment"><span class="n">4</span><span class="t">Equipment</span></a><ol><li><a href="#light-sources"><span class="n">4.1</span><span class="t">Light Sources</span></a></li><li><a href="#weapons-armor"><span class="n">4.2</span><span class="t">Weapons &amp; Armor</span></a></li><li><a href="#consumables"><span class="n">4.3</span><span class="t">Consumables</span></a></li><li><a href="#adventuring-gear"><span class="n">4.4</span><span class="t">Adventuring Gear</span></a></li><li><a href="#valuables-trade-goods"><span class="n">4.5</span><span class="t">Valuables &amp; Trade Goods</span></a></li><li><a href="#spellbooks-relics"><span class="n">4.6</span><span class="t">Spellbooks &amp; Relics</span></a></li></ol></li><li class="ch"><a href="#challenges"><span class="n">5</span><span class="t">Challenges</span></a></li><li class="ch"><a href="#actions"><span class="n">6</span><span class="t">Actions</span></a><ol><li><a href="#initiative"><span class="n">6.1</span><span class="t">Initiative</span></a></li><li><a href="#movement"><span class="n">6.2</span><span class="t">Movement</span></a></li><li><a href="#main-actions"><span class="n">6.3</span><span class="t">Main Actions</span></a></li><li><a href="#free-actions"><span class="n">6.4</span><span class="t">Free Actions</span></a></li></ol></li><li class="ch"><a href="#combat"><span class="n">7</span><span class="t">Combat</span></a><ol><li><a href="#conditions"><span class="n">7.1</span><span class="t">Conditions</span></a></li><li><a href="#morale"><span class="n">7.2</span><span class="t">Morale</span></a></li></ol></li><li class="ch"><a href="#magic"><span class="n">8</span><span class="t">Magic</span></a><ol><li><a href="#casting"><span class="n">8.1</span><span class="t">Casting</span></a></li><li><a href="#example-spellbooks"><span class="n">8.2</span><span class="t">Example Spellbooks</span></a></li><li><a href="#example-relics"><span class="n">8.3</span><span class="t">Example Relics</span></a></li></ol></li><li class="ch"><a href="#hazards-weather-effects"><span class="n">9</span><span class="t">Hazards &amp; Weather Effects</span></a></li><li class="ch"><a href="#overland-travel"><span class="n">10</span><span class="t">Overland Travel</span></a></li><li class="ch"><a href="#dungeon-delving"><span class="n">11</span><span class="t">Dungeon Delving</span></a></li><li class="ch"><a href="#random-encounters"><span class="n">12</span><span class="t">Random Encounters</span></a></li><li class="ch"><a href="#treasure"><span class="n">13</span><span class="t">Treasure</span></a></li><li class="ch"><a href="#recruiting"><span class="n">14</span><span class="t">Recruiting</span></a><ol><li><a href="#hirelings"><span class="n">14.1</span><span class="t">Hirelings</span></a></li><li><a href="#mercenaries"><span class="n">14.2</span><span class="t">Mercenaries</span></a></li><li><a href="#availability"><span class="n">14.3</span><span class="t">Availability</span></a></li><li><a href="#companions"><span class="n">14.4</span><span class="t">Companions</span></a></li></ol></li><li class="ch"><a href="#warfare"><span class="n">15</span><span class="t">Warfare</span></a></li><li class="ch"><a href="#construction"><span class="n">16</span><span class="t">Construction</span></a></li><li class="ch"><a href="#room-board"><span class="n">17</span><span class="t">Room &amp; Board</span></a></li><li class="ch"><a href="#oracles"><span class="n">18</span><span class="t">Oracles</span></a><ol><li><a href="#yesno-oracle"><span class="n">18.1</span><span class="t">Yes/No Oracle</span></a></li><li><a href="#solo-d6-oracle"><span class="n">18.2</span><span class="t">Solo d6 Oracle</span></a></li><li><a href="#action-theme"><span class="n">18.3</span><span class="t">Action &amp; Theme</span></a></li><li><a href="#adventure-seeds"><span class="n">18.4</span><span class="t">Adventure Seeds</span></a></li><li><a href="#settlement-names"><span class="n">18.5</span><span class="t">Settlement Names</span></a></li><li><a href="#dungeon-names"><span class="n">18.6</span><span class="t">Dungeon Names</span></a></li></ol></li><li class="ch"><a href="#bestiary"><span class="n">19</span><span class="t">Bestiary</span></a></li></ol>
+  </div>
+</dialog>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
