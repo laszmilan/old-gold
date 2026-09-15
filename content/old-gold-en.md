@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Old Gold is a tabletop roleplaying game of daring exploration, creative problem-solving, and fast-paced tactical combat, in which you play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
+*Old Gold is a tabletop roleplaying game of daring exploration, creative problem-solving, and fast-paced tactical combat, in which you play as adventurers brave (or foolish) enough to delve into ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
 
 ## INTRODUCTION
 
@@ -38,7 +38,7 @@ Always round up.
 ### CREDITS
 
 Old Gold was designed by Milán László.
-Illustrations by [Illustrator's Name].
+Illustrations by Regina László.
 Inspired by The Black Hack, Knave 2e and Mausritter.
 Licensed under Creative Commons Attribution 4.0.
 Special thanks to our playtesters: [Playtester Names].
@@ -123,7 +123,9 @@ HP represents your ability to endure harm. Your maximum HP starts at 6, plus 3 f
 
 ### DEFENSE POINTS
 
-DP represents armor, cover, and magical protection. Your base DP is 0. When you take damage from any source, subtract your DP. If any damage is left, apply it to your HP.
+DP represents armor, cover, and magical protection. Your base DP is 0. 
+
+When you take damage from any source, reduce it by your DP. Any damage left reduces your HP.
 
 **Cover.** Partial cover grants +2 DP, while full cover blocks attacks entirely.
 

@@ -27,22 +27,31 @@
   }
 
   var dialog = document.getElementById('toc-dialog');
+  var pill = document.querySelector('.pill');
+  var index = document.querySelector('.index');
+  /* both lists, so the sheet marks the reader's place like the sidebar does */
+  var links = {};
+  document.querySelectorAll('.index a[href^="#"], dialog a[href^="#"]').forEach(function (a) {
+    var id = a.getAttribute('href').slice(1);
+    (links[id] = links[id] || []).push(a);
+  });
+  var heads = [].slice.call(document.querySelectorAll('.rules h2, .rules h3'));
+  var rules = document.getElementById('rules');
+  var current = null;
+
   if (dialog && dialog.showModal) {
     document.querySelectorAll('[data-toc-open]').forEach(function (b) {
-      b.addEventListener('click', function () { dialog.showModal(); });
+      b.addEventListener('click', function () {
+        dialog.showModal();
+        var here = current && dialog.querySelector('a[href="#' + current + '"]');
+        if (here) here.scrollIntoView({ block: 'center' });
+        else dialog.scrollTop = 0;
+      });
     });
     dialog.addEventListener('click', function (e) {
       if (e.target === dialog || e.target.closest('a') || e.target.closest('[data-close]')) dialog.close();
     });
   }
-
-  var index = document.querySelector('.index');
-  var links = {};
-  document.querySelectorAll('.index a[href^="#"]').forEach(function (a) {
-    links[a.getAttribute('href').slice(1)] = a;
-  });
-  var heads = [].slice.call(document.querySelectorAll('.rules h2, .rules h3'));
-  var current = null;
 
   /* scroll the column, not the page. The pads clear the mask's fades. */
   function reveal(a) {
@@ -55,8 +64,8 @@
   function setCurrent(id) {
     if (id === current) return;
     current = id;
-    for (var key in links) links[key].classList.toggle('current', key === id);
-    if (id && links[id]) reveal(links[id]);
+    for (var key in links) links[key].forEach(function (a) { a.classList.toggle('current', key === id); });
+    if (id && links[id]) reveal(links[id][0]);
     else if (!id && index) index.scrollTop = 0;
   }
 
@@ -66,6 +75,7 @@
   function spy() {
     pending = false;
     var mark = Math.min(160, window.innerHeight * 0.25), found = null;
+    if (pill && rules) pill.classList.toggle('on', rules.getBoundingClientRect().top < window.innerHeight * 0.5);
     for (var i = 0; i < heads.length; i++) {
       if (heads[i].getBoundingClientRect().top <= mark) found = heads[i].id; else break;
     }

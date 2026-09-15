@@ -1,33 +1,33 @@
 # OLD GOLD
 
-*Az Old Gold egy asztali szerepjáték tele merész felfedezésekkel, leleményes problémamegoldásokkal és pörgős, taktikus csatákkal, amelyben olyan kalandozókat irányítasz, akik elég bátrak (vagy bolondok) ahhoz, hogy elfeledett romok és szörnyek járta rengetegek mélyére hatoljanak az ott várakozó régi arany reményében. Remélem, te is annyi örömöt lelsz majd benne, mint én.*
+*Az Old Gold egy asztali szerepjáték tele merész felfedezésekkel, leleményes megoldásokkal és pörgős, taktikus csatákkal, amelyben olyan kalandozókat irányítasz, akik elég bátrak (vagy bolondok), hogy romok és szörnyek járta rengetegek mélyére merészkedjenek az ott várakozó régi aranyért. Remélem Te is annyi örömöt lelsz majd benne, mint én.*
 
 ## BEVEZETÉS
 
-Az asztali szerepjátékok, így az Old Gold is, egy egyszerű ciklust követnek: a Játékvezető (vagy te magad, ha egyedül játszol) felvázol egy jelenetet, a játékosok elmondják, mit tesz vagy mond a karakterük, a kockák pedig eldöntik, ami bizonytalan.
+Az asztali szerepjátékok, így az Old Gold is, egy egyszerű folyamatot követnek: a Játékvezető (vagy te magad, ha egyedül játszol) felvázol egy jelenetet, a játékosok elmondják mit tesz vagy mond a karakterük, a kockák pedig eldöntik ami bizonytalan.
 
-**Jó Játékvezetőnek lenni.** Semleges döntőbíró vagy. Ha egy helyzetre nem terjednek ki a szabályok, józan ésszel döntesz. Hagyod, hogy a történet a játékosok tetteiből bontakozzon ki, és hagyod, hogy a kockák úgy essenek, ahogy esnek. Te vagy a játékosok szeme, füle és orra. Előre jelzed a veszélyt, és megjutalmazod az okos ötleteket.
+**Egy jó Játékvezető.** Semleges döntőbíró vagy. Ha egy helyzetre nem terjednek ki a szabályok, józan ésszel alkotsz egyet. Hagyod, hogy a történet a játékosok tetteiből bontakozzon ki, és hagyod, hogy a kockák úgy essenek ahogy esnek. Te vagy a játékosok szeme, füle és orra. Előre jelzed a veszélyt és megjutalmazod az okos ötleteket.
 
-**Jó játékosnak lenni.** Sokat kérdezel, jegyzetelsz, térképet rajzolsz. Azt is megkérdezed, te mit tennél, nemcsak azt, hogy a karaktered mit tenne. Együtt tervezel és dolgozol a csapatoddal. A győzelemért játszol, de készen állsz a vereségre.
+**Egy jó játékos.** Sokat kérdezel, jegyzetelsz, térképet rajzolsz. Azt is megkérdezed, te mit tennél, nemcsak azt, hogy a karaktered mit tenne. Együtt tervezel és dolgozol a csapatoddal. A győzelemért játszol, de készen állsz a vereségre.
 
 ### MIRE LESZ SZÜKSÉGED
 
-Legalább egy kockakészletre (d4, d6, d8, d10, d12, d20), papírra, ceruzára és 50×15 mm-es öntapadós cetlikre a felszerelésednek. A karakterlapot az [itch.io](https://tinyravenpress.itch.io/old-gold/) oldalról töltheted le, és csatlakozhatsz a [Discord](https://discord.gg/WssHvFgUZ)-szerverünkhöz is.
+Legalább egy kockakészletre (d4, d6, d8, d10, d12, d20), papírra, ceruzára és 50×15 mm-es öntapadós cetlikre a felszerelésednek. A karakterlapot az [itch.io](https://tinyravenpress.itch.io/old-gold/) oldalról töltheted le, és csatlakozhatsz a [Discord](https://discord.gg/WssHvFgUZ) szerverünkhöz is.
 
 ### JELÖLÉSEK
 
 Néhány hasznos fogalom:
 
-- **XdY.** Dobj X darab Y oldalú kockával, és add össze az eredményeket.
-- **JK.** Játékoskarakter, egy játékos által irányított kalandozó.
+- **XdY.** Dobj X darab Y oldalú kockával és add össze az eredményeket.
+- **JK.** Játékos karakter, egy játékos által irányított kalandozó.
 - **NJK.** Nem játékos karakter, vagyis a világ minden más szereplője.
-- **Orákulum.** Véletlen táblázatok, amelyek megválaszolják a kérdéseidet, és váratlan fordulatokkal szolgálnak.
+- **Orákulum.** Véletlen táblázatok, amelyek megválaszolják a kérdéseidet és váratlan fordulatokkal szolgálnak.
 
 ### JÁTÉKMÓDOK
 
 Játszhatsz egyedül vagy barátokkal.
 
-- **Egyjátékos.** Az egész csapatot te irányítod, te magad vagy a Játékvezető is, a kérdéseket és a fordulatokat orákulumok döntik el.
+- **Egyjátékos.** Az egész csapatot te irányítod és te vagy a Játékvezető is. A kérdéseket és a fordulatokat orákulumok döntik el.
 - **Csoportos.** A játékosok együtt irányítják a csapatot, Játékvezető nélkül, közösen döntenek a szabályokról és kérdezik az orákulumokat.
 - **Vezetett.** Az egyik játékos a Játékvezető, ő írja le a világot, játssza az NJK-kat és dönt a szabályokról, a többiek pedig egy vagy több JK-t irányítanak.
 
@@ -38,7 +38,7 @@ Mindig kerekíts felfelé.
 ### KÖZREMŰKÖDŐK
 
 A játékot készítette: László Milán.
-Illusztrációk: [Illusztrátor neve].
+Illusztrációk: László Regina.
 Ihletet adott: The Black Hack, Knave 2e és Mausritter.
 Creative Commons Attribution 4.0 licenc alatt.
 Külön köszönet a tesztjátékosainknak: [Tesztjátékosok nevei].
@@ -61,7 +61,7 @@ A kalandozód megalkotása csak néhány percet vesz igénybe.
 
 Válaszd ki a néped, vagy dobj 1d4-gyel.
 
-**1. Törpe.** Olyan szívósak, mint a hegybe vájt váraik, rendíthetetlenül hűségesek és híresek a sör iránti szeretetükről. A törpék 120 cm magasak és 200 évig élnek, a testük a haláluk után kővé, érccé és drágakővé változik. Előnnyel (lásd Próbák) dobnak a méreg elleni próbákon (az alkoholt is beleértve), valamint az ÉP-re karakteralkotáskor és szintlépéskor. Sebesség 8 m. Közös és törp nyelven beszélnek.
+**1. Törpe.** Olyan szívósak mint a hegybe vájt váraik, rendíthetetlenül hűségesek és híresek a sör iránti szeretetükről. A törpék 120 cm magasak és 200 évig élnek, a testük a haláluk után kővé, érccé és drágakővé változik. Előnnyel (lásd Próbák) dobnak a méreg elleni próbákon (az alkoholt is beleértve), valamint az ÉP-ra karakteralkotáskor és szintlépéskor. Sebesség 8 m. Közös és törp nyelven beszélnek.
 
 **2. Elf.** Csendesek és erős akaratúak, vonzza őket az ősi tudás és a természet. 200 cm magasak és akár 500 évig is élnek, a testük a haláluk után maggá és zöldellő hajtássá változik. Előnnyel dobnak az elmét befolyásoló hatások (pl. Elbűvölés) elleni próbákon. Sebesség 12 m. Közös és tünde nyelven beszélnek.
 
@@ -107,13 +107,13 @@ Ihletet akkor kapsz, ha valami kivételesen leleményeset vagy bátrat teszel, v
 
 Az ÉP megmutatja, mennyi sérülést bírsz ki. A maximális ÉP-d 6-ról indul, és az Erő értéked minden pontja után 3-mal nő. Minden szinten (az elsőt is beleértve) dobj 1d6-tal, és add hozzá a maximumodhoz. Az ÉP-d nem csökkenhet 0 alá.
 
-> Bramble félnép Ereje 1, így 6 + (1 × 3) = 9 ÉP-vel kezd. Az első szinten 2-t dob, így a maximum ÉP-je 11. A második szintre érve 5-öt dob, és az Erejét 2-re emeli, így 5 ÉP-t kap a dobásból és 3-at az Erőből, az új maximuma pedig 19.
+> Bramble egy félnép, és Ereje 1, így 6 + (1 × 3) = 9 ÉP-vel kezd. Az első szinten 2-t dob, így a maximum ÉP-je 11. A második szintre érve 5-öt dob, és az Erejét 2-re emeli, így 5 ÉP-t kap a dobásból és 3-at az Erőből, az új maximuma pedig 19.
 
 **Haldoklás.** 0 ÉP-n a földre kerülsz, nem tudsz cselekedni, és Haláldobást kell végrehajtanod, valahányszor sorra kerülnél. Az NJK-k általában meghalnak, ha elérik a 0 ÉP-t, az eszméletlen vagy tehetetlen lényeket pedig azonnal meg lehet ölni.
 
 | 1d6 | Haláldobás eredménye |
 |---|---|
-| 1 | Meghalsz. Írd le az utolsó pillanataidat. |
+| 1 | Meghalsz. Meséld le az utolsó pillanataidat. |
 | 2–5 | 1d4 őrségen át eszméletlenül fekszel 1 ÉP-vel. |
 | 6 | Magadhoz térsz 1 ÉP-vel, és cselekedhetsz. |
 
@@ -123,7 +123,9 @@ Az ÉP megmutatja, mennyi sérülést bírsz ki. A maximális ÉP-d 6-ról indul
 
 ### VÉDELMI PONTOK
 
-A VP a páncélt, a fedezéket és a mágikus védelmet jelenti. Az alap VP-d 0. Ha bármilyen forrásból sebzés ér, vond ki belőle a VP-det. Ha marad belőle valami, azt vond le az ÉP-edből.
+A VP a páncélt, a fedezéket és a mágikus védelmet takarja. Az alap VP-d 0. 
+
+Ha bármilyen forrásból sebzést szenvedsz, vond ki belőle a VP-det. Ami marad, azt vond le az ÉP-edből.
 
 **Fedezék.** A részleges fedezék +2 VP-t ad, a teljes fedezék pedig megállít minden támadást.
 

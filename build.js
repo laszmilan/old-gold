@@ -313,7 +313,7 @@ function buildPage(lang, doc) {
   <div class="dialog-in">
     <div class="dialog-head">
       <span class="dialog-title">${t.contents}</span>
-      <button type="button" data-close>${t.close}</button>
+      <button type="button" data-close aria-label="${t.close}"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></button>
     </div>
     ${index}
   </div>

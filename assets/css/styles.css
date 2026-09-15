@@ -110,6 +110,8 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
   object-fit: contain;
 }
 @media (prefers-reduced-motion: reduce) {
+  .pill { transition: none; }
+  dialog[open] { animation: none; }
   .cover-art picture { transform: none; transition: none; }
 }
 /* A grid row sized by its own content cannot shrink the art inside it, so the
@@ -135,11 +137,13 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
   font-family: var(--display); font-variation-settings: var(--soft);
   font-weight: 600; font-size: 1rem;
 }
+dialog .toc a { padding: .5rem 0; font-size: .95rem; }
+dialog .toc li.ch > a { margin-top: .9rem; font-size: 1.1rem; }
 .index .toc a:hover, dialog .toc a:hover { color: var(--ink); }
 /* the chapter rule above is more specific, so the current entry needs to match it */
-.index .toc a.current,
-.index .toc li.ch > a.current,
-.index .toc a.current .n { color: var(--gold); }
+.index .toc a.current, dialog .toc a.current,
+.index .toc li.ch > a.current, dialog .toc li.ch > a.current,
+.index .toc a.current .n, dialog .toc a.current .n { color: var(--gold); }
 
 /* ===========================================================
    RULES
@@ -241,21 +245,50 @@ th:last-child, td:last-child { padding-right: 0; }
 .colophon p:last-child { margin-bottom: 0; }
 @media (min-width: 1100px) { .colophon { grid-column: 2; padding-bottom: 2.5rem; } }
 
+/* only in the rules: over the cover there is nothing to open yet */
 .pill {
-  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 5;
+  position: fixed; right: 1.25rem; bottom: max(1.25rem, env(safe-area-inset-bottom)); z-index: 5;
   background: var(--ink); color: var(--paper);
   border: 0; border-radius: 999px;
   padding: .7rem 1.1rem .6rem;
   font-size: 1rem; font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .25);
+  opacity: 0; transform: translateY(.75rem); pointer-events: none;
+  transition: opacity .25s, transform .25s, background .15s;
 }
+.pill.on { opacity: 1; transform: none; pointer-events: auto; }
 .pill:hover { background: var(--gold); }
-dialog { border: 1px solid var(--ink); padding: 0; width: min(46rem, calc(100% - 2rem)); max-height: 85vh; background: var(--paper); color: var(--ink); }
+
+/* a sheet from the bottom edge, rising from where the pill sits */
+dialog {
+  position: fixed; inset: auto 0 0; margin: 0 auto;
+  width: 100%; max-width: 46rem; max-height: 85dvh;
+  padding: 0; border: 0; border-radius: 1.25rem 1.25rem 0 0;
+  background: var(--paper); color: var(--ink);
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, .3);
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+dialog::-webkit-scrollbar { display: none; }
 dialog::backdrop { background: rgba(0, 0, 0, .45); }
-.dialog-in { padding: 1.5rem 1.75rem 1.75rem; }
-.dialog-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.25rem; }
-.dialog-title { font-size: 1.2rem; font-weight: 600; color: var(--gold); }
-.dialog-head button { background: none; border: 0; padding: 0; font: inherit; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); cursor: pointer; }
+dialog[open] { animation: sheet-up .3s cubic-bezier(.2, .8, .2, 1); }
+@keyframes sheet-up { from { transform: translateY(2rem); opacity: 0; } }
+body:has(dialog[open]) { overflow: hidden; }
+.dialog-in { padding: 0 1.5rem calc(1.5rem + env(safe-area-inset-bottom)); }
+.dialog-head {
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 1;
+  margin: 0 -1.5rem .5rem; padding: 1.25rem 1.5rem .75rem;
+  background: var(--paper); border-bottom: 1px solid var(--rule);
+}
+.dialog-title { font-size: 1.3rem; font-weight: 600; color: var(--gold); }
+.dialog-head button {
+  display: grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-right: -.6rem;
+  background: none; border: 0; border-radius: 50%; padding: 0;
+  color: var(--ink-2); cursor: pointer;
+}
+.dialog-head button:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); }
 
 /* ===========================================================
    404 AND THE REDIRECT
