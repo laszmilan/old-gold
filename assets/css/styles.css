@@ -62,7 +62,7 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
   letter-spacing: -.02em;
   margin: 0 0 1.25rem;
 }
-.cover .deck { font-size: 1.2rem; line-height: 1.45; max-width: 28em; color: var(--ink-2); margin: 0 0 1.75rem; }
+.cover .deck { font-size: 1.2rem; line-height: 1.45; max-width: 31em; color: var(--ink-2); margin: 0 0 1.75rem; }
 .actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 1.75rem; margin: 0; }
 .actions a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .actions a:hover { border-color: var(--gold); }

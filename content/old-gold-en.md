@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Old Gold is a tabletop roleplaying game of daring exploration, creative problem-solving, and fast-paced tactical combat. You play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
+*Old Gold is a tabletop roleplaying game of daring exploration, creative problem-solving, and fast-paced tactical combat, in which you play as adventurers brave (or foolish) enough to delve into forgotten ruins and monster-haunted wilds for the old gold that awaits there. I hope you'll find as much joy with it as I have.*
 
 ## INTRODUCTION
 
@@ -25,7 +25,7 @@ A few shorthand terms are used throughout these rules:
 
 ### MODES OF PLAY
 
-You can undertake this journey alone or with friends.
+Play alone or with friends.
 
 - **Solo play.** You control the whole party and referee yourself, using oracles to answer questions and generate outcomes.
 - **Group play.** Players control the party together, with no Referee, adjudicating rules and consulting oracles collectively.
@@ -55,13 +55,13 @@ Special thanks to our playtesters: [Playtester Names].
 
 ## CHARACTER CREATION
 
-This chapter will walk you through creating an adventurer in just a few minutes.
+Creating an adventurer takes only a few minutes.
 
 ### ANCESTRY
 
 Choose your ancestry or roll 1d4.
 
-**1. Dwarf.** Sturdy as the fortresses they carve, they are fiercely loyal and famous for their love of beer. Dwarves stand 120 cm tall and live 200 years, their bodies turning to stone, ore, and gems upon death. Advantage on checks to resist poison (including alcohol), and roll HP with advantage at character creation and when leveling up. Speed 8m. Speak Common and Dwarvish.
+**1. Dwarf.** Sturdy as the fortresses they carve, they are fiercely loyal and famous for their love of beer. Dwarves stand 120 cm tall and live 200 years, their bodies turning to stone, ore, and gems upon death. Advantage (see Challenges) on checks to resist poison (including alcohol), and roll HP with advantage at character creation and when leveling up. Speed 8m. Speak Common and Dwarvish.
 
 **2. Elf.** Quiet and strong-willed, Elves are drawn to old knowledge and the wilderness. They stand 200 cm tall and live up to 500 years, their bodies becoming seeds and green growth upon death. Advantage on checks to resist mental effects (such as Charm). Speed 12m. Speak Common and Sylvan.
 
@@ -161,7 +161,7 @@ Gold Pieces (gp) are the standard currency used throughout the realm, and a day'
 
 ### STARTING EQUIPMENT
 
-Choose starting equipment: a weapon, plus a light or medium armor, spellbook, or relic. You also start with 20 + 2d20 gp, plus a waterskin, bedroll, flint & steel, and basic clothing (these take no slots). A Referee may adjust starting gear and wealth to fit a character's background. See Equipment for the full tables and prices.
+Discuss your starting equipment with the Referee: a weapon, plus a light or medium armor, spellbook, or relic. You also start with 20 + 2d20 gp, plus a waterskin, bedroll, flint & steel, and basic clothing (these take no slots). See Equipment for the full tables and prices.
 
 ### ADVANCEMENT
 
@@ -280,7 +280,7 @@ You share a bond with each player sitting next to you (or pair characters in sol
 | Candle | 1 slot, 6m light. Mark every hour. | 1 |
 | Torch | 1 slot, 10m light. Mark every hour. | 5 |
 | Lantern | 1 slot, 10m light. Mark every watch. Refill with Lantern Oil. | 50 |
-| Lantern Oil | 1 slot. Throw to ignite (3 rounds, 2m). | 5 |
+| Lantern Oil | 1 slot. Throw to ignite a 2m area for 3 rounds. Creatures inside take 1d6 damage each time they would act. Refills a Lantern. | 5 |
 | Sunstone | 1 slot, 6m light. Mark every hour. Refill with sunlight. | 100 |
 
 ### WEAPONS & ARMOR
@@ -325,10 +325,10 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 | Antitoxin | 1 slot. Retry a failed check against an active poison, or gain advantage on the next poison check. | 30 |
 | Healing potion | 1 slot. Restores 1d6+1 HP. | 50 |
 | Greater healing potion | 1 slot. Restores 2d6+2 HP. | 200 |
-| Weakening poison | 1 slot. Disadvantage on Might and Grace rolls for 1d4 watches or until cured. | 200 |
-| Sleep poison | 1 slot. Asleep for 1d4 watches. Damage or shaking may wake the victim. | 300 |
-| Paralytic poison | 1 slot. Paralyzed for 1d6 hours. | 400 |
-| Lethal poison | 1 slot. 1d6 direct damage now and each time the victim would act for the next 6 rounds. | 500 |
+| Weakening poison | 1 slot. Difficulty 10. Disadvantage on Might and Grace rolls for 1d4 watches or until cured. | 200 |
+| Sleep poison | 1 slot. Difficulty 13. Asleep for 1d4 watches. Damage or shaking may wake the victim. | 300 |
+| Paralytic poison | 1 slot. Difficulty 16. Paralyzed for 1d6 hours. | 400 |
+| Lethal poison | 1 slot. Difficulty 16. 1d6 direct damage now and each time the victim would act for the next 6 rounds. | 500 |
 
 ### ADVENTURING GEAR
 
@@ -347,7 +347,7 @@ When used, weapons and shields occupy hand slots and armor occupies body slots.
 | Hourglass | 1 slot. Measures time. | 25 |
 | Healer's kit | 1 slot, 3 dots. Restores 1d3 + Heart Bonus HP. Advantage on your next rest's HP roll. | 50 |
 | Disguise kit | 1 slot, 3 dots. Heart check to pass as another person. | 100 |
-| Sack | 1 slot. Carries small items together. | 1 |
+| Sack | 1 slot. Carries a reasonable number of small items. | 1 |
 | Pouch | 1 slot. Holds 250 gp. | 1 |
 
 ### VALUABLES & TRADE GOODS
@@ -371,7 +371,7 @@ Example worths for treasure a party finds and sells. A sackful of valuables fill
 
 ## CHALLENGES
 
-When the outcome of an action is uncertain, make a check: roll 1d20 and add your relevant attribute score. You succeed if the total exceeds the difficulty and you fail on equal or lower. Only call for a check when the result is genuinely uncertain and failure or success has meaningful or interesting consequences.
+When the outcome of an action is uncertain and failure would matter, make a check: roll 1d20 and add your relevant attribute score. You succeed if the total exceeds the difficulty and you fail on equal or lower.
 
 **Difficulty.** When acting against another creature, difficulty equals 10 plus their relevant attribute score. Otherwise, set difficulty by the task itself.
 
@@ -385,7 +385,7 @@ When the outcome of an action is uncertain, make a check: roll 1d20 and add your
 
 > Bramble (Grace 2) picks a sturdy lock, rolling 1d20 + 2 against difficulty 10 (Normal). His d20 comes up 8, for a total of 10. Equal to the difficulty, so the lock holds.
 
-**Player-facing rolls.** Whenever a PC is involved, the player should make the check from their character's point of view.
+**Player-facing rolls.** Whenever a PC is involved, the player should make the check from their character's point of view. If the NPC would have advantage, roll with disadvantage, and the reverse.
 
 > Aldric (Might 5) faces an Orc Warrior (Might 3). When the orc tries to grapple him, instead of the Referee rolling for the orc, Aldric rolls 1d20 + 5 against difficulty 13 (10 + the orc's Might). Perspective changes, but the odds remain identical.
 
@@ -480,7 +480,7 @@ Both spells and prayers require a main action, the spellbook or relic in hand, a
 A spellbook contains a single specific spell. It occupies 1 inventory slot and has 3 usage dots that refill on a rest.
 
 - **Charm.** Make a Mind check against each of up to Mind Bonus humanoids within range. Each you beat is charmed for 1 hour, and may realize they were influenced when it ends.
-- **Sleep.** Make a Mind check against each of up to Mind Bonus creatures within range. Each target you beat falls asleep for 1 hour. Loud noise or a shake wakes them.
+- **Sleep.** Make a Mind check against each of up to Mind Bonus creatures within range. Each target you beat falls asleep for 1 hour. Damage, shaking, or loud noise wakes them when they would next act.
 - **Petrify.** Make a Mind check against a creature within range that can see you. It resists with Grace, averting its eyes. If you beat it, the creature is petrified.
 - **Counterspell.** When a creature you can see casts a spell within range, you may cast this immediately as a free action. Make a Mind check to end their spell.
 - **Detect magic.** You sense magical auras within range by focusing for a few minutes. With a Mind check, you can also learn an aura's nature and function.
@@ -498,7 +498,7 @@ A spellbook contains a single specific spell. It occupies 1 inventory slot and h
 
 ### EXAMPLE RELICS
 
-Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has 1 usage dot that refills on a rest, but grants access to all prayers your deity permits. Acting against that nature, such as a priest of light wielding dark magic, risks the deity's displeasure.
+Holy objects tied to a specific deity (see Deities). A relic occupies 1 inventory slot and has 1 usage dot that refills on a rest, but grants access to all prayers your deity permits.
 
 - **Commune.** Ask your deity a question. The answer, if there is one, comes in Heart Bonus × 2 words or fewer.
 - **Aura of courage.** Allies who can see or hear you add your Heart Bonus to their morale scores and have advantage on checks to resist fear for a day.
@@ -516,6 +516,29 @@ Holy objects tied to a specific deity. A relic occupies 1 inventory slot and has
 - **Hex.** Make a Heart check against a creature within range. If you beat it, for Heart Bonus minutes they have disadvantage on checks involving an attribute you name.
 - **Speak with dead.** The spirit of a corpse you touch manifests and answers Heart Bonus questions honestly.
 
+### DEITIES
+
+A deity has a name, a domain it watches over, and a tenet its faithful keep. Which prayers a relic grants is agreed with the Referee and fits the domain. Breaking the tenet risks the deity's displeasure. 
+
+To create a deity, roll 1d12 on each column or envision your own.
+
+| 1d12 | Name | Domain | Tenet |
+|---|---|---|---|
+| 1 | Aurel | Sun and light | Greet each dawn with blood |
+| 2 | Cerra | Sea and storms | Bury the dead before nightfall |
+| 3 | Dunmor | Death and the dead | Keep every oath you swear |
+| 4 | Hesk | Hearth and harvest | Never strike the first blow |
+| 5 | Ilvane | War and honor | Give a tenth of all you gain |
+| 6 | Kest | Craft and forge | Speak no lie |
+| 7 | Morrow | Secrets and shadows | Show mercy to the surrendered |
+| 8 | Nyrra | Wilds and beasts | Burn what is unclean |
+| 9 | Oduun | Law and oaths | Never sleep under a roof |
+| 10 | Sedd | Fortune and trade | Owe no debt |
+| 11 | Thessa | Plague and rot | Kill nothing you will not eat |
+| 12 | Vael | Moon and dreams | Light a candle for each life you take |
+
+> **Ysolde, Keeper of the Lamp.** Domain: light, roads, and travelers. Tenet: turn no stranger from your door. Prayers: Light, Ward, Bless, Aura of courage, Lay on hands.
+
 ## HAZARDS & WEATHER EFFECTS
 
 Not every danger swings a sword.
@@ -528,11 +551,11 @@ Not every danger swings a sword.
 - **Wind.** Halves the range of ranged and thrown weapons. Strong wind drowns out sound, slows movement, and may blow over unsecured objects. Carries scents.
 - **Storm.** Combines rain, wind, and lightning at their worst.
 - **Extreme heat.** Without water and shade, suffer 1d3 direct damage each watch, and resting consumes an extra ration.
-- **Burning.** Fire deals 2d6 damage. A creature that is on fire takes this damage each time it would act until the flames are extinguished. Drop and roll (main action) to extinguish.
+- **Burning.** A creature that is on fire takes 2d6 damage each time it would act until the flames are extinguished. Drop and roll (main action) to extinguish.
 - **Falling.** 1d4 damage every 2m fallen beyond the first 2. If three or more dice show their max value, you die on impact.
 - **Suffocating.** Hold breath for 6 + Might Bonus rounds. After that, fall unconscious and suffer 2d6 direct damage each time you would act.
 - **Intoxication.** Might check after heavy drinking. Failure gives disadvantage on all rolls for one watch. Fail by 5 or more and you fall unconscious for 1d4 watches instead.
-- **Poison.** When exposed, make a Might check to resist, or suffer its effects. Mark usage to coat one weapon strike or one drink.
+- **Poison.** When exposed, make a Might check against the poison's difficulty to resist, or suffer its effects. Mark usage to coat one weapon strike or one drink.
 
 ## OVERLAND TRAVEL
 
@@ -557,13 +580,13 @@ When traveling through untamed lands, consult the Travel Oracle once per watch.
 | 6–10 | Fair (overcast, light breeze, drizzle) |
 | 11–12 | Favorable (clear skies, gentle sun, crisp air) |
 
-**Favorable weather.** Clear skies are their own reward, let players bask in it narratively. If you want it to matter mechanically, foraging, navigation, or exploration can be rolled with advantage, or danger and landmarks can be spotted from farther off.
+**Favorable weather.** Clear skies are their own reward. If you want them to matter mechanically, foraging, navigation, or exploration can be rolled with advantage, or danger and landmarks can be spotted from farther off.
 
 **Exploring.** Spending a watch exploring a hex may reveal hidden ruins, lairs, overgrown paths, and buried things. Some secrets require a check.
 
 **Navigation.** In bad weather (storms, fog, blizzards) or featureless terrain (open sea, deep desert, forest at night), make a Heart check. On a failure, you arrive at a random adjacent hex instead of your intended destination.
 
-**Foraging.** Spend a watch and make a group check to gather 1d4 rations on a success. Difficulty varies by terrain and conditions.
+**Foraging.** Spend a watch and make a group check (Heart to gather, Grace to hunt) and collect 1d4 rations on a success. Difficulty varies by terrain and conditions.
 
 **Mounts & vehicles.** On land, mounts and vehicles don't increase your travel speed, but they expand what you can carry (inventory slots equal HP). By water, ships travel 3 hexes per watch. Airships are rare and wondrous, traveling 3 hexes per watch in a straight line, ignoring the terrain below.
 
@@ -586,7 +609,7 @@ Hirelings cost their daily wages on top of the purchase price. Vehicles requirin
 
 ## DUNGEON DELVING
 
-A dungeon is any dangerous, contained place worth exploring: ancient ruins, monster lairs, forgotten tombs, cursed manors, deep caves. The rules below assume someone has prepared a map, marked the rooms, and decided what lives, lurks, and waits inside, whether that's the Referee, a published adventure, or your own imagination.
+A dungeon is any dangerous, contained place worth exploring: ancient ruins, monster lairs, forgotten tombs, cursed manors, deep caves. The rules below assume someone has prepared a map, marked the rooms, and decided what waits inside, whether that's the Referee, a published adventure, or your own imagination.
 
 PCs usually move through dungeons one room per turn. Most of this time is spent testing surfaces, listening, and mapping, so visible features and clues are revealed automatically. Searching a room can reveal hidden details but may require a check and spending an extra turn, depending on what you seek.
 
@@ -638,9 +661,9 @@ Add together the XP each adventurer needs for their next level (the XP Required 
 - **Difficult.** The party is tested. Success costs resources, and mistakes cost lives.
 - **Brutal.** The party is outmatched. Survival demands creativity, sacrifice, or retreat.
 
-> Four companions at level 5 each need 16,000 XP for level 6, 64,000 in total. Recovering a noble's stolen signet from a bandit camp (Normal, half a session) is worth about 6,400 gp. A haunted barrow that truly tests them (Difficult, about a session) holds some 25,600. A megadungeon that will take weeks and likely a life (Brutal, several sessions) holds some 76,800, more than enough to lift the whole party a level in theory, though in practice not all of it will be spent on advancement.
+> Four companions at level 5 each need 16,000 XP for level 6, 64,000 in total. Recovering a noble's stolen signet from a bandit camp (Normal, half a session) is worth about 6,400 gp. A haunted barrow that tests them (Difficult, about a session) holds some 25,600. A megadungeon that will take weeks and likely a life (Brutal, several sessions) holds some 76,800, more than enough to lift the whole party a level in theory, though in practice not all of it will be spent on advancement.
 
-This is a guideline for stocking dungeons and setting payments, not a promise that every dangerous encounter pays out (a quick ambush by something far beyond the party may be Brutal on paper, but it shouldn't automatically yield treasure). Treat these numbers as estimates, not targets, and stray from them whenever the story is better for it.
+This is a guideline for stocking dungeons and setting payments, not a promise that every dangerous encounter pays out (a quick ambush by something far beyond the party may be Brutal on paper, but it shouldn't automatically yield treasure). Stray from them whenever the story is better for it.
 
 **Slowing advancement (optional).** Because XP costs double each level, every level takes about the same number of adventures. If you'd rather the highest levels be harder-won, use Adjusted Reward instead of XP Required when calculating treasure (leveling still costs the full XP Required).
 
@@ -698,15 +721,15 @@ Followers generated like PCs. They take equal shares of treasure, gain levels ov
 
 Use these procedures to resolve large-scale battles without tracking individual actions.
 
-**Preparation.** Both sides declare their objective (rout the enemy, seize territory, rescue prisoners) and calculate their combat power. Each unit equals 1 power and costs 100,000 gp/month to field. Some examples include: 1 archmage, 5 battle clerics, 25 cavalry, 100 archers, or 200 untrained foot soldiers.
+**Preparation.** Both sides declare their objective (rout the enemy, seize territory, rescue prisoners) and calculate their combat power. Each unit equals 1 power and costs 100,000 gp/month to field. For example: 1 archmage, 5 battle clerics, 25 cavalry, 100 archers, or 200 untrained foot soldiers.
 
-**Battle.** Each round, one side makes a check, adding their total power as a bonus against a difficulty of 10 plus the opponent's power. Roll with advantage for a clear edge (defending a castle, ambush, high ground), or disadvantage when badly outmatched. The losing side loses 10% of its original strength, or 20% if it lost the round by 10 or more, then makes a morale check against 10 minus the number of rounds it has lost.
+**Battle.** Each round, one side makes a check, adding their total power as a bonus against a difficulty of 10 plus the opponent's power. Roll with advantage for a clear edge (defending a castle, ambush, high ground), or disadvantage when badly outmatched. The losing side loses 10% of its original strength (or 20% if it lost the round by 10 or more) and checks morale (see Morale) against 10 minus the number of rounds it has lost.
 
 **Resolution.** The battle ends when a side fails a morale check, is destroyed, or withdraws, and the victor achieves their stated objective. Once per battle, a commander may make a Heart check to negate their side's first failed morale check with an inspiring speech.
 
 ## CONSTRUCTION
 
-The following costs are estimates, actual construction times and prices may vary with quality, location or special features. Use these examples to estimate the cost of a structure not listed.
+Costs and times are estimates and vary with quality, location, and special features. Use these examples to estimate the cost of a structure not listed.
 
 | Name | Description | Price | Time |
 |---|---|---|---|
@@ -718,13 +741,13 @@ The following costs are estimates, actual construction times and prices may vary
 
 **Renting.** You can rent an entire building for 1% of its total cost per month.
 
-**New construction.** Constructing a new building costs 150% of its listed cost. This price represents the total cost of materials and labor, but does not include the acquisition of the land itself. After paying the cost, the project requires the listed build time to complete.
+**New construction.** Constructing a new building costs 150% of its listed cost. This covers materials and labor, not the land. Building takes the listed time.
 
 **Owning land.** In the wild, you may build freely, but the land is yours only as long as you can hold it. To build within or near a settlement, you need permission from a landlord, noble, guild, faction, or other authority, or purchase it for 20% of the planned building's cost.
 
 **Running a business.** A business or investment, when operations run smoothly, generates an annual profit equal to 2d6% of its initial investment.
 
-## ROOM & BOARD
+## COST OF LIVING
 
 A roof over your head costs coin, and without a home of your own, you pay for the privilege nightly.
 
@@ -927,7 +950,7 @@ A dungeon takes its name from what it looks like, what it is, and what haunts it
 
 **Troll.** HP 24, DP 1, Might 5, Grace 2, Mind 1, Heart 1, Speed 12m, Morale 9, ATK claws (1d8+3, 2m), NA 1d2. Regenerates 1d6 HP each time it would act. Sunlight prevents regeneration. Sees in darkness.
 
-**Demon.** HP 22, DP 2, Might 5, Grace 3, Mind 3, Heart 2, Speed 10m (20m flying), Morale 10, ATK claws (1d8+3, 2m), NA 1d2. A fiend of the lower planes, wreathed in fire. Immune to fire. Sees in darkness. Innate magic: Fireball. Speaks Abyssal.
+**Demon.** HP 22, DP 2, Might 5, Grace 3, Mind 3, Heart 2, Speed 10m (20m flying), Morale 10, ATK claws (1d8+3, 2m), NA 1d2. A fiend of the lower planes, wreathed in fire. Immune to fire. Sees in darkness. Innate magic: Fireball.
 
 **Vampire.** HP 40, DP 2, Might 5, Grace 5, Mind 5, Heart 6, Speed 12m, Morale 11, ATK claws (1d8+3, 2m), NA 1. Undead lord. Reforms in its coffin after 1d4 days unless destroyed in sunlight or with a stake through the heart. Sees in darkness. Innate magic: Charm, Drain.
 
