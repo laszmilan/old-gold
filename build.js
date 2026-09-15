@@ -21,6 +21,7 @@ const STRINGS = {
   en: {
     other: 'hu', otherPath: 'hu/',
     contents: 'Contents', close: 'Close', skip: 'Skip to the rules', rules: 'Rulebook',
+    theme: 'Color scheme', light: 'Light', dark: 'Dark',
     title: 'Old Gold — a fantasy adventure game',
     description: 'A fantasy adventure game of daring exploration, creative problem-solving, and fast-paced tactical combat, with OSR roots and modern design. Read the full rulebook online, free.',
     ogDescription: 'A fantasy adventure game with OSR roots and modern design. Read the full rulebook online, free.',
@@ -37,12 +38,13 @@ const STRINGS = {
   hu: {
     other: 'en', otherPath: '',
     contents: 'Tartalom', close: 'Bezárás', skip: 'Ugrás a szabályokhoz', rules: 'Szabálykönyv',
+    theme: 'Színséma', light: 'Világos', dark: 'Sötét',
     title: 'Old Gold — fantasy kalandjáték',
     description: 'Fantasy kalandjáték a merész felfedezésről, a kreatív problémamegoldásról és a pörgős, taktikus harcról. A teljes szabálykönyv ingyen olvasható online.',
     ogDescription: 'Fantasy kalandjáték OSR gyökerekkel és modern tervezéssel. A teljes szabálykönyv ingyen olvasható online.',
     read: 'Szabálykönyv olvasása',
     note: 'A teljes szabálykönyv ingyen olvasható online. Ha támogatnád, töltsd le a karakterlapot az itch.io-n, és fizess annyit, amennyit szeretnél.',
-    publisher: 'Tiny Raven Press', license: 'A szöveg CC BY 4.0 licenc alatt',
+    publisher: 'Tiny Raven Press', license: 'CC BY 4.0 licenc alatt',
     coverAlt: 'Egy sárkány alszik összegömbölyödve egy aranyhalmon',
     seeWord: 'lásd', example: 'Példa',
     notFound: 'Nincs ilyen oldal',
@@ -58,6 +60,15 @@ function langSwitch(lang) {
   const away = (code, href) => `<a href="${href}" hreflang="${code}" lang="${code}" data-lang-switch>${code.toUpperCase()}</a>`;
   return '<nav class="lang" aria-label="Language">' +
     (lang === 'en' ? here('en') + away('hu', 'hu/') : away('en', '../') + here('hu')) +
+    '</nav>';
+}
+
+/* LIGHT | DARK in the lang switch's clothes. Which one is "on" is set by
+   the script, since only the browser knows the system preference. */
+function themeSwitch(t) {
+  return `<nav class="lang theme" aria-label="${t.theme}">` +
+    `<button type="button" data-theme-set="light">${t.light}</button>` +
+    `<button type="button" data-theme-set="dark">${t.dark}</button>` +
     '</nav>';
 }
 
@@ -201,7 +212,9 @@ function head({ lang, t, assets, title, description, bodyClass, canonical, noind
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-${noindex ? '<meta name="robots" content="noindex">\n' : ''}<meta name="theme-color" content="#faf6ee">
+${noindex ? '<meta name="robots" content="noindex">\n' : ''}<meta name="theme-color" content="#faf6ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="${assets}img/favicon.png">
 ${canonical ? `<link rel="canonical" href="${canonical}">
 <link rel="alternate" hreflang="${lang}" href="${canonical}">
@@ -255,7 +268,7 @@ function buildPage(lang, doc) {
 <header class="cover" id="top">
   <div class="cover-top">
     <span>${t.publisher}</span>
-    ${langSwitch(lang)}
+    <div>${themeSwitch(t)}${langSwitch(lang)}</div>
   </div>
   <div class="cover-main">
     <div class="cover-text">

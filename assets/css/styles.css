@@ -10,6 +10,19 @@
   --measure: 36em;
   --index: 15rem;
   --soft: "SOFT" 100, "WONK" 1;
+  color-scheme: light;
+}
+/* dark tokens live in one place; the media block covers "system" and the
+   attribute block covers the reader's own choice, so both must stay in sync */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17140f; --ink: #ece5d6; --ink-2: #a89f8c; --rule: #3a342a; --gold: #d2a94a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17140f; --ink: #ece5d6; --ink-2: #a89f8c; --rule: #3a342a; --gold: #d2a94a;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html {
@@ -48,6 +61,12 @@ h1, h2, h3, .pill, .dialog-title { font-family: var(--display); font-optical-siz
 .lang .on { color: var(--ink); font-weight: 700; }
 .lang a { color: var(--ink-2); }
 .lang a:hover { color: var(--gold); }
+.cover-top { flex-wrap: wrap; }
+.cover-top > div { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.theme button { background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--ink-2); cursor: pointer; }
+.theme button + button { border-left: 1px solid var(--rule); }
+.theme button:hover { color: var(--gold); }
+.theme .on { color: var(--ink); font-weight: 700; cursor: default; }
 .cover-bottom a[href^="mailto"] { text-transform: none; letter-spacing: 0; }
 .cover-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; align-items: center; }
 @media (min-width: 900px) {
@@ -232,7 +251,7 @@ th:last-child, td:last-child { padding-right: 0; }
 }
 .pill:hover { background: var(--gold); }
 dialog { border: 1px solid var(--ink); padding: 0; width: min(46rem, calc(100% - 2rem)); max-height: 85vh; background: var(--paper); color: var(--ink); }
-dialog::backdrop { background: rgba(30, 26, 20, .4); }
+dialog::backdrop { background: rgba(0, 0, 0, .45); }
 .dialog-in { padding: 1.5rem 1.75rem 1.75rem; }
 .dialog-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.25rem; }
 .dialog-title { font-size: 1.2rem; font-weight: 600; color: var(--gold); }

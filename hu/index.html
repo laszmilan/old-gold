@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Old Gold — fantasy kalandjáték</title>
 <meta name="description" content="Fantasy kalandjáték a merész felfedezésről, a kreatív problémamegoldásról és a pörgős, taktikus harcról. A teljes szabálykönyv ingyen olvasható online.">
-<meta name="theme-color" content="#faf6ee">
+<meta name="theme-color" content="#faf6ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="../assets/img/favicon.png">
 <link rel="canonical" href="https://oldgoldrpg.com/hu/">
 <link rel="alternate" hreflang="hu" href="https://oldgoldrpg.com/hu/">
@@ -34,7 +36,7 @@
 <header class="cover" id="top">
   <div class="cover-top">
     <span>Tiny Raven Press</span>
-    <nav class="lang" aria-label="Language"><a href="../" hreflang="en" lang="en" data-lang-switch>EN</a><span class="on" lang="hu">HU</span></nav>
+    <div><nav class="lang theme" aria-label="Színséma"><button type="button" data-theme-set="light">Világos</button><button type="button" data-theme-set="dark">Sötét</button></nav><nav class="lang" aria-label="Language"><a href="../" hreflang="en" lang="en" data-lang-switch>EN</a><span class="on" lang="hu">HU</span></nav></div>
   </div>
   <div class="cover-main">
     <div class="cover-text">
@@ -2326,7 +2328,7 @@
 
   <footer class="colophon">
     <p>
-      <span>A szöveg CC BY 4.0 licenc alatt</span>
+      <span>CC BY 4.0 licenc alatt</span>
       <a href="mailto:team@tinyravenpress.com">team@tinyravenpress.com</a>
       <a href="https://discord.gg/WssHvFgUZ" target="_blank" rel="noopener">Discord</a>
       <a href="https://tinyravenpress.itch.io/old-gold/" target="_blank" rel="noopener">itch.io</a>

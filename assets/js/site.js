@@ -1,7 +1,30 @@
-/* Contents dialog, reading position, language switch. All optional: the rules
-   are in the HTML and every link works without this. */
+/* Contents dialog, reading position, language switch, color scheme. All
+   optional: the rules are in the HTML and every link works without this. */
 (function () {
   'use strict';
+
+  /* Picking the scheme the system already uses clears the choice, so the page
+     follows the system again without a third "auto" button. */
+  var themeButtons = document.querySelectorAll('[data-theme-set]');
+  if (themeButtons.length) {
+    var systemDark = matchMedia('(prefers-color-scheme: dark)');
+    var store = function (v) { try { v ? localStorage.setItem('theme', v) : localStorage.removeItem('theme'); } catch (e) {} };
+    var paint = function () {
+      var chosen = document.documentElement.dataset.theme;
+      var on = chosen || (systemDark.matches ? 'dark' : 'light');
+      themeButtons.forEach(function (b) { b.classList.toggle('on', b.dataset.themeSet === on); });
+    };
+    themeButtons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.dataset.themeSet, system = systemDark.matches ? 'dark' : 'light';
+        if (v === system) { delete document.documentElement.dataset.theme; store(null); }
+        else { document.documentElement.dataset.theme = v; store(v); }
+        paint();
+      });
+    });
+    systemDark.addEventListener('change', paint);
+    paint();
+  }
 
   var dialog = document.getElementById('toc-dialog');
   if (dialog && dialog.showModal) {
