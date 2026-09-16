@@ -12,7 +12,7 @@ Tabletop roleplaying games, such as Old Gold, follow a simple game loop: the Ref
 
 ### WHAT YOU NEED
 
-At least one polyhedral dice set (d4, d6, d8, d10, d12, d20), paper, pencil, and 50×15mm sticky notes to track your inventory. Download the character sheet on [itch.io](https://tinyravenpress.itch.io/old-gold/) and join our [Discord](https://discord.gg/WssHvFgUZ).
+At least one polyhedral dice set (d4, d6, d8, d10, d12, d20), paper, pencil, and 50×15mm sticky notes to track your inventory. Download the character sheet on [itch.io](https://tinyravenpress.itch.io/old-gold/) and join our [Discord](https://discord.gg/DE898XYqj).
 
 ### GAME NOTATIONS
 

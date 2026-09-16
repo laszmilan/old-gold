@@ -12,7 +12,7 @@ Az asztali szerepjátékok, így az Old Gold is, egy egyszerű folyamatot követ
 
 ### MIRE LESZ SZÜKSÉGED
 
-Legalább egy kockakészletre (d4, d6, d8, d10, d12, d20), papírra, ceruzára és 50×15 mm-es öntapadós cetlikre a felszerelésednek. A karakterlapot az [itch.io](https://tinyravenpress.itch.io/old-gold/) oldalról töltheted le, és csatlakozhatsz a [Discord](https://discord.gg/WssHvFgUZ) szerverünkhöz is.
+Legalább egy kockakészletre (d4, d6, d8, d10, d12, d20), papírra, ceruzára és 50×15 mm-es öntapadós cetlikre a felszerelésednek. A karakterlapot az [itch.io](https://tinyravenpress.itch.io/old-gold/) oldalról töltheted le, és csatlakozhatsz a [Discord](https://discord.gg/DE898XYqj) szerverünkhöz is.
 
 ### JELÖLÉSEK
 

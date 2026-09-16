@@ -3,7 +3,7 @@
 
 module.exports = {
   site: 'https://oldgoldrpg.com',
-  discord: 'https://discord.gg/WssHvFgUZ',
+  discord: 'https://discord.gg/DE898XYqj',
   email: 'team@tinyravenpress.com',
   itch: 'https://tinyravenpress.itch.io/old-gold/',
 };
