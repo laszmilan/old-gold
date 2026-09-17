@@ -18,7 +18,7 @@ That rewrites `index.html`, `hu/index.html`, `rulebook.html`, `404.html` and `si
 
 The pages hold the rules as plain HTML, so they work without JavaScript and without a server: open `index.html` to preview.
 
-`content/old-gold-hu.md` is the Hungarian translation, still partial.
+`content/old-gold-hu.md` is the Hungarian translation.
 
 ## Layout
 

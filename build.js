@@ -43,7 +43,7 @@ const STRINGS = {
     description: 'Fantasy kalandjáték a merész felfedezésről, a kreatív problémamegoldásról és a pörgős, taktikus harcról. A teljes szabálykönyv ingyen olvasható online.',
     ogDescription: 'Fantasy kalandjáték OSR gyökerekkel és modern tervezéssel. A teljes szabálykönyv ingyen olvasható online.',
     read: 'Szabálykönyv',
-    note: 'A teljes szabálykönyv ingyen olvasható online. Ha támogatnád, töltsd le a karakterlapot az itch.io-n, és fizess annyit, amennyit szeretnél.',
+    note: 'A teljes szabálykönyv ingyen olvasható online. Ha támogatnád a játékot, töltsd le a karakterlapot az itch.io-ról és fizess érte annyit, amennyit szeretnél.',
     publisher: 'Tiny Raven Press', license: 'CC BY 4.0 licenc alatt',
     coverAlt: 'Egy sárkány alszik összegömbölyödve egy aranyhalmon',
     seeWord: 'lásd', example: 'Példa',
