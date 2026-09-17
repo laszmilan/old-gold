@@ -1,6 +1,6 @@
 # OLD GOLD
 
-*Az Old Gold a merész felfedezések, a leleményes megoldások és a pörgős, taktikus csaták asztali szerepjátéka. Kalandozókat irányítasz benne, akik elég bátrak (vagy bolondok), hogy romok és szörnyek járta rengetegek mélyére merészkedjenek az ott várakozó régi aranyért. Remélem, te is annyi örömöt lelsz majd benne, mint én.*
+*Az Old Gold a merész felfedezések, a leleményes megoldások és a pörgős, taktikus csaták asztali szerepjátéka. Kalandozókat irányítasz benne, akik elég bátrak (vagy bolondok), hogy romok és szörnyek járta rengetegek mélyére merészkedjenek az ott rejtőző régi aranyért. Remélem, te is annyi örömöt lelsz majd benne, mint én.*
 
 ## BEVEZETÉS
 
